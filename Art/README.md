@@ -35,7 +35,7 @@ Built by `preview.html` in this folder, rasterised by Chrome headless. The page 
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless --disable-gpu \
   --hide-scrollbars --window-size=896,504 \
   --screenshot=Mod/About/Preview.png \
-  "file:///C:/Users/nelim/Documents/rimworld/FoxLamp/Art/preview.html"
+  "file:///C:/Users/nelim/Documents/rimworld/FoxLampRenew/Art/preview.html"
 ```
 
 Text is composed **at final size**, so the glyphs are never resampled. The repository engraving
