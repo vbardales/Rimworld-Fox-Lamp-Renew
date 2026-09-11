@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <packageId>nelim.foxlamp</packageId>
+  <name>Fox Lamp Renew</name>
+  <author>AmliFurx, Megapa3yM - 1.6 port: nelim</author>
+  <url>https://github.com/vbardales/Rimworld-Fox-Lamp-Renew</url>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>Mlie.AFSydailyFox</packageId>
+      <displayName>【AF】SydailyFox (Continued)</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/3540588386</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>Mlie.AFSydailyFox</li>
+  </loadAfter>
+  <description>The Fox Lamp, brought to RimWorld 1.6 - a bamboo shoot carved from marble, set in an open lantern frame.
+
+I am not the author of this mod. The piece is AmliFurx's, made in July 2020 as a thank-you to a player. Megapa3yM kept it running through 1.5. All I did was the work needed to make it run on 1.6. Credit goes to them; mistakes in the update are mine. If either of them comes back to it, or asks me to take this down, it comes down.
+
+Original: https://steamcommunity.com/sharedfiles/filedetails/?id=2166575832 (AmliFurx)
+1.5 fork: https://steamcommunity.com/sharedfiles/filedetails/?id=3248294052 (Megapa3yM, stopped at 1.5)
+
+WHAT THIS MOD IS - AND WHAT IT IS NOT
+
+This is one building. Despite the name it is a sculpture, not a lamp: it gives off no light, burns no fuel and pushes no heat. It is built from 80 marble blocks, it is worth looking at, and a pawn can meditate in front of it.
+
+It appears in the "AmliFurx" architect tab, alongside the other thank-you pieces.
+
+READ THIS BEFORE SUBSCRIBING
+
+If you are here for the fox lamps - the fur lights, the tiny one, the bamboo shoot lamp - you do not want this mod. You want 【AF】SydailyFox (Continued), which is required below and which already ships every one of them, on 1.6, unchanged.
+
+The 1.5 mod this one comes from was a fork of that mod's lamps. All of them have since been carried to 1.6 by Mlie in the parent mod itself, so republishing them here would only put duplicate defNames against a mod you are required to have. Exactly one def in the fork was never in the parent: this one. That is all this mod adds.
+
+REQUIRES 【AF】SydailyFox (Continued)
+
+Not a courtesy listing - a hard requirement. The piece inherits its base def, its architect tab and both of its item categories from that mod. Without it, this mod does nothing but log errors.
+
+https://steamcommunity.com/sharedfiles/filedetails/?id=3540588386
+
+WHAT CHANGED IN THE 1.6 UPDATE
+
+Every field was checked against the 1.6 game files. Nothing in the def was broken by 1.6 itself - it loads on 1.6 as written. Three things were wrong before it, and are now fixed:
+
+- The colour mask never loaded, in any version, since 2020. It shipped as Fox_Lampm.png, but the game looks for the texture path plus "_m" - Fox_Lamp_m.png - and gives up silently when it is missing. The 24 KB file is not shipped rather than renamed: renaming it would change how the piece is drawn, and a port should look like the mod people knew.
+- Beauty was never shown. The piece is built around a Beauty of 800, but it used the plain Building class instead of vanilla's Building_Art, which is what puts the Beauty line in the inspect pane.
+- The description said nothing about the object. AmliFurx's line - the joke and the signature - is kept word for word; a sentence saying what the thing actually is now comes before it, so the build menu has something to show.
+
+The English text also read "No! Shoot! Eat! Bamboo! Shoot! ! !", a garbled machine translation of the Chinese. It now says what the original says.
+
+The defName Fox_Lamp is unchanged on purpose. Renaming it would drop the piece out of any save that already has one standing.
+
+Twenty-six language folders shipped with the 1.5 mod. All twenty-six were byte-identical English stubs - none was ever translated - so they are not carried over. English is in the def, and there is a real French translation.
+
+No code, no Harmony, no patches. Safe to add to an ongoing save. To remove it mid-save, deconstruct any you have built first.
+
+The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to AmliFurx for the piece, to Megapa3yM for keeping it alive through 1.5, and to Mlie for the parent mod this one stands on.
+
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+</ModMetaData>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- AmliFurx's thank-you piece: a bamboo shoot carved from marble, set in an open
+       lantern frame. Despite the name it is a sculpture, not a lamp - no glower, no
+       fuel, no heat. It is the one def of "Fox Lamp Forked" that SydailyFox
+       (Continued) does not already ship, which is why this mod exists and why it
+       requires that mod: AF_NaturalBuildingBase, AF_Thankyou and both AF_TC_*
+       categories all come from there. -->
+  <ThingDef ParentName="AF_NaturalBuildingBase">
+    <defName>Fox_Lamp</defName>
+    <label>Fox Lamp</label>
+    <description>A bamboo shoot carved from marble, set in an open lantern frame. It sheds no light and burns no fuel - it is here to be looked at.
+
+DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
+
+--By:AmliFurx
+--2020-7-15</description>
+
+    <!-- Vanilla art uses Building_Art, which adds the Beauty line to the inspect
+         pane. AF_NaturalBuildingBase leaves thingClass at plain Building, so the
+         one stat this piece is built around was the one it never showed. -->
+    <thingClass>Building_Art</thingClass>
+
+    <size>(1,1)</size>
+
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <!-- Kept as authored. The companion mask Fox_Lampm.png never loaded - see
+           ATTRIBUTION.md - and is not shipped; the shader stays so the render is
+           unchanged from 1.5. -->
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.92,4.92)</drawSize>
+      <texPath>Thankyou/Fox_Lamp</texPath>
+      <shadowData>
+        <volume>(0.9,0.3,0.9)</volume>
+      </shadowData>
+    </graphicData>
+
+    <fillPercent>0</fillPercent>
+    <pathCost>0</pathCost>
+
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>24000</WorkToBuild>
+      <MarketValue>200</MarketValue>
+      <Beauty>800</Beauty>
+      <Mass>40</Mass>
+      <Flammability>0</Flammability>
+      <MeditationFocusStrength>0.4</MeditationFocusStrength>
+    </statBases>
+
+    <costList>
+      <BlocksMarble>80</BlocksMarble>
+    </costList>
+
+    <rotatable>false</rotatable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <canOverlapZones>false</canOverlapZones>
+    <passability>PassThroughOnly</passability>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <constructEffect>ConstructWood</constructEffect>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>true</useHitPoints>
+    <techLevel>Neolithic</techLevel>
+
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isEdifice>false</isEdifice>
+    </building>
+
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+
+    <comps>
+      <!-- No CompQuality, unlike every vanilla art building. That is deliberate on
+           the author's part and it works: Frame.CompleteConstruction calls
+           CompArt.InitializeArt itself when the finished thing has no quality comp,
+           so the piece still gets a generated title, an author and an art tab. The
+           trade is that its Beauty and focus strength are flat rather than rolled. -->
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtSculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+        <canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Artistic</li>
+        </focusTypes>
+      </li>
+    </comps>
+
+    <thingCategories>
+      <li>AF_TC_RimFurry_Building_Thankyou</li>
+      <li>AF_TC_RimFurry_Building_Thankyou_Y</li>
+    </thingCategories>
+
+    <designationCategory>AF_Thankyou</designationCategory>
+    <uiIconPath>Thankyou/UI_Fox_Lamp</uiIconPath>
+    <uiIconScale>1.8</uiIconScale>
+  </ThingDef>
+
+</Defs>

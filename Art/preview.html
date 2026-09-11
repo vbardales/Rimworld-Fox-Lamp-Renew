@@ -1,0 +1,46 @@
+<!doctype html><meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:896px; height:504px; overflow:hidden; background:#000; }
+  .stage { position:relative; width:896px; height:504px;
+           background:#3a3125; font-family:"Segoe UI",system-ui,sans-serif; }
+
+  /* Packed-earth ground with the tile rhythm RimWorld reads by. */
+  .ground { position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(90deg, rgba(0,0,0,.16) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg,  rgba(0,0,0,.16) 0 1px, transparent 1px 64px),
+      radial-gradient(120% 90% at 78% 44%, #6d5b3f 0%, #4a3d2c 38%, #2b2419 72%, #1c1710 100%);
+  }
+  /* Warm pool from a source off-frame to the right: the piece is lit, never lighting. */
+  .pool { position:absolute; inset:0;
+    background: radial-gradient(38% 46% at 74% 50%,
+      rgba(214,143,44,.42) 0%, rgba(198,126,38,.20) 46%, rgba(198,126,38,0) 74%); }
+
+  .piece { position:absolute; left:596px; top:96px; width:166px; height:321px;
+           image-rendering:auto; filter:drop-shadow(0 10px 10px rgba(0,0,0,.55)); }
+  .contact { position:absolute; left:588px; top:396px; width:184px; height:44px;
+             background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,.62) 0%, rgba(0,0,0,0) 70%); }
+
+  /* Repository standard: radial darkening from the top-left, nil at 74%. */
+  .veil { position:absolute; inset:0;
+    background: radial-gradient(circle at 0% 0%, rgba(6,5,4,.86) 0%, rgba(6,5,4,0) 74%); }
+
+  .text { position:absolute; left:56px; top:150px; width:430px; }
+  h1 { font-size:62px; line-height:1.02; font-weight:700; color:#f2ece1;
+       letter-spacing:-.5px; text-shadow:0 2px 10px rgba(0,0,0,.7); }
+  .rule { width:58px; height:3px; background:#D68F2C; margin:22px 0 20px; }
+  p { font-size:21px; line-height:1.42; color:#d8cfc0; text-shadow:0 1px 6px rgba(0,0,0,.75); }
+</style>
+<div class="stage">
+  <div class="ground"></div>
+  <div class="pool"></div>
+  <div class="contact"></div>
+  <img class="piece" src="sprite-trimmed.png">
+  <div class="veil"></div>
+  <div class="text">
+    <h1>Fox Lamp</h1>
+    <div class="rule"></div>
+    <p>A bamboo shoot carved from marble, set in an open lantern frame.</p>
+  </div>
+</div>
