@@ -23,6 +23,8 @@ It is not shipped: it lives beside `Mod/`, never inside it, so Steam never recei
   `BlocksMarble`. The piece costs **24 000 work**, four fifths of a vanilla large sculpture, and
   will take a builder days; Debug actions → Finish construction is the way through it, except in
   scenario 5, where the work has to complete normally.
+- Fuel for scenario 6: **hay, wood or chemfuel**. It is built with a full frame, so none is needed
+  to see it light, but some is needed to see it refuelled.
 
 Useful comparisons, all read out of the vanilla files:
 
@@ -123,22 +125,60 @@ completes. Also a fail, in the other direction: a quality label appearing, which
 
 **Pass:** both read 800. The trade for having no quality is that the piece never rolls.
 
-## 6. It is a sculpture, not a lamp
+## 6. It lights, and that part is not AmliFurx's
 
-The single thing about this mod a player is most likely to mis-report. It is called Fox *Lamp* and
-it is drawn inside a lantern frame.
+The one thing in this mod that is a change to his work rather than a repair of it, so it gets the
+longest scenario. Three comps do it, and the game wires them together: `CompGlower` asks
+`CompRefuelable` for fuel and `CompFlickable` for the switch, exactly as vanilla's torch does.
 
-1. Build one and wait for night, or Debug actions → set the hour to 2.
+1. Place one, and watch the placement ghost before confirming.
 
-**Pass:** it emits **no light at all**. The cell it stands in is as dark as the ground around it.
-There is no fuel bar, no refuelling job, no heat, and no on/off switch in the inspect pane.
+**Pass:** a lit-radius ring is drawn around the ghost while you position it, the way it is for any
+vanilla lamp. That is `PlaceWorker_GlowRadius`.
 
-2. Start a fire next to it.
+2. Finish building it, then wait for night or Debug actions → set the hour to 2.
 
-**Pass:** it does not catch. Flammability is 0.
+**Pass:** it is **already lit**, without anyone hauling fuel to it first — `initialFuelPercent` is
+1, so it is built with a full frame. The pool is small: radius 4.2, about four cells, in the same
+warm amber as its sister lamps rather than a white electric light.
 
-**Fail:** any glow. That would mean a `CompGlower` arrived from somewhere, and the mod would be
-advertising something it does not ship.
+**Fail:** built dark. That means the initial fuel was lost, and a player would reasonably conclude
+the light does not work.
+
+3. Read the inspect pane.
+
+**Pass:** a fuel bar, a refuelling job when it runs low, and an on/off switch. Twelve units at full.
+
+4. Switch it off.
+
+**Pass:** the glow goes out at once and fuel stops draining. Switch it back on and the light
+returns.
+
+5. Check what it will accept as fuel.
+
+**Pass:** hay, wood and chemfuel, and nothing else. Those are its sister lamp's three, not a choice
+made here.
+
+6. Let it run dry, or Debug actions → empty the fuel.
+
+**Pass:** it goes dark and **stays standing**. `destroyOnNoFuel` is false, so an unattended
+monument is an unlit monument, never a lost one. Beauty, the art title and the meditation focus all
+survive being unlit — none of them is wired to the glow.
+
+7. Put it in a small sealed room and watch the temperature.
+
+**Pass:** the room does **not** warm up. It has no heat pusher, deliberately: a marble carving
+warming a room is the part that would not read. Its sister lamp does push heat; this one does not.
+
+8. Look at the sprite while it is lit.
+
+**Pass:** no flame is drawn on the art — only the light on the ground changes. There is no fire
+overlay, on purpose: vanilla draws that flame at the centre of the cell, and this piece is drawn
+at 4.92 cells, so the flame would sit at its foot instead of inside the lantern frame.
+
+9. Start a fire next to it.
+
+**Pass:** it does not catch. Flammability is 0, which is what vanilla's own torch base uses too.
 
 ## 7. No colour mask, and no tint
 
@@ -248,6 +288,14 @@ standing does not lose it.
 
 **Pass:** the game gives its usual missing-content warning, the colony loads and plays, and the
 piece is gone. Deconstruct any you have built first if you would rather avoid the warning.
+
+4. The upgrade case, if you can reach it: a save made while the piece was still unlit, loaded with
+   this version. Either an old save from before the light was added, or one made with the 1.5 fork
+   in place of this mod.
+
+**Pass:** the standing piece gains the fuel frame and the switch, loads without a red line, and
+keeps its art title. Whether it comes back lit or empty is not the test — either is acceptable, and
+worth writing down, since the fuel comp is new to a thing that was saved without one.
 
 ## 14. The 1.5 fork and this mod must never be enabled together
 

@@ -2,15 +2,19 @@
 <Defs>
 
   <!-- AmliFurx's thank-you piece: a bamboo shoot carved from marble, set in an open
-       lantern frame. Despite the name it is a sculpture, not a lamp - no glower, no
-       fuel, no heat. It is the one def of "Fox Lamp Forked" that SydailyFox
-       (Continued) does not already ship, which is why this mod exists and why it
-       requires that mod: AF_NaturalBuildingBase, AF_Thankyou and both AF_TC_*
-       categories all come from there. -->
+       lantern frame. A sculpture first - beauty 800, an Artistic meditation focus -
+       and, since the Renew release, a small lamp as well. He wrote it with no light of
+       any kind; the comps at the bottom of this def are the one thing here that is not
+       his, and they are argued for there and in ATTRIBUTION.md.
+
+       It is the one def of "Fox Lamp Forked" that SydailyFox (Continued) does not
+       already ship, which is why this mod exists and why it requires that mod:
+       AF_NaturalBuildingBase, AF_Thankyou and both AF_TC_* categories all come from
+       there. -->
   <ThingDef ParentName="AF_NaturalBuildingBase">
     <defName>Fox_Lamp</defName>
     <label>Fox Lamp</label>
-    <description>A bamboo shoot carved from marble, set in an open lantern frame. It sheds no light and burns no fuel - it is here to be looked at.
+    <description>A bamboo shoot carved from marble, set in an open lantern frame. Fill the frame and light it, and it throws a small warm pool over whatever is worth looking at nearby.
 
 DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
 
@@ -70,6 +74,11 @@ DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
       <isEdifice>false</isEdifice>
     </building>
 
+    <!-- Draws the lit radius while the piece is being placed, as every vanilla light does. -->
+    <placeWorkers>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
+
     <inspectorTabs>
       <li>ITab_Art</li>
     </inspectorTabs>
@@ -90,6 +99,42 @@ DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
         <focusTypes>
           <li>Artistic</li>
         </focusTypes>
+      </li>
+
+      <!-- The lantern burns, as of the Renew release. AmliFurx never gave the piece a
+           glower and neither did the 1.5 fork, so this is a change to his work rather
+           than a repair of it - see ATTRIBUTION.md. The radius and the fuel are his own
+           BambooShootLamp's, the nearest relative and the same subject, so the piece
+           behaves like the four lamps it was always filed apart from.
+
+           No CompProperties_HeatPusher, unlike that lamp: a marble sculpture warming a
+           room is the one part of this that does not read. No CompProperties_FireOverlay
+           either - vanilla draws that flame at the centre of the cell, and this thing is
+           drawn at 4.92 cells, so the flame would sit at its foot instead of inside the
+           lantern frame.
+
+           Glow, fuel and the switch are wired together by the game, not here:
+           CompGlower asks CompRefuelable for fuel and CompFlickable for the switch, the
+           way vanilla's TorchBase does. -->
+      <li Class="CompProperties_Glower">
+        <glowRadius>4.2</glowRadius>
+        <glowColor>(227,115,32,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>0.4</fuelConsumptionRate>
+        <fuelCapacity>12.0</fuelCapacity>
+        <!-- Thirty days to a full tank. A piece that took 24 000 work should not become a
+             hauling chore. -->
+        <initialFuelPercent>1</initialFuelPercent>
+        <fuelFilter>
+          <thingDefs>
+            <li>Hay</li>
+            <li>Chemfuel</li>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <destroyOnNoFuel>false</destroyOnNoFuel>
       </li>
     </comps>
 

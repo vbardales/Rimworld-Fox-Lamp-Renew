@@ -12,10 +12,13 @@
       repeating-linear-gradient(0deg,  rgba(0,0,0,.16) 0 1px, transparent 1px 64px),
       radial-gradient(120% 90% at 78% 44%, #6d5b3f 0%, #4a3d2c 38%, #2b2419 72%, #1c1710 100%);
   }
-  /* Warm pool from a source off-frame to the right: the piece is lit, never lighting. */
+  /* The pool is emitted, and anchored on the lantern frame rather than on the whole
+     piece: x76 y71 is the opening in the sprite, not its centre of mass. Before the
+     Renew release this sat at 50% height and stood for a light source off-frame,
+     because the piece gave off none. It does now. */
   .pool { position:absolute; inset:0;
-    background: radial-gradient(38% 46% at 74% 50%,
-      rgba(214,143,44,.42) 0%, rgba(198,126,38,.20) 46%, rgba(198,126,38,0) 74%); }
+    background: radial-gradient(40% 48% at 76% 71%,
+      rgba(224,156,52,.50) 0%, rgba(203,130,40,.22) 44%, rgba(198,126,38,0) 74%); }
 
   .piece { position:absolute; left:596px; top:96px; width:166px; height:321px;
            image-rendering:auto; filter:drop-shadow(0 10px 10px rgba(0,0,0,.55)); }

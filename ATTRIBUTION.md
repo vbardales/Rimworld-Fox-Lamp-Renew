@@ -122,6 +122,48 @@ The description also mixed real newlines with literal `\n` escapes, which
 (`InnerText.Replace("\\n", "\n")`) — so every break rendered doubled. It now uses newlines
 only.
 
+## What was changed against the author, and why that is allowed here
+
+**The lantern lights, and he never meant it to.** This is the only thing in the mod that is not
+a repair, and it breaks the rule the section below sets out — that a value the author wrote down
+is kept. He wrote down no glower at all, which is a written choice as much as a number is.
+
+The evidence that it was a choice and not an oversight is strong enough to be worth recording,
+because it is what makes this an honest change rather than a careless one:
+
+- All four lamps in the required mod — `AF_theFurLight`, `_Normal`, `_Tiny` and
+  `BambooShootLamp` — carry `CompProperties_Glower` **and** `CompProperties_Refuelable`. He knew
+  how to make a lamp; he made four.
+- He filed those four in the `Furniture` and `AF_CITE` tabs. He filed this one in `AF_Thankyou`,
+  with the statues, and gave it a Beauty of 800 against their 8 to 40.
+- `Lansy_Statue`, another of his thank-you pieces in that same tab, **does** carry a glower. So
+  the tab is not a rule against light either. He added one where he wanted one.
+- Even the colour mask that never loaded points the same way: it covers the marble shoot and
+  leaves the lantern frame out of it entirely. A colour mask, never a glow map.
+
+So the name was the joke, not a promise, and the piece he made is a sculpture.
+
+It lights here because we wanted it to light. The licence for that is the `Renew` suffix, which
+in this repository does the work `(Continued)` does elsewhere: it says the mod has been taken
+over and may be changed, not merely recompiled. A straight port would have had to leave this
+alone. Anyone who wants the sculpture as he made it has it: the 1.5 fork is still on the
+Workshop, unlit, and says 1.5 on the tin.
+
+**What the light is made of, and where the numbers come from.** Glower at radius 4.2 in
+`(227,115,32,0)`, flickable, refuelable on hay, wood or chemfuel at 0.4 a day against a 12-unit
+frame. Every one of those is `BambooShootLamp`'s, unchanged — the nearest thing he drew to this
+piece and the same subject, a bamboo shoot. Borrowing his own numbers for a thing he did not
+build is the least invention available. Two additions of our own: `initialFuelPercent` 1, so a
+finished piece is lit rather than waiting on a hauler, and `PlaceWorker_GlowRadius`, which every
+vanilla light has.
+
+**Two things `BambooShootLamp` has that were declined.** `CompProperties_HeatPusher`, because a
+marble carving warming a room is the one part of this that does not read, and the piece keeps
+`Flammability` 0 — which vanilla's own `TorchBase` also uses, so that is not the oddity it looks
+like. And `CompProperties_FireOverlay`, because vanilla draws that flame at the centre of the
+cell while this sprite is drawn at 4.92 cells: the flame would appear at the sculpture's foot
+rather than inside the lantern frame.
+
 ## What was checked and deliberately not changed
 
 **No `CompQuality`, unlike every vanilla art building.** `ArtBuildingBase` pairs

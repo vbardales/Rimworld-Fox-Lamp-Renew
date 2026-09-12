@@ -22,14 +22,16 @@
   </incompatibleWith>
   <description>The Fox Lamp, brought to RimWorld 1.6 - a bamboo shoot carved from marble, set in an open lantern frame.
 
-I am not the author of this mod. The piece is AmliFurx's, made in July 2020 as a thank-you to a player. Megapa3yM kept it running through 1.5. All I did was the work needed to make it run on 1.6. Credit goes to them; mistakes in the update are mine. If either of them comes back to it, or asks me to take this down, it comes down.
+I am not the author of this mod. The piece is AmliFurx's, made in July 2020 as a thank-you to a player. Megapa3yM kept it running through 1.5. Credit goes to them; mistakes here are mine. If either of them comes back to it, or asks me to take this down, it comes down.
+
+Most of what I did was the work needed to make it run on 1.6. One thing is not that, and it is the first thing you will notice: the lantern lights now. AmliFurx never gave the piece a light and the 1.5 fork never added one, so that is a change to his work rather than a repair of it. It is described below, and it is why this mod is a Renew rather than a straight port.
 
 Original: https://steamcommunity.com/sharedfiles/filedetails/?id=2166575832 (AmliFurx)
 1.5 fork: https://steamcommunity.com/sharedfiles/filedetails/?id=3248294052 (Megapa3yM, stopped at 1.5)
 
 WHAT THIS MOD IS - AND WHAT IT IS NOT
 
-This is one building. Despite the name it is a sculpture, not a lamp: it gives off no light, burns no fuel and pushes no heat. It is built from 80 marble blocks, it is worth looking at, and a pawn can meditate in front of it.
+This is one building: a sculpture that is also, now, a small lamp. It is built from 80 marble blocks, it carries a beauty of 800 - twice that of the grandest sculpture in the base game - and a pawn can meditate in front of it. Fill the lantern frame with hay, wood or chemfuel and switch it on, and it lights the few cells around it. It pushes no heat: it is marble, and it does not warm a room.
 
 It appears in the "AmliFurx" architect tab, alongside the other thank-you pieces.
 
@@ -47,11 +49,21 @@ Not a courtesy listing - a hard requirement. The piece inherits its base def, it
 
 https://steamcommunity.com/sharedfiles/filedetails/?id=3540588386
 
+THE ONE THING THAT IS NOT A REPAIR: IT LIGHTS
+
+The piece has a switch, a fuel frame and a glow of radius 4.2 - the same numbers as AmliFurx's own bamboo shoot lamp, which is the closest thing he drew to it and the same subject. A full frame holds twelve units and burns for thirty days, so it is a monument you top up now and then, not a hauling chore.
+
+None of that came from him. The def never had a glower, in any version since 2020, and this was not an oversight on his part: the four lamps in the mod this one requires all have one, he filed this piece in a different architect tab from them, gave it a beauty twenty times theirs, and even added a glower to another of his thank-you statues. He simply did not want one here. The name was the joke, not a promise.
+
+It lights because I wanted it to light. If you want the sculpture he actually made, the 1.5 fork is still on the Workshop, unlit, and it says 1.5 on the tin.
+
+No heat pusher, and no flame drawn on the sprite. The first would have a marble carving warming a room; the second would put a vanilla flame at the foot of the piece rather than inside the lantern, because the art is drawn five times the size of the cell it stands on.
+
 WHAT CHANGED IN THE 1.6 UPDATE
 
 Every field was checked against the 1.6 game files. Nothing in the def was broken by 1.6 itself - it loads on 1.6 as written. Three things were wrong before it, and are now fixed:
 
-- The colour mask never loaded, in any version, since 2020. It shipped as Fox_Lampm.png, but the game looks for the texture path plus "_m" - Fox_Lamp_m.png - and gives up silently when it is missing. The 24 KB file is not shipped rather than renamed: renaming it would change how the piece is drawn, and a port should look like the mod people knew.
+- The colour mask never loaded, in any version, since 2020. It shipped as Fox_Lampm.png, but the game looks for the texture path plus "_m" - Fox_Lamp_m.png - and gives up silently when it is missing. It is not shipped rather than renamed: renaming it would change how the piece is drawn, and it should look like the mod people knew. For the curious, the mask covers the marble shoot and nothing else - the lantern frame is not in it. It was a colour mask, never a glow map.
 - Beauty was never shown. The piece is built around a Beauty of 800, but it used the plain Building class instead of vanilla's Building_Art, which is what puts the Beauty line in the inspect pane.
 - The description said nothing about the object. AmliFurx's line - the joke and the signature - is kept word for word; a sentence saying what the thing actually is now comes before it, so the build menu has something to show.
 

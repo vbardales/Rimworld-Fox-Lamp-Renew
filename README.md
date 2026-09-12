@@ -12,15 +12,26 @@ update are mine.
 
 ## What it is
 
-One building. Despite the name it is a **sculpture, not a lamp**: no glower, no fuel, no
-heat. A bamboo shoot carved from marble, standing in an open lantern frame.
+One building: a bamboo shoot carved from marble, standing in an open lantern frame. It is a
+**sculpture first** — that is what its beauty and its meditation focus are for — and, since
+the Renew release, **a small lamp as well**.
 
 | | |
 | --- | --- |
 | Cost | 80 marble blocks, 24 000 work |
-| Beauty | 800 |
-| Meditation | `Artistic` focus, strength 0.4 |
+| Beauty | 800, twice a vanilla grand sculpture |
+| Meditation | `Artistic` focus, strength 0.4, flat |
+| Light | radius 4.2, switchable, hay / wood / chemfuel |
+| Fuel | 12 units, 30 days to a tank |
+| Heat | none — it is marble |
 | Tab | **AmliFurx**, alongside the other thank-you pieces |
+
+**The light is mine, not AmliFurx's.** He gave the piece no glower in any version since 2020,
+and that was a choice rather than an oversight: the four lamps in the mod this one requires all
+have one, he filed this piece in a different architect tab from them, and he added a glower to
+another of his own thank-you statues. The name was the joke, not a promise. It lights here
+because I wanted it to, which is the difference between a Renew and a straight port. The unlit
+piece he made is still on the Workshop as the 1.5 fork.
 
 No code, no Harmony, no patches. Safe to add to an ongoing save; deconstruct any you have
 built before removing it mid-save.

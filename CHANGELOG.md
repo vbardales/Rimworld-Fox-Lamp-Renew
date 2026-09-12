@@ -13,6 +13,28 @@ First release of the 1.6 port of AmliFurx's **Fox Lamp**, carried to 1.5 by Mega
 
 ### Added
 
+- **The lantern lights.** `CompProperties_Glower` at radius 4.2 in the family amber
+  `(227,115,32,0)`, `CompProperties_Flickable` for the switch, and
+  `CompProperties_Refuelable` on hay, wood or chemfuel — 0.4 a day against a 12-unit frame,
+  so thirty days to a tank, and `initialFuelPercent` 1 so a finished piece is lit without
+  waiting on a hauler. `destroyOnNoFuel` is false: run dry and it goes dark, never away.
+  The radius, the colour and the fuel are AmliFurx's own `BambooShootLamp`, the nearest
+  thing he drew to this and the same subject.
+
+  **This is the one entry in this file that is not a repair.** He gave the piece no light in
+  any version since 2020 and the 1.5 fork added none, and the evidence says that was a
+  choice: the four lamps in the required mod all carry a glower, he filed this piece in a
+  different architect tab from them, gave it a beauty twenty times theirs, and added a
+  glower to another of his own thank-you statues. Even the colour mask that never loaded
+  covers the marble shoot and not the lantern — a colour mask, never a glow map. The name
+  was the joke, not a promise. It lights here because we wanted it to, which is what makes
+  this a Renew rather than a straight port.
+
+  No `CompProperties_HeatPusher`, unlike `BambooShootLamp`: a marble carving warming a room
+  is the part that does not read. No `CompProperties_FireOverlay` either — vanilla draws
+  that flame at the centre of the cell, and this piece is drawn at 4.92 cells, so it would
+  sit at the foot of the sculpture rather than inside the lantern frame.
+- `PlaceWorker_GlowRadius`, so the lit radius is drawn while the piece is being placed.
 - Support for RimWorld 1.6. Every field of `Fox_Lamp` was checked against the 1.6 game
   files and the 1.6 assembly; nothing in it was broken by 1.6 itself.
 - A French translation — the first one this piece has ever had.

@@ -4,10 +4,10 @@
   <!-- The label is left in English on purpose: "Fox Lamp" is the title AmliFurx gave
        the piece, not a common noun. Translating it would rename someone's artwork. -->
   <Fox_Lamp.label>Fox Lamp</Fox_Lamp.label>
-  <!-- EN: A bamboo shoot carved from marble, set in an open lantern frame. It sheds no
-       light and burns no fuel - it is here to be looked at. / DO! NOT! EAT! THE!
-       BAMBOO! SHOOT!!!! -->
-  <Fox_Lamp.description>Une pousse de bambou taillée dans le marbre, dressée dans un châssis de lanterne ouvert. Elle n'éclaire rien et ne consomme aucun combustible : elle est là pour être regardée.
+  <!-- EN: A bamboo shoot carved from marble, set in an open lantern frame. Fill the frame
+       and light it, and it throws a small warm pool over whatever is worth looking at
+       nearby. / DO! NOT! EAT! THE! BAMBOO! SHOOT!!!! -->
+  <Fox_Lamp.description>Une pousse de bambou taillée dans le marbre, dressée dans un châssis de lanterne ouvert. Garnissez le châssis et allumez-le : il jette une petite flaque de lumière chaude sur ce qui mérite d'être regardé à côté.
 
 ON! NE! MANGE! PAS! LA! POUSSE! DE! BAMBOU!!!!
 

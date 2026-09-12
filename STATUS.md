@@ -66,6 +66,12 @@ loaded this mod.** Everything asserted about it comes from reading the def again
 files and assembly. `TESTING.md` beside this file is the list of what has to be watched in a
 running colony; `tested_on` stays empty until someone walks it.
 
+That line matters more since 2026-09-12 than it did before. Until then the mod was a port, and an
+untested port at worst fails to appear. It now carries a **behaviour change** — the piece was given
+a glower, a fuel frame and a switch that AmliFurx never wrote — and three comps working together
+is the kind of thing that reads correctly on paper and misbehaves in play. Scenario 6 of
+`TESTING.md` exists for it and runs to nine steps.
+
 ## Vocabulary
 
 `licence`: `open` an explicit licence, `silent` no licence and a dead source, `alive` no licence

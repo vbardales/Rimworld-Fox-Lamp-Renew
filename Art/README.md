@@ -9,8 +9,11 @@ sold. `STYLE_RIMWORLD.md` describes a painted RimWorld *scene*, which is the rep
 default; this is a deliberate departure, noted here so a later pass can regenerate rather than
 guess why.
 
-**The mod ships a `ModIcon.png` since 2026-09-12.** See the last section but one for what it is and
-for the one rule it deliberately departs from.
+**The mod ships a `ModIcon.png` since 2026-09-12.** See the last section but one for what it is.
+
+**The banner's light rule was reversed on 2026-09-12**, the day the piece was given a glower. Both
+images now show it giving off light, which it does. The old rule and the reason it fell are kept in
+the `Preview.png` section below rather than deleted.
 
 ## `sprite-trimmed.png` — 166 x 321, 44 KB
 
@@ -25,7 +28,7 @@ ffmpeg -y -i Mod/Textures/Thankyou/Fox_Lamp.png -vf "crop=166:321:323:168" Art/s
 
 Kept because both images below are built from it, and because re-deriving it means re-measuring.
 
-## `Mod/About/Preview.png` — 896 x 504, 340 KB
+## `Mod/About/Preview.png` — 896 x 504, 345 KB
 
 Built by `preview.html` in this folder, rasterised by Chrome headless. The page references
 `sprite-trimmed.png` by relative path, so the command below reproduces the shipped file
@@ -58,11 +61,20 @@ The summary is lifted word for word from the `About.xml` description, as the sta
 No count is engraved: the rule allows one for a frozen source, but "one sculpture" would read as
 an apology for the mod rather than a description of it.
 
-**The light comes from off-frame right, and the piece never emits any.** This is the one thing
-about this mod that a showcase can get wrong. It is called Fox *Lamp* and it is drawn inside a
-lantern frame, but it has no `CompProperties_Glower`, no fuel and no heat — it is a sculpture. A
-banner showing it aglow would advertise something the mod does not ship. The warm pool is a
-radial gradient anchored at 74 % width, outside the object.
+**The light is emitted, and the pool is anchored on the lantern.** The gradient sits at 76 % width
+and 71 % height, which is the frame's opening in the sprite rather than the piece's centre of mass.
+
+**This rule was the opposite until 2026-09-12, and the reversal is the point.** It used to read:
+the light comes from off-frame right, and the piece never emits any — because it had no
+`CompProperties_Glower`, no fuel and no heat, and a banner showing it aglow would have advertised
+something the mod did not ship. The pool sat at 50 % height and stood for a source outside the
+frame. The Renew release gives the piece a glower, a fuel frame and a switch, so the banner now
+shows what the mod actually does. Anyone who finds the old wording quoted elsewhere is reading a
+document that predates the light.
+
+The summary engraved under the rule is **unchanged**, and deliberately so. It is the first sentence
+of the `About.xml` description, word for word, as the standard requires, and that sentence did not
+change when the light was added. The picture carries the new fact; the words did not have to.
 
 Checked at 268 px, the real Workshop thumbnail width: the name reads, the silhouette reads. The
 summary falls to about 6 px and is not meant to be read there — it is written for whoever opens
@@ -86,21 +98,21 @@ one eye, a thick near-black outline, flat cel shading, and the mod's own subject
 The ponytail the other icons wear is replaced here by fox ears, which is the fusion doing its job
 rather than a departure — Mintchoco's head *is* a scoop of ice cream, and this one *is* a fox.
 
-**The lantern it holds is lit, and that is deliberate.** It reads as a contradiction of the rule
-two sections up, which says the banner must never show the piece aglow, so here is why the two
-differ.
+**The lantern it holds is lit**, and it agrees with the banner, which now shows the piece emitting
+light as well.
 
-The banner rule is about **the piece**. The sculpture ships with no `CompProperties_Glower`, no
-fuel and no heat, so a banner showing *it* giving off light would advertise a thing the mod does
-not contain. The icon shows no sculpture at all: it is a character holding an ordinary lantern,
-the way the Mintchoco mascot holds nothing the mod ships either.
+It did not always agree. For one day, 2026-09-12, this icon shipped against a banner rule that
+forbade showing the piece aglow, and the paragraph here argued the difference: the icon is a
+character holding an ordinary lantern, not a picture of the sculpture, so it promised nothing the
+mod lacked. That argument is now moot, because the mod does not lack it. Kept in a sentence rather
+than deleted, so that the icon is not mistaken for a leftover of the unlit era and darkened to
+match something.
 
-And the icon has a constraint the banner does not. It is read at **32 px** in a mod list. An unlit
-lantern at that size is a brown smudge with no silhouette; the glow is the only thing that makes
-the object legible as a lantern, which is the one word the icon has to say. Checked at 32 px: the
-ears, the wink and the lit lantern all survive.
-
-Left as it is on purpose. A later pass should not darken it to match the banner.
+The second reason it was drawn lit still stands on its own, and it is the one to keep in mind if
+the icon is ever redrawn. It is read at **32 px** in a mod list. An unlit lantern at that size is a
+brown smudge with no silhouette; the glow is the only thing that makes the object legible as a
+lantern, which is the one word the icon has to say. Checked at 32 px: the ears, the wink and the
+lit lantern all survive.
 
 **Whatever is drawn, it must not be built from `UI_Fox_Lamp.png`.** That file is the *build-menu*
 icon and it is a **book** — the author's deliberate style, shipped untouched, and explained in
