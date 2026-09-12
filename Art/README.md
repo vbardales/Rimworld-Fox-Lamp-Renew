@@ -25,7 +25,7 @@ ffmpeg -y -i Mod/Textures/Thankyou/Fox_Lamp.png -vf "crop=166:321:323:168" Art/s
 
 Kept because both images below are built from it, and because re-deriving it means re-measuring.
 
-## `Mod/About/Preview.png` — 896 x 504, 337 KB
+## `Mod/About/Preview.png` — 896 x 504, 340 KB
 
 Built by `preview.html` in this folder, rasterised by Chrome headless. The page references
 `sprite-trimmed.png` by relative path, so the command below reproduces the shipped file
@@ -33,17 +33,23 @@ Built by `preview.html` in this folder, rasterised by Chrome headless. The page 
 
 ```
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless --disable-gpu \
-  --hide-scrollbars --window-size=896,504 \
-  --screenshot=Mod/About/Preview.png \
+  --hide-scrollbars --force-device-scale-factor=1 --window-size=896,504 \
+  "--screenshot=C:\Users\nelim\Documents\rimworld\FoxLampRenew\Mod\About\Preview.png" \
   "file:///C:/Users/nelim/Documents/rimworld/FoxLampRenew/Art/preview.html"
 ```
+
+**`--screenshot` needs an absolute Windows path.** Given a path relative to the shell, Chrome
+resolves it against its own working directory and fails with `Le chemin d'accès spécifié est
+introuvable`, leaving the previous file untouched — so the render looks like it silently did
+nothing rather than like an error. `--force-device-scale-factor=1` pins the rasterisation to
+1:1 whatever the display is set to.
 
 Text is composed **at final size**, so the glyphs are never resampled. The repository engraving
 standard is followed exactly:
 
 | | Value |
 |---|---|
-| Title | `Fox Lamp`, 62 px, one line |
+| Title | `Fox Lamp Renew`, 48 px, two lines |
 | Rule | 58 x 3, amber `#D68F2C` |
 | Summary | 21 px over 430 px |
 | Darkening | radial from the top-left corner, `rgba(6,5,4,.86)` at the centre, nil at **74 %** |
