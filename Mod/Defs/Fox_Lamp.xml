@@ -115,7 +115,8 @@ DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
 
            Glow, fuel and the switch are wired together by the game, not here:
            CompGlower asks CompRefuelable for fuel and CompFlickable for the switch, the
-           way vanilla's TorchBase does. -->
+           way vanilla's WoodFiredGenerator does. TorchBase pairs the first two but has no
+           switch, so it is the generators that carry all three. -->
       <li Class="CompProperties_Glower">
         <glowRadius>4.2</glowRadius>
         <glowColor>(227,115,32,0)</glowColor>

@@ -129,7 +129,9 @@ completes. Also a fail, in the other direction: a quality label appearing, which
 
 The one thing in this mod that is a change to his work rather than a repair of it, so it gets the
 longest scenario. Three comps do it, and the game wires them together: `CompGlower` asks
-`CompRefuelable` for fuel and `CompFlickable` for the switch, exactly as vanilla's torch does.
+`CompRefuelable` for fuel and `CompFlickable` for the switch. Vanilla's torch pairs the first two
+but has no switch; the three together are the wood-fired and chemfuel generators, so that trio is
+the pattern being followed and the one to compare against if a step below misbehaves.
 
 1. Place one, and watch the placement ghost before confirming.
 
