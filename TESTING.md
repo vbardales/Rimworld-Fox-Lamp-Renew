@@ -254,12 +254,22 @@ piece is gone. Deconstruct any you have built first if you would rather avoid th
 Both declare `Fox_Lamp`, and the 1.5 mod additionally declares the four lamps that SydailyFox now
 ships itself.
 
-1. Enable **【1.5】Fox Lamp Forked** and this mod at the same time.
+Since 2026-09-12 the About declares `mg.ferianstory.foxlamp` in `<incompatibleWith>`, so the game
+says so rather than leaving it to be discovered.
 
-**Expected, and the reason nothing guards it yet:** RimWorld keeps one `Fox_Lamp` and logs a
-duplicate-defName error. Whichever loads last wins. Nothing crashes, but one of the two mods is
-silently doing nothing.
+1. Enable **【1.5】Fox Lamp Forked** and this mod at the same time, in the mod list.
 
-There is no `<incompatibleWith>` in the About declaring this. Writing one is the open task recorded
-in `STATUS.md`; until it exists, this is a scenario to check by hand rather than a rule the game
-enforces.
+**Pass:** the mod list marks the pair as incompatible and warns before you start, naming the 1.5
+fork. The warning is the whole point: the duplicate it prevents is silent otherwise.
+
+2. Ignore the warning and load anyway.
+
+**Expected:** RimWorld keeps one `Fox_Lamp` and logs a duplicate-defName error; whichever loads
+last wins. Nothing crashes, but one of the two mods is doing nothing. This is what the declaration
+exists to stop, so seeing it here is the confirmation, not a failure of the mod.
+
+3. Read the mod description in the list.
+
+**Pass:** it tells anyone still subscribed to the fork to unsubscribe or disable it, and says they
+lose nothing by doing so — everything the fork had is either in this mod or in the parent it
+requires.

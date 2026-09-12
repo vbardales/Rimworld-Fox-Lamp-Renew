@@ -8,13 +8,11 @@ stage:        in monorepo
 licence:      silent
 licence_at:   neither the 1.5 mod folder nor its Workshop page says anything
 dependencies: declared
-showcase:     banner only
+showcase:     complete
 tested_on:
 workshop:
 remaining:
   - unverified: never seen running
-  - defect: Mod/About/ModIcon.png is a raw 1254x1254 source of 1.2 MB, uncommitted
-  - defect: nothing keeps the dead 1.5 fork out, and it declares the same Fox_Lamp
 session:      local_7c385da5-e8e6-4eb1-92ff-dd3e44a2b6ec
 updated:      2026-09-12, the mod's own session
 ---
@@ -42,22 +40,31 @@ fields for whoever held the mod. This session holds it now and has answered them
   belongs to a mod that was not declared and not loaded.
 - **`remaining`** — what is left, in three kinds: `feature` for something missing from a first
   release, `defect` for a known fault left unfixed, `unverified` for what could not be checked.
-  The three lines above are this mod's, not the repository's boilerplate.
+  The line above is this mod's, not the repository's boilerplate.
 
-## What the two defects are
+## The two defects that were here, and what closed them
+
+Both were closed on 2026-09-12, in the same pass that wrote them down. Kept here because the next
+sweep will otherwise find the same two things and wonder whether they were ever looked at.
 
 **The icon was never finished.** The sweep that generates mod icons dropped a full-resolution
-source into `Mod/About/` on 2026-09-12 at 00:18 and stopped there. A finished icon is 128x128 at
-roughly 30 KB, the size Fullzoon Cookies carries; this one is 1254x1254 at 1.2 MB and is not
-committed. Being uncommitted does not make it harmless, because the Workshop uploader sends
-`Mod/` as it stands from disk, with no filtering. So `showcase` reads `banner only`: the banner
-is done and to standard at 896x504, the icon is not.
+mascot into `Mod/About/` at 00:18 and stopped there, leaving 1254x1254 and 1.2 MB where a finished
+icon is 128x128 at roughly 30 KB. Being uncommitted made it no safer, because the Workshop uploader
+sends `Mod/` as it stands from disk, with no filtering. The source now lives at
+`Art/ModIcon-source.png` and the shipped icon is downscaled from it, so `showcase` reads `complete`.
 
-**The 1.5 fork is still subscribed.** 【1.5】Fox Lamp Forked, `mg.ferianstory.foxlamp`, is still
-in the Workshop folder and declares `Fox_Lamp`, the one defName this mod exists to carry. Enabled
-together they are a silent duplicate, and RimWorld keeps only one. Neither is active in the
-current mod list, so nothing is broken today. The guard would be an `<incompatibleWith>` naming
-that packageId; it has not been written.
+**The 1.5 fork could be enabled alongside.** 【1.5】Fox Lamp Forked, `mg.ferianstory.foxlamp`, is
+still in the Workshop folder and declares `Fox_Lamp`, the one defName this mod exists to carry.
+Nothing stopped the two loading together, and RimWorld keeps only one. The About now declares that
+packageId in `<incompatibleWith>`, and the description says so in words for anyone still
+subscribed to it.
+
+## The one thing left
+
+`remaining` holds a single line, and it is the one no document can close: **RimWorld has never
+loaded this mod.** Everything asserted about it comes from reading the def against the game's own
+files and assembly. `TESTING.md` beside this file is the list of what has to be watched in a
+running colony; `tested_on` stays empty until someone walks it.
 
 ## Vocabulary
 

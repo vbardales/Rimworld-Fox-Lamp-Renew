@@ -17,6 +17,9 @@
   <loadAfter>
     <li>Mlie.AFSydailyFox</li>
   </loadAfter>
+  <incompatibleWith>
+    <li>mg.ferianstory.foxlamp</li>
+  </incompatibleWith>
   <description>The Fox Lamp, brought to RimWorld 1.6 - a bamboo shoot carved from marble, set in an open lantern frame.
 
 I am not the author of this mod. The piece is AmliFurx's, made in July 2020 as a thank-you to a player. Megapa3yM kept it running through 1.5. All I did was the work needed to make it run on 1.6. Credit goes to them; mistakes in the update are mine. If either of them comes back to it, or asks me to take this down, it comes down.
@@ -35,6 +38,8 @@ READ THIS BEFORE SUBSCRIBING
 If you are here for the fox lamps - the fur lights, the tiny one, the bamboo shoot lamp - you do not want this mod. You want 【AF】SydailyFox (Continued), which is required below and which already ships every one of them, on 1.6, unchanged.
 
 The 1.5 mod this one comes from was a fork of that mod's lamps. All of them have since been carried to 1.6 by Mlie in the parent mod itself, so republishing them here would only put duplicate defNames against a mod you are required to have. Exactly one def in the fork was never in the parent: this one. That is all this mod adds.
+
+If you are still subscribed to that 1.5 fork, unsubscribe or disable it. This mod declares it incompatible, because the two ship the same defName and RimWorld would keep only one of them, at random as far as you can tell. You lose nothing: everything the fork had is either here or in the mod required below.
 
 REQUIRES 【AF】SydailyFox (Continued)
 
