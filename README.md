@@ -4,8 +4,8 @@ RimWorld 1.6 port of **Fox Lamp**, by **AmliFurx** — kept alive through 1.5 by
 
 **I am not the author of this mod.** The piece is AmliFurx's, made in July 2020 as a
 thank-you to a player, and signed inside its own description. Megapa3yM carried it to 1.5.
-All I did was the work needed to make it run on 1.6. Credit goes to them; mistakes in the
-update are mine.
+Most of what I did was the work needed to make it run on 1.6. The light is the exception, and it
+is described below. Credit goes to them; mistakes here are mine.
 
 - Original: https://steamcommunity.com/sharedfiles/filedetails/?id=2166575832 (AmliFurx)
 - 1.5 fork: https://steamcommunity.com/sharedfiles/filedetails/?id=3248294052 (Megapa3yM, stopped at 1.5)
@@ -21,7 +21,7 @@ the Renew release, **a small lamp as well**.
 | Cost | 80 marble blocks, 24 000 work |
 | Beauty | 800, twice a vanilla grand sculpture |
 | Meditation | `Artistic` focus, strength 0.4, flat |
-| Light | radius 4.2, switchable, hay / wood / chemfuel |
+| Light | radius 10, switchable, hay / wood / chemfuel |
 | Fuel | 12 units, 30 days to a tank |
 | Heat | none — it is marble |
 | Tab | **AmliFurx**, alongside the other thank-you pieces |

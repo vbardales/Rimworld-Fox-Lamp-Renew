@@ -149,13 +149,35 @@ over and may be changed, not merely recompiled. A straight port would have had t
 alone. Anyone who wants the sculpture as he made it has it: the 1.5 fork is still on the
 Workshop, unlit, and says 1.5 on the tin.
 
-**What the light is made of, and where the numbers come from.** Glower at radius 4.2 in
+**What the light is made of, and where the numbers come from.** Glower at radius 10 in
 `(227,115,32,0)`, flickable, refuelable on hay, wood or chemfuel at 0.4 a day against a 12-unit
-frame. Every one of those is `BambooShootLamp`'s, unchanged — the nearest thing he drew to this
-piece and the same subject, a bamboo shoot. Borrowing his own numbers for a thing he did not
+frame. The colour and the fuel are `BambooShootLamp`'s, unchanged — the nearest thing he drew to
+this piece and the same subject, a bamboo shoot. Borrowing his own numbers for a thing he did not
 build is the least invention available. Two additions of our own: `initialFuelPercent` 1, so a
 finished piece is lit rather than waiting on a hauler, and `PlaceWorker_GlowRadius`, which every
 vanilla light has.
+
+**The radius is the exception, and it is rebalancing rather than borrowing.** It was 4.2 for a
+day, his bamboo lamp's figure, and that was the wrong instinct: it is the smallest of his five
+lamps, it is below everything the base game calls a lamp, and a pool of 4.2 would not have covered
+this sculpture, which is drawn at 4.92 cells. The piece would have lit less ground than it stands
+on.
+
+| | Radius |
+|---|---|
+| `BambooShootLamp`, 2020 | 4.2 |
+| `AF_theFurLight_Normal` and `_Tiny` | 8.2 |
+| Vanilla `TorchWallLamp` | 9 |
+| Vanilla `TorchLamp`, `Brazier` | **10** |
+| Vanilla `WallLamp` | 11 |
+| Vanilla `StandingLamp` | 12 |
+| `AF_theFurLight`, his flagship | 14.2 |
+| Vanilla `SunLamp` | 14 |
+
+10 is where a fuel-burning floor light sits in 1.6, and the piece lands between his own two
+middling lamps and his flagship rather than under all of them. The objection that a strong light
+turns a monument into everyone's cheap lamp does not survive the cost: 80 marble blocks and 24 000
+work is eight times a torch in every currency. The gate is the price, not a dim glow.
 
 **Two things `BambooShootLamp` has that were declined.** `CompProperties_HeatPusher`, because a
 marble carving warming a room is the one part of this that does not read, and the piece keeps
@@ -207,10 +229,25 @@ quarter of the footprint, for 80 marble blocks against 400 stuff, and 24 000 wor
 105 000. `MeditationFocusStrength` of 0.4 flat is above the 0.28 a *legendary* vanilla
 sculpture reaches through `FocusStrengthOffset_Quality`.
 
-They are left alone. The line this port holds is the one from Shallow Water Floor: a number
-gets corrected when it was never *chosen* — an absent field falling back to a default — and
-is kept when the author wrote it down. Every one of these was written down. It is a
-thank-you piece; being out of scale is the point of it.
+They are left alone **for now**, and the reason is no longer the one this document used to
+give.
+
+The old line came from Shallow Water Floor: a number gets corrected when it was never
+*chosen* — an absent field falling back to a default — and is kept when the author wrote it
+down. Every one of these was written down, so every one of them stayed.
+
+**That line does not govern a Renew.** Decided on 2026-09-12: rebalancing is part of what
+the suffix means, not a violation of it. A mod that has sat untouched for years is being
+measured against an ecosystem that moved on without it, and a value the author chose in 2020
+can be wrong in 1.6 without the author ever having been wrong. The glow radius is the worked
+example, two sections up: 4.2 was his figure, and keeping it would have lit less ground than
+the sculpture covers.
+
+So Beauty 800, `MeditationFocusStrength` 0.4 and 24 000 work are now open questions rather
+than settled ones. They are untouched here because rebalancing them is a deliberate pass and
+not a side effect of adding a lamp, and because the case for leaving them is still real: it
+is a thank-you piece, and being out of scale may be the point of it. What has changed is
+that "he wrote it down" is no longer the answer on its own.
 
 ## Verified against 1.6
 

@@ -13,13 +13,18 @@ First release of the 1.6 port of AmliFurx's **Fox Lamp**, carried to 1.5 by Mega
 
 ### Added
 
-- **The lantern lights.** `CompProperties_Glower` at radius 4.2 in the family amber
+- **The lantern lights.** `CompProperties_Glower` at radius 10 in the family amber
   `(227,115,32,0)`, `CompProperties_Flickable` for the switch, and
   `CompProperties_Refuelable` on hay, wood or chemfuel — 0.4 a day against a 12-unit frame,
   so thirty days to a tank, and `initialFuelPercent` 1 so a finished piece is lit without
   waiting on a hauler. `destroyOnNoFuel` is false: run dry and it goes dark, never away.
-  The radius, the colour and the fuel are AmliFurx's own `BambooShootLamp`, the nearest
-  thing he drew to this and the same subject.
+  The colour and the fuel are AmliFurx's own `BambooShootLamp`, the nearest thing he drew
+  to this and the same subject. **The radius is not**, and that is rebalancing rather than
+  borrowing: his bamboo lamp lights 4.2, the smallest of his five and under everything
+  vanilla calls a lamp, and a pool that size would not cover this sprite, which is drawn at
+  4.92 cells. 10 is `TorchLamp` and `Brazier`, the fuel-burning lights this piece is a peer
+  of, and it falls between his own 8.2 fur lights and the 14.2 of his flagship. The gate on
+  this piece is its 24 000 work, not a dim glow.
 
   **This is the one entry in this file that is not a repair.** He gave the piece no light in
   any version since 2020 and the 1.5 fork added none, and the evidence says that was a

@@ -14,7 +14,7 @@
   <ThingDef ParentName="AF_NaturalBuildingBase">
     <defName>Fox_Lamp</defName>
     <label>Fox Lamp</label>
-    <description>A bamboo shoot carved from marble, set in an open lantern frame. Fill the frame and light it, and it throws a small warm pool over whatever is worth looking at nearby.
+    <description>A bamboo shoot carved from marble, set in an open lantern frame. Fill the frame and light it, and it throws a warm pool over whatever is worth looking at nearby.
 
 DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
 
@@ -103,9 +103,16 @@ DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
 
       <!-- The lantern burns, as of the Renew release. AmliFurx never gave the piece a
            glower and neither did the 1.5 fork, so this is a change to his work rather
-           than a repair of it - see ATTRIBUTION.md. The radius and the fuel are his own
-           BambooShootLamp's, the nearest relative and the same subject, so the piece
-           behaves like the four lamps it was always filed apart from.
+           than a repair of it - see ATTRIBUTION.md. The colour and the fuel are his own
+           BambooShootLamp's, the nearest relative and the same subject.
+
+           The RADIUS is not his, and that is rebalancing rather than borrowing. His
+           bamboo lamp lights 4.2, the smallest of his five and below everything vanilla
+           calls a lamp; a pool that size would not even cover this sprite, which is
+           drawn at 4.92 cells. 10 is vanilla's TorchLamp and Brazier, the fuel-burning
+           lights this piece is a peer of, and it sits between his own 8.2 fur lights and
+           the 14.2 of his flagship. What stops this being anybody's cheap lamp is its
+           24 000 work, not a dim glow.
 
            No CompProperties_HeatPusher, unlike that lamp: a marble sculpture warming a
            room is the one part of this that does not read. No CompProperties_FireOverlay
@@ -118,7 +125,7 @@ DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
            way vanilla's WoodFiredGenerator does. TorchBase pairs the first two but has no
            switch, so it is the generators that carry all three. -->
       <li Class="CompProperties_Glower">
-        <glowRadius>4.2</glowRadius>
+        <glowRadius>10</glowRadius>
         <glowColor>(227,115,32,0)</glowColor>
       </li>
       <li Class="CompProperties_Flickable" />

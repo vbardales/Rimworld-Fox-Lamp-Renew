@@ -141,8 +141,9 @@ vanilla lamp. That is `PlaceWorker_GlowRadius`.
 2. Finish building it, then wait for night or Debug actions → set the hour to 2.
 
 **Pass:** it is **already lit**, without anyone hauling fuel to it first — `initialFuelPercent` is
-1, so it is built with a full frame. The pool is small: radius 4.2, about four cells, in the same
-warm amber as its sister lamps rather than a white electric light.
+1, so it is built with a full frame. The pool reaches radius 10, the same as a vanilla torch or
+brazier, in the warm amber of its sister lamps rather than the white of an electric light. Stand a
+torch beside it and the two pools should look the same size.
 
 **Fail:** built dark. That means the initial fuel was lost, and a player would reasonably conclude
 the light does not work.
