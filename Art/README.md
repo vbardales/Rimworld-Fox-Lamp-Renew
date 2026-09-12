@@ -9,8 +9,8 @@ sold. `STYLE_RIMWORLD.md` describes a painted RimWorld *scene*, which is the rep
 default; this is a deliberate departure, noted here so a later pass can regenerate rather than
 guess why.
 
-**The mod ships with no `ModIcon.png`.** See the last section for why, and for what has to be
-drawn before it gets one.
+**The mod ships a `ModIcon.png` since 2026-09-12.** See the last section but one for what it is and
+for the one rule it deliberately departs from.
 
 ## `sprite-trimmed.png` — 166 x 321, 44 KB
 
@@ -68,32 +68,43 @@ Checked at 268 px, the real Workshop thumbnail width: the name reads, the silhou
 summary falls to about 6 px and is not meant to be read there — it is written for whoever opens
 the mod page.
 
-## `Mod/About/ModIcon.png` — removed, pending a mascot
+## `Art/ModIcon-source.png` — 1254 x 1254, 1.2 MB
 
-There was one, briefly: the same crop scaled to 54 x 104 and centred on a near-black ground, a
-pale marble ogive on a dark square base. It was 128 x 128 and 8 KB, so it broke no file
-constraint. It was removed on **2026-09-11** all the same, under a rule that runs across the
-repository.
+The mascot at full resolution, kept so the icon can be rebuilt without redrawing it. Never
+published: it sits here, outside `Mod/`.
 
-The `ModIcon` block of `STYLE_RIMWORLD.md` used to ask for an object pictogram — *"no character,
-no face"* — and that is what the ogive was. The block was wrong about what this repository
-actually draws: the sixty icons that exist are all **one mascot**, a round head seen
-three-quarter, winking one eye, a small ponytail at the top right, a thick near-black outline
-and flat cel shading, with the mod's own subject fused into it. Shallow Water Floor's is blue
-with ripples across the face; Mintchoco's head *is* a scoop of mint ice cream on a cone. The
-block was rewritten from the files themselves on 2026-09-11.
+## `Mod/About/ModIcon.png` — 128 x 128, 24 KB
 
-An off-style icon is worse than none, because the mascot is what makes the family read at 32 px
-in a mod list — a lone grey ogive would read as a mod from somewhere else. Shipping without one
-is a normal state here rather than a broken one: `ModIcon` is optional to RimWorld, and most of
-the repository has none while the set is being drawn.
+Downscaled from the source above, and from nothing else:
 
-The replacement brief lives in `PROMPT_FOXLAMP.md` at the repository root, per the workflow
-`PUBLISHING.md` sets out. It is gitignored, and it gets deleted the day the icon exists.
+```
+ffmpeg -y -i Art/ModIcon-source.png -vf "scale=128:128:flags=lanczos" Mod/About/ModIcon.png
+```
 
-**Whatever is drawn, it must not be built from `UI_Fox_Lamp.png`.** That file is the
-*build-menu* icon and it is a **book** — the author's deliberate style, shipped untouched, and
-explained in `ATTRIBUTION.md`. It names nothing at 32 px in a list of mod icons.
+It is the repository mascot, and it follows the family: a round head seen three-quarter, winking
+one eye, a thick near-black outline, flat cel shading, and the mod's own subject fused into it.
+The ponytail the other icons wear is replaced here by fox ears, which is the fusion doing its job
+rather than a departure — Mintchoco's head *is* a scoop of ice cream, and this one *is* a fox.
+
+**The lantern it holds is lit, and that is deliberate.** It reads as a contradiction of the rule
+two sections up, which says the banner must never show the piece aglow, so here is why the two
+differ.
+
+The banner rule is about **the piece**. The sculpture ships with no `CompProperties_Glower`, no
+fuel and no heat, so a banner showing *it* giving off light would advertise a thing the mod does
+not contain. The icon shows no sculpture at all: it is a character holding an ordinary lantern,
+the way the Mintchoco mascot holds nothing the mod ships either.
+
+And the icon has a constraint the banner does not. It is read at **32 px** in a mod list. An unlit
+lantern at that size is a brown smudge with no silhouette; the glow is the only thing that makes
+the object legible as a lantern, which is the one word the icon has to say. Checked at 32 px: the
+ears, the wink and the lit lantern all survive.
+
+Left as it is on purpose. A later pass should not darken it to match the banner.
+
+**Whatever is drawn, it must not be built from `UI_Fox_Lamp.png`.** That file is the *build-menu*
+icon and it is a **book** — the author's deliberate style, shipped untouched, and explained in
+`ATTRIBUTION.md`. It names nothing at 32 px in a list of mod icons.
 
 ## Tooling on this machine, as of 2026-09-05
 
