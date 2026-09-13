@@ -122,7 +122,7 @@ The description also mixed real newlines with literal `\n` escapes, which
 (`InnerText.Replace("\\n", "\n")`) — so every break rendered doubled. It now uses newlines
 only.
 
-## What was changed against the author, and why that is allowed here
+## Changes from the original design
 
 **The lantern lights, and he never meant it to.** This is the only thing in the mod that is not
 a repair, and it breaks the rule the section below sets out — that a value the author wrote down
@@ -143,9 +143,7 @@ because it is what makes this an honest change rather than a careless one:
 
 So the name was the joke, not a promise, and the piece he made is a sculpture.
 
-It lights here because we wanted it to light. The licence for that is the `Renew` suffix, which
-in this repository does the work `(Continued)` does elsewhere: it says the mod has been taken
-over and may be changed, not merely recompiled. A straight port would have had to leave this
+It lights here because we wanted it to light. The `Renew` suffix identifies a modified continuation, not an upstream licence or permission. No explicit permission has been established; the attribution and removal commitment above still apply. A straight port would have had to leave this
 alone. Anyone who wants the sculpture as he made it has it: the 1.5 fork is still on the
 Workshop, unlit, and says 1.5 on the tin.
 

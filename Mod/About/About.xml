@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <packageId>nelim.foxlamprenew</packageId>
-  <name>Fox Lamp Renew</name>
+  <name>Fox Lamp Renew (unofficial)</name>
   <author>AmliFurx, Megapa3yM - 1.6 port: nelim</author>
   <url>https://github.com/vbardales/Rimworld-Fox-Lamp-Renew</url>
   <supportedVersions>
@@ -20,7 +20,9 @@
   <incompatibleWith>
     <li>mg.ferianstory.foxlamp</li>
   </incompatibleWith>
-  <description>The Fox Lamp, brought to RimWorld 1.6 - a bamboo shoot carved from marble, set in an open lantern frame.
+  <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
+
+The Fox Lamp, brought to RimWorld 1.6 - a bamboo shoot carved from marble, set in an open lantern frame.
 
 I am not the author of this mod. The piece is AmliFurx's, made in July 2020 as a thank-you to a player. Megapa3yM kept it running through 1.5. Credit goes to them; mistakes here are mine. If either of them comes back to it, or asks me to take this down, it comes down.
 
@@ -79,5 +81,7 @@ No code, no Harmony, no patches. Safe to add to an ongoing save. To remove it mi
 
 The update work was done with the help of an AI assistant (Claude, by Anthropic). Thanks to AmliFurx for the piece, to Megapa3yM for keeping it alive through 1.5, and to Mlie for the parent mod this one stands on.
 
-If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.</description>
+If I do not answer within a reasonable time after being contacted, anyone may freely update this or any other of my mods, including publishing a continuation of it. All credit must be preserved.
+
+[url=https://github.com/vbardales/Rimworld-Fox-Lamp-Renew]Source code on GitHub[/url]</description>
 </ModMetaData>

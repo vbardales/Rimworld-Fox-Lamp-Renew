@@ -1,21 +1,208 @@
 ---
-mod:          Fox Lamp Renew
+localization: complete
+translation_en: complete
+translation_fr: complete
+mod:          Fox Lamp Renew (unofficial)
 packageId:    nelim.foxlamprenew
 repo:         Rimworld-Fox-Lamp-Renew
 visibility:   public
 detached:     yes
-stage:        in monorepo
+stage:        preTest
 licence:      silent
 licence_at:   neither the 1.5 mod folder nor its Workshop page says anything
-dependencies: declared
+dependencies: verified
 showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: never seen running
+  - unverified: full technical test coverage of shipped behavior is not established.
+  - unverified: in-game scenarios, logs, English/French UI and save regressions not executed.
 session:      local_7c385da5-e8e6-4eb1-92ff-dd3e44a2b6ec
-updated:      2026-09-12, the mod's own session
+updated:      2026-09-13, evidence-based workflow audit
+settings_audit: not_applicable
+audit_revision: ec6f3d93512c2091ab93b710c5dd384514f9d953
+audit_result: passed_through_preTest
 ---
+
+# Corrections and revalidation — 2026-09-13
+
+**in monorepo -> preTest** under the supplied ordered workflow. All gates through dependency
+validation now pass. This section supersedes the audit findings below, which are retained as
+history. HEAD remains ec6f3d93512c2091ab93b710c5dd384514f9d953; results include local changes.
+
+- Corrected root attribution: Renew identifies a continuation and grants no licence or permission.
+  Synchronized the distributed copy. Both SHA256 hashes are now
+  05385492552A9B05C447A0FD06F35FE9AA019C5239C6DA461DA40777BF1CDD29.
+- Added the exact final Source code on GitHub BBCode link to the About description. Its target
+  matches About URL and the previously verified public GitHub origin. XML reparsed successfully.
+- Rebuilt the existing HTML composition without changing the authored illustration. Renew is
+  65 percent in secondary ink; the unofficial tag and 1.6 badge are installed. Main title and
+  summary share primary ink. PNG: 896 x 504, 337,152 bytes.
+- Palette source: Art/preview-palette.json; composition: Art/preview.html; renderer:
+  Art/render-preview.cjs. The muted brown ground supplies the veil and warm sand secondary;
+  the existing light pool supplies the more saturated orange accent. Both remain visibly distinct.
+- Chrome rendered with Segoe UI available and document.fonts.ready awaited. Direct inspection
+  at 896 x 504 and 268 x 151 passed: title, suffix and version readable, rule visible, no clipping
+  or overlap. The small summary remains intended for the full-size view.
+- Contrast measured over every background pixel in each text bounding rectangle using
+  Art/preview-background.png: title >=10.01:1, suffix >=7.10:1, tag >=5.92:1,
+  summary >=8.58:1. Badge ink #17120E on opaque #FF9600 exceeds 8:1.
+- Preserved Art/Preview.png without overlay and Art/preview-thumbnail.png for QA.
+- git diff --check passed. Existing README and About edits were preserved. No push or publication.
+
+Settings, translation paths and dependency evidence from the audit remains valid: no ThingDef,
+in-game translation, assembly or dependency declaration changed. No in-game success is claimed.
+The next gate is preTest -> done: establish applicable technical regression coverage and its
+results; the existing shared XML/path validation does not certify all native component wiring.
+Final in-game scenarios remain pending for done -> tested.
+
+---
+# Historical workflow audit — 2026-09-13
+
+This section supersedes the historical stage interpretation and the historical claim that
+only an in-game run remains. History below is retained, not treated as current evidence.
+
+**Previous `in monorepo` -> retained `in monorepo`**, now an evidence-based gate result.
+Here `in monorepo` maps to **dansMonoRepo**, the first workflow state. It is not a claim
+about repository location: `detached: yes` is verified. No sidebar move or sign-off is required.
+The first transition is blocked by documentation defects, not by Git or a monorepo remote.
+
+## Scope and reproducibility
+
+- Standalone repository: `C:\Users\nelim\Documents\rimworld\FoxLampRenew`.
+  Actual distribution: its `Mod/` subdirectory.
+- HEAD: `ec6f3d93512c2091ab93b710c5dd384514f9d953`.
+- Before the audit, `git status --porcelain=v1` reported local edits in
+  `Mod/About/About.xml`, `README.md` and `STATUS.md`. The audit includes those working-tree
+  edits, not HEAD alone. Only STATUS.md was edited by this audit; no build, image generation,
+  publication, commit or gameplay change was performed.
+- Read parent AGENTS.md, PUBLISHING.md, STYLE_RIMWORLD.md, MOD_SETTINGS.md and TRANSLATIONS.md.
+  The supplied audit prompt takes precedence, including the source-only no-settings exception.
+- `git rev-parse --show-toplevel`, `git remote -v`, `git rev-parse HEAD` verified isolation,
+  origin and revision. `gh repo view vbardales/Rimworld-Fox-Lamp-Renew --json
+  nameWithOwner,visibility,url` returned PUBLIC. `git ls-remote origin HEAD` returned the
+  same SHA as local HEAD. Initial sandbox/network access failed; the read-only retry succeeded.
+
+## Ordered gate results
+
+| Transition | Result | Evidence / limitation |
+| --- | --- | --- |
+| dansMonoRepo -> horsMonoRepo | **Defect found** | Git isolation, public GitHub repository and pushed commit verified. Identity is coherent. Required distributed attribution copy is stale and root attribution misstates the meaning of Renew. |
+| horsMonoRepo -> ModIcon generated | Independently validated | XML-only implementation; no Source, C#, project or shipped DLL. Build is not applicable. Installed PNG is 128 x 128, 24,403 bytes; inspected directly. No unfinished feature is established by the inventory. |
+| ModIcon generated -> Preview generated | Independently validated | Installed PNG is 896 x 504, 352,766 bytes, below 1 MB; inspected directly. Sprite composition in Art/preview.html is an existing rendered artifact; no historical AI-generation proof is required. |
+| Preview generated -> preOptions | **Defect found** | English description and metadata suffix exist, but final GitHub link is missing. Preview renders Renew at full title size in the primary ink; secondary suffix treatment is absent. Unofficial tag and 1.6 badge are absent. |
+| preOptions -> options | Independently validated; settings not applicable | Inventory and rationale below. No empty settings page or MainButtons shortcut. |
+| options -> l10n | Independently validated | Two owned text fields, two filled FR injection paths, native EN source. Shared validator passed. Runtime language checks remain separate. |
+| l10n -> preTest | Independently validated | Required parent, architect tab and both categories found in installed dependency 1.6 files; package and load order agree. |
+| preTest -> done | **Not fully verified** | TESTING.md provides 14 functional scenarios with preconditions/actions/expectations. XML parsing and translation validation passed; no project-specific automated behavior/regression suite or complete technical-test applicability record exists. These checks alone do not establish all shipped behavior. |
+| done -> tested | **Not verified** | No in-game scenario, log review, bilingual UI, new-colony or existing-save test was performed during this audit. Historical status also records no run. |
+
+## First blocking gate: attribution and rights documentation
+
+`git diff --no-index -- ATTRIBUTION.md Mod/ATTRIBUTION.md` found substantive differences:
+the distributed copy omits the entire lighting-change section and retains the old position
+on balancing. This is not a newline-only mismatch. SHA256:
+
+- Root: `5EA8FA4617293A687D368FC774D16C034865187F60601C6FD6681F3C1F866CEC`.
+- Distributed: `F27B004219AE65E83FD6276423798EBE1917DFFE5564988234ED9CDD026363B0`.
+
+Root ATTRIBUTION.md says, “The licence for that is the `Renew` suffix”. A naming convention
+is not an upstream licence or permission under PUBLISHING.md. Correct that assertion and
+synchronize the distributed copy to pass this gate. Do not invent a third-party LICENSE.
+The `silent` classification is supported by the recorded source research and installed
+fork metadata (versions 1.1 through 1.5, no declared 1.6); no fresh Workshop permission
+investigation was performed. Public visibility and the exact `(unofficial)` metadata/README
+notice are consistent with the workflow classification, which itself grants no permission.
+English README, CHANGELOG and attribution documents exist. Absence of a LICENSE is not
+independently classified as a defect where no applicable upstream licence was established.
+
+## Showcase and description audit
+
+Both About PNGs decoded as PNG and were visually inspected. The icon is legible fox/lantern
+art. The Preview is a sprite on a tiled brown background with readable title and amber rule;
+its deliberate sprite-composition choice is documented in Art/README.md. No speculative
+camera defect is raised, and no historical comparison screenshot is demanded.
+
+The next showcase gate fails on directly visible overlay differences: Renew is neither
+reduced to 65 percent nor colored with secondary ink, and the unofficial tag and version
+badge are missing. Art/preview.html confirms the single h1 style and absent elements.
+Secondary/accent separation must be reviewed after the missing secondary treatment exists.
+The metadata name already has the correct suffix; there are no connecting words to reduce.
+The final description currently ends with the adoption clause, not the mandatory
+`[url=https://github.com/vbardales/Rimworld-Fox-Lamp-Renew]Source code on GitHub[/url]`.
+The target repository and About URL were verified and match origin.
+
+## Settings audit
+
+Result: `not_applicable`. Inventory: one ThingDef, two game textures, no assembly, custom
+UI, settings serialization, MainButtonDef, patches or LoadFolders in this mod. The inherited
+AF_NaturalBuildingBase was inspected: it adds ordinary building properties, no settings UI.
+Fuel choice, refuelling and on/off control belong to vanilla per-building comps. Beauty,
+work cost, fuel capacity and light radius are authored balance constants, with no documented
+user need to expose them as global settings. No manual XML configuration is prescribed.
+Therefore no useful settings page is missing, and no empty page or shortcut is shipped.
+Settings persistence/input/integration tests are not applicable. No RIMMSQOL or other
+customization integration was tested or claimed. Gameplay behavior remains subject to TESTING.md.
+
+## Translation and XML audit
+
+Inventory: Fox_Lamp.label and Fox_Lamp.description. English lives in the ThingDef; French
+contains both nonempty entries. The identical proper-name label is deliberate. The description
+was read in both languages; paragraph breaks, author/date and meaning are retained. No
+format parameters, custom rich-text tags, Keyed strings or code-owned UI exist. Art name and
+description generation refer to native NamerArtSculpture / ArtDescription_Sculpture rather
+than owned grammar strings. Native component UI is not a missing mod-owned translation.
+
+Executed from the standalone repository:
+
+```powershell
+& ..\scripts\Check-DefInjected.ps1 -TransMod "$PWD\Mod" -Targets @(
+  "$PWD\Mod",
+  'C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\3540588386'
+) *>&1
+Get-ChildItem Mod -Recurse -Filter *.xml | ForEach-Object {
+  $null = [xml](Get-Content $_.FullName -Raw)
+}
+```
+
+Validator exit 0: 49 patch operations applied, 11,681 defs indexed, **2 keys checked,
+0 errors**, no UNVERIFIED findings reported. All three shipped XML files parsed successfully.
+This is resource/path validation, not proof of runtime UI or all building behavior. All three
+translation fields mean static coverage complete; English/French in-game UI remains unverified.
+
+## Dependencies and tests
+
+Installed Workshop dependency 3540588386 declares Mlie.AFSydailyFox and RimWorld 1.6.
+Its 1.6 Defs contain AF_NaturalBuildingBase, AF_Thankyou,
+AF_TC_RimFurry_Building_Thankyou and AF_TC_RimFurry_Building_Thankyou_Y. The mod's
+modDependencies and loadAfter both name that package. Incompatible fork metadata confirms
+mg.ferianstory.foxlamp. There are no conditional patches or version-load branches in this mod.
+Harmony is declared by SydailyFox as its own required dependency; this XML-only mod does
+not directly call Harmony and need not add a redundant direct dependency.
+
+The automated shared DefInjected test and XML parse checks above passed against the working
+tree. No compilation/unit test of custom code applies because none exists. Broader technical
+coverage of native-comp wiring has not been certified: classify meaningful automated checks
+versus game-only checks before claiming done, without adding artificial tests. TESTING.md is
+an unexecuted scenario specification, not a results record. In particular, lighting/fuel/switch,
+art generation, meditation and save migration still need their specified game validation.
+
+## Strict next action and nonblocking notes
+
+To cross the next transition only: correct the rights-documentation wording and synchronize
+Mod/ATTRIBUTION.md, then recheck those documents. Git detachment and pushing are already proven.
+Later blockers do not require redoing independent image-format, settings and localization checks
+unless their relevant inputs change.
+
+Nonblocking maintainability note: Art/Preview.png and Art/preview-palette.json are absent;
+Art/preview.html and sprite-trimmed.png retain the current composition source. Preserve and
+update those sources during any future overlay work. No new art was generated in this audit.
+
+---
+
+## Historical status retained below
+
+The following original narrative includes superseded claims; current results are above.
 
 # Fox Lamp Renew — status
 

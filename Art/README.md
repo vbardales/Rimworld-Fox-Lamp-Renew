@@ -1,5 +1,19 @@
 # Art — sources
 
+## Current rendering — 2026-09-13
+
+This section supersedes the historical overlay dimensions and rendering command below.
+Run `node Art/render-preview.cjs` from the repository with Playwright installed (or set
+PLAYWRIGHT_MODULE to its module path). Chrome is required. The renderer serves the local
+composition, loads preview-palette.json as the sole overlay palette, waits for fonts and images,
+and writes the shipped Preview.png, the clean Art/Preview.png and preview-background.png.
+The 268-pixel QA thumbnail is retained separately as preview-thumbnail.png.
+
+The title uses Segoe UI 46 px/600; Renew is 65 percent in sand-colored secondary ink.
+The unofficial tag uses 24 px, and the orange triangle displays the declared version 1.6.
+The origin of this artwork remains the authored sprite and HTML ground, not a generated scene.
+
+
 RimWorld never reads this folder, and neither does Steam: only `Mod/` is published. What lives
 here is the material needed to rebuild the shipped showcase, and nothing else.
 

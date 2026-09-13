@@ -1,4 +1,6 @@
-# Fox Lamp Renew
+# Fox Lamp Renew (unofficial)
+
+UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
 RimWorld 1.6 port of **Fox Lamp**, by **AmliFurx** — kept alive through 1.5 by **Megapa3yM**.
 

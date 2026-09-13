@@ -27,13 +27,19 @@
 
   /* Repository standard: radial darkening from the top-left, nil at 74%. */
   .veil { position:absolute; inset:0;
-    background: radial-gradient(circle at 0% 0%, rgba(6,5,4,.86) 0%, rgba(6,5,4,0) 74%); }
+    background: radial-gradient(circle at 0% 0%, rgb(from var(--veil) r g b / .86) 0%, rgb(from var(--veil) r g b / 0) 74%); }
 
-  .text { position:absolute; left:56px; top:131px; width:430px; }
-  h1 { font-size:48px; line-height:1.04; font-weight:700; color:#f2ece1;
-       letter-spacing:-.5px; text-shadow:0 2px 10px rgba(0,0,0,.7); }
-  .rule { width:58px; height:3px; background:#D68F2C; margin:22px 0 20px; }
-  p { font-size:21px; line-height:1.42; color:#d8cfc0; text-shadow:0 1px 6px rgba(0,0,0,.75); }
+  .text { position:absolute; left:50px; top:54px; width:430px; }
+  h1 { font-size:46px; line-height:1.1; font-weight:600; color:var(--inkPrimary); letter-spacing:0; }
+  h1 span { font-size:.65em; color:var(--inkSecondary); }
+  .tag { font-size:24px; line-height:1.1; font-weight:400; letter-spacing:.2px; color:var(--inkSecondary); margin-top:8px; }
+  h1,.tag,p { text-shadow:0 3px 10px rgba(0,0,0,.75); }
+  .rule { width:58px; height:3px; background:var(--accent); margin:20px 0 16px; }
+  p { font-size:21px; line-height:1.45; color:var(--inkPrimary); }
+  .badge { position:absolute; right:0; top:0; width:80px; height:80px; background:var(--accent); clip-path:polygon(0 0,100% 0,100% 100%); }
+  .version { position:absolute; left:869px; top:27px; transform:translate(-50%,-50%) rotate(45deg); font-size:26px; line-height:1; font-weight:700; color:var(--badgeInk); }
+  html.source .text,html.source .badge,html.source .version,html.source .veil { display:none; }
+  html.background .text,html.background .badge,html.background .version { display:none; }
 </style>
 <div class="stage">
   <div class="ground"></div>
@@ -41,9 +47,20 @@
   <div class="contact"></div>
   <img class="piece" src="sprite-trimmed.png">
   <div class="veil"></div>
+  <div class="badge"></div><div class="version">1.6</div>
   <div class="text">
-    <h1>Fox Lamp<br>Renew</h1>
+    <h1>Fox Lamp <span>Renew</span></h1>
+    <div class="tag">(unofficial)</div>
     <div class="rule"></div>
     <p>A bamboo shoot carved from marble, set in an open lantern frame.</p>
   </div>
 </div>
+<script>
+window.ready = (async () => {
+  const palette = await (await fetch('preview-palette.json')).json();
+  for (const [key,value] of Object.entries(palette)) document.documentElement.style.setProperty('--'+key,value);
+  document.documentElement.className = new URLSearchParams(location.search).get('mode') || '';
+  await document.fonts.ready;
+  await Promise.all([...document.images].map(img => img.decode()));
+})();
+</script>
