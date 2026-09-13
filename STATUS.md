@@ -7,7 +7,7 @@ packageId:    nelim.foxlamprenew
 repo:         Rimworld-Fox-Lamp-Renew
 visibility:   public
 detached:     yes
-stage:        preTest
+stage:        done
 licence:      silent
 licence_at:   neither the 1.5 mod folder nor its Workshop page says anything
 dependencies: verified
@@ -15,15 +15,31 @@ showcase:     complete
 tested_on:
 workshop:
 remaining:
-  - unverified: full technical test coverage of shipped behavior is not established.
   - unverified: in-game scenarios, logs, English/French UI and save regressions not executed.
 session:      local_7c385da5-e8e6-4eb1-92ff-dd3e44a2b6ec
 updated:      2026-09-13, evidence-based workflow audit
 settings_audit: not_applicable
-audit_revision: ec6f3d93512c2091ab93b710c5dd384514f9d953
-audit_result: passed_through_preTest
+audit_revision: a88095fd927706409966bb6d870502a24c5ad5b8
+audit_result: passed_through_done
 ---
 
+# Technical validation — 2026-09-13
+
+**preTest -> done**. This is the current result; earlier audit sections below are historical.
+The reproducible Tests/Run-Checks.ps1 suite passed against the distribution committed as
+`a88095fd927706409966bb6d870502a24c5ad5b8`. Tests/RESULTS.md records the environment,
+applicability decisions, individual results and runtime limitations; Tests/run.log records
+all shipped-file SHA256 hashes. Shared XML checks resolved nine types, every Def reference
+and parent, all fields, and both translations; 26 offline consistency rules passed.
+No distribution file changed during technical validation. No custom-code build or settings
+unit test applies. TESTING.md contains the final functional scenarios, still unexecuted.
+
+`done` means ready for final in-game validation, not tested in game. `tested_on` remains empty.
+Next: execute TESTING.md in RimWorld 1.6 with the required dependency chain, inspect logs and
+FR/EN UI, and cover new and existing saves. Native application control is unavailable in
+this session, so no gameplay result is claimed. No push or Workshop publication performed.
+
+---
 # Corrections and revalidation — 2026-09-13
 
 **in monorepo -> preTest** under the supplied ordered workflow. All gates through dependency

@@ -1,0 +1,70 @@
+UTC: 2026-09-13T11:03:59.6530954Z
+Revision: a88095fd927706409966bb6d870502a24c5ad5b8
+INPUT Mod\ATTRIBUTION.md: 05385492552A9B05C447A0FD06F35FE9AA019C5239C6DA461DA40777BF1CDD29
+INPUT Mod\About\About.xml: B2539BCB76A5234E96CDE0D3AF4EE77D48B5FC1A24C4D7273985F6BD8E607C11
+INPUT Mod\About\ModIcon.png: 971DA8A0C30C92EB4EA82BA4E3A2AF74C63F16CE5105960825C00DA6B0533397
+INPUT Mod\About\Preview.png: 48BEE7A063F30B66A5EDA3784F31DBE9CD0D15CCDF25F2D16FD3B50E1E92BE19
+INPUT Mod\Defs\Fox_Lamp.xml: 9A7A6E01C65E8021DB9A58CD75F43BDE2E471D001EA8C89AA5CC92520F4D1D55
+INPUT Mod\Languages\French\DefInjected\ThingDef\Fox_Lamp.xml: C25A5C816B04A7583885D26F0D859A20E509F5B1B68BC1FB893448F4926BA46E
+INPUT Mod\Textures\Thankyou\Fox_Lamp.png: 98DDEA7DBDE60C7691C666A44B4E4535FDDDC6AB0C292AE44D739E8EFD118CDC
+INPUT Mod\Textures\Thankyou\UI_Fox_Lamp.png: 6A2C2F382878E1CBFAAA61D75D6A7D5E416BA3C08C6529C166A7AC6153058A0F
+PASS: Distributed attribution equals root attribution
+PASS: Description footer matches repository URL
+PASS: Texture reference resolves: Thankyou/Fox_Lamp
+PASS: Texture reference resolves: Thankyou/UI_Fox_Lamp
+PASS: Preview PNG dimensions
+PASS: Preview below 1 MB
+PASS: ModIcon PNG dimensions
+PASS: ModIcon below 1 MB
+Champs de reference lus dans l'assemblage : 1186 balises (28 ecrites a la main), 22 typees
+Lecture des defs du jeu (C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Data)...
+Lecture des defs du mod (C:\Users\nelim\Documents\rimworld\FoxLampRenew\Mod)...
+Lecture des defs de dependance (C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\3540588386\1.6)...
+
+=== C:\Users\nelim\Documents\rimworld\FoxLampRenew\Mod ===
+defs du mod : 1   parents du mod : 0
+-- tous les XML sont bien formes --
+-- aucune reference de def introuvable --
+-- toutes les references pointent sur le bon type de def --
+-- tous les ParentName sont resolus --
+
+-- Class= utilisees (verifier a la main si elles viennent d'un mod) --
+  CompProperties_Art                         Defs\Fox_Lamp.xml
+  CompProperties_Flickable                   Defs\Fox_Lamp.xml
+  CompProperties_Glower                      Defs\Fox_Lamp.xml
+  CompProperties_MeditationFocus             Defs\Fox_Lamp.xml
+  CompProperties_Refuelable                  Defs\Fox_Lamp.xml
+2 files checked.
+No unknown fields: every element maps to a 1.6 field.
+reading Anomaly...
+reading Biotech...
+reading Core...
+reading Ideology...
+reading Odyssey...
+reading Royalty...
+reading dependency 1.6...
+
+=== C:\Users\nelim\Documents\rimworld\FoxLampRenew\Mod ===
+defs checked: 1 of 1   rules applied: 26
+-- no config error --
+
+Not covered by this script, and worth reading the log for anyway:
+  - anything a patch operation would have changed: defs are read as written
+  - rules that read another def: equipment verbs and tools, linkedBodyPartsGroup
+    against a body, damage multipliers, smeltProducts
+  - rules whose condition is a computed property: IsEdifice, EverHaulable,
+    CanEverDeteriorate, Fillage on anything but isAirtight
+2 XML files read under C:\Users\nelim\Documents\rimworld\FoxLampRenew\Mod.
+77 element names searched, 9 of them List<Type>.
+3 name(s) skipped as ambiguous - vanilla declares them with more than one field type: lordJob, targetType, type
+0 type references that are neither RimWorld's nor Unity's.
+
+No unguarded reference to a third-party type.
+=== C:\Users\nelim\Documents\rimworld\FoxLampRenew\Mod ===
+types references depuis le XML : 9
+-- tous les types references sont resolus --
+Patch operations applied: 29
+Defs indexed: 11587
+
+Keys checked: 2 - errors: 0
+PASS: all applicable offline checks completed. No in-game result is implied.

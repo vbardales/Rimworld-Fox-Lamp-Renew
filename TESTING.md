@@ -7,11 +7,15 @@ whether its Beauty finally reaches the inspect pane.
 
 It is not shipped: it lives beside `Mod/`, never inside it, so Steam never receives it.
 
+Offline validation and reproducible commands are recorded in [Tests/RESULTS.md](Tests/RESULTS.md).
+These scenarios remain pending until executed in game; offline checks are not gameplay results.
+
 ## Before starting
 
 - RimWorld 1.6. **No DLC required.** The `Artistic` meditation focus is a Core def, not a Royalty
   one, so scenario 10 works on a bare install. Development mode on, so silent failures become red
   text.
+- Enable **Harmony**, required by the installed SydailyFox dependency, before SydailyFox.
 - **【AF】SydailyFox (Continued)** (`Mlie.AFSydailyFox`, Workshop 3540588386) must be installed and
   loaded **before** this mod. It is a hard requirement, not a courtesy: the parent def, the
   architect tab and both item categories all come from it.
