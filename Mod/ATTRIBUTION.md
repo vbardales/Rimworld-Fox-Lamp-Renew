@@ -6,7 +6,7 @@ There are two links in this chain, and both are credited here.
 | --- | --- |
 | **AmliFurx** | wrote the piece. `Fox_Lamp` first appeared in **Fox Lamp** (https://steamcommunity.com/sharedfiles/filedetails/?id=2166575832), signed and dated in its own description: *"--By:AmliFurx / --2020-7-15"*. |
 | **Megapa3yM** (MEGA) | carried it to 1.5 in **【1.5】Fox Lamp Forked** (https://steamcommunity.com/sharedfiles/filedetails/?id=3248294052), published 17 May 2024, one version note, stopped at 1.5. Their own description says: *"Updated version of AmliFurx's Fox Lamp mod. If AmliFurx require, i will remove this mod from workshop."* |
-| **nelim** | this 1.6 port. |
+| **Nelim** | adapted this to 1.6. |
 
 Neither the 1.5 mod folder nor its Workshop page states a licence. This port follows the
 usual practice for abandoned mods: **explicit credit to both authors, links to both

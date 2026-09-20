@@ -127,7 +127,7 @@ preserved.
 - **AmliFurx** — the piece itself.
 - **Megapa3yM** — the 1.5 fork this port starts from.
 - **Mlie** (emipa606) — 【AF】SydailyFox (Continued), the mod this one stands on.
-- 1.6 port by nelim. Written with the help of Claude (Anthropic).
+- 1.6 adapted by Nelim. Written with the help of Claude (Anthropic).
 
 Full detail, including what was checked and deliberately left alone, is in
 [ATTRIBUTION.md](ATTRIBUTION.md).
