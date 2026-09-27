@@ -7,20 +7,108 @@ packageId:    nelim.foxlamprenew
 repo:         Rimworld-Fox-Lamp-Renew
 visibility:   public
 detached:     yes
-stage:        done
+stage:        preTest
 licence:      silent
 licence_at:   neither the 1.5 mod folder nor its Workshop page says anything
 dependencies: verified
 showcase:     complete
 tested_on:
-workshop:
+workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 remaining:
+  - defect: TESTING.md's 14 scenarios are prose, not a Pickle/Gherkin suite. No suite exists
+    under Tests/Pickle/. PickleTools/Authoring/README.md states plainly that done requires
+    scenarios to be written for whatever only a running game can show, with no exemption for
+    a code-free XML mod, and every one of the 14 scenarios needs the game running.
   - unverified: in-game scenarios, logs, English/French UI and save regressions not executed.
-session:      local_7c385da5-e8e6-4eb1-92ff-dd3e44a2b6ec
-updated:      2026-09-13, evidence-based workflow audit
+session:      local_208abe7c-10e5-485b-88d4-9ba6faadfd52
+updated:      2026-09-27, evidence-based workflow audit
 settings_audit: not_applicable
-audit_revision: a88095fd927706409966bb6d870502a24c5ad5b8
-audit_result: passed_through_done
+audit_revision: 078710718b70360d1d337e69f184f667d26427a1
+audit_result: regressed_to_preTest
+---
+
+# Workflow audit — 2026-09-27
+
+**preTest, regressed from the recorded `done`.** The 2026-09-13 audit that set `done` applied
+the gate criteria current at the time; `PickleTools/Authoring/README.md` (self-dated review
+2026-09-22, file touched 2026-09-26) now states without exemption that `preTest -> done`
+requires a written Pickle/Gherkin suite for whatever only a running game can show. This mod's
+`TESTING.md` holds 14 scenarios, all of them exactly that kind — a Beauty line in the inspect
+pane, a glow radius, an art-comp title with no quality label, meditation focus, save load — and
+none is in `Tests/Pickle/`. Per AGENTS.md/AUDIT.md Method ("détermine le dernier état dont tous
+les critères obligatoires cumulés sont établis"), that is a real gap against the current
+criteria, not a historical footnote, so the stage moves back rather than staying at `done` on
+the strength of an audit that predates the requirement. Nothing else found in this pass would by
+itself have blocked `done`: dependencies, settings, translations, showcase and attribution are
+unchanged and still hold (see below and `docs/PROTOCOLS-READ.md` for what was reread and why).
+
+## What changed in this pass
+
+- **`Mod/About/PublishedFileId.txt` (3806767650) committed on its own** (`18d18a4`). It was
+  sitting untracked since 2026-09-23 — a prepublication had created the Workshop item and never
+  followed up in the repository. Losing it would have made the next Steam send create a second,
+  orphaned item. `CHANGELOG.md` gained the `[0.1.0]` entry the workflow specifies for this act:
+  item creation, not a claim of testing or public visibility. The item is private, as Steam
+  creates every item, and stays private until switched by hand — nothing in this pass changed
+  that, and nothing in this pass touched Steam.
+- **Description reshaped to the current three-labelled-section convention** (`IF I GO QUIET`,
+  `AI-GENERATED`, `THANKS`), matching what Architect Studio and other mods already ship instead
+  of the same content folded into prose paragraphs. Content unchanged: the adoption clause is
+  still verbatim, the thanks still name AmliFurx, Megapa3yM and Mlie, and the `[url=...]Source
+  code on GitHub[/url]` line is unchanged at the end.
+- **Two stray untracked files given `.gitignore` entries**: `desktop.ini` (Explorer folder-view
+  metadata for the custom icon set on this folder) and `*.dds` (`Fox_Lamp.dds`,
+  `UI_Fox_Lamp.dds` — the game's own BC7-compressed texture cache, 812x812 and 256x256,
+  regenerated from the shipped PNGs, not authored content). Neither was ever tracked; both would
+  have been picked up by the next `git add -A`. Their origin was checked and is not a game load
+  of this mod: `Player.log` has zero occurrences of `FoxLamp` or `Fox_Lamp`, and their mtime
+  (2026-09-23 16:49) does not line up with any recorded Check-*.log run (2026-09-20) or with the
+  `PublishedFileId.txt` creation four minutes earlier (16:44) closely enough to explain them.
+  Left unexplained; not a blocker, since they were never shipped and are now ignored either way.
+- **Upstream repository checked, per PUBLISHING.md's "Départ depuis le projet d'origine"**:
+  neither AmliFurx's original (Workshop 2166575832) nor Megapa3yM's 1.5 fork (Workshop 3248294052)
+  has any linked Git repository, on their Workshop pages or in the installed mod folders. Both
+  are Workshop-only. There is nothing to base this port on, and no PR is possible; this was
+  already implicit in the `silent` licence classification but had not been written down as its
+  own checked fact.
+- `docs/PROTOCOLS-READ.md` created: which of the documents this workflow names were actually
+  reread this pass, at what version, and whether they changed anything for this mod. Two mattered
+  (`PickleTools/Authoring/README.md`, `PUBLISHING.md`'s description convention); the rest either
+  hadn't moved since the last audit or gate a later transition this mod hasn't reached.
+
+## Checked and still holding, not reworked this pass
+
+- **Attribution and licence.** `ATTRIBUTION.md` and `Mod/ATTRIBUTION.md` are byte-identical
+  (`diff` empty). `licence: silent` still stands: neither upstream mod names a licence, and both
+  are dead (the fork's own `supportedVersions` stops at 1.5).
+- **Dependencies.** `Mlie.AFSydailyFox` is declared in both `modDependencies` and `loadAfter`;
+  `mg.ferianstory.foxlamp` is declared in `incompatibleWith`. Unchanged since 2026-09-13, still
+  correct against the installed dependency's 1.6 Defs.
+- **Settings.** `not_applicable` still holds: one ThingDef, two textures, no assembly, no
+  MainButtonDef, no settings serialization anywhere in this mod or its inherited base.
+- **Localization.** Two owned DefInjected fields (label, description), both filled in French,
+  English native in the ThingDef. Static coverage unchanged; runtime FR/EN UI remains
+  `unverified`, same as before — that check belongs to `done -> tested`, not to this gate.
+- **Showcase.** `ModIcon.png` 128x128, 24,403 bytes (within the documented 20-30 KB band);
+  `Preview.png` 896x504, under 1 MB. The version badge on the banner reads "1.6", which is the
+  supported RimWorld version taken from `About.xml` per `STYLE_RIMWORLD.md` ("jamais une version
+  supposée") — not the deprecated mod-name-suffix convention, and not a defect.
+
+## Strict next action
+
+Write the `Tests/Pickle/` suite: a companion mod under `Tests/Pickle/Mod/About/About.xml`
+declaring `Mlie.AFSydailyFox` and this mod, then Gherkin features covering what `TESTING.md`
+already specifies in prose — Beauty in the inspect pane, the glow/fuel/switch trio, the
+no-quality art comp, meditation focus, the missing-dependency load-failure (scenario 1, using
+`an error matching {string} was logged`), and the `mg.ferianstory.foxlamp` incompatibility
+(scenario 14, using `mod {string} is loaded` / `is not loaded`). `PickleTools/docs/steps.md` is
+the step catalogue to check against before inventing new step text. Writing the suite is the
+`preTest -> done` criterion; running it is `done -> tested` and is not required to close this gate.
+
+## Nonblocking
+
+None raised this pass beyond the unexplained `.dds` origin noted above, which is not a blocker.
+
 ---
 
 # Technical validation — 2026-09-13
