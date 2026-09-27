@@ -13,3 +13,11 @@
 
 # Windows shortcuts dropped in the mod folder, never content.
 *.lnk
+
+# Folder-view metadata Explorer drops when a custom folder icon is set (Mod/About/ModIcon.png
+# here), never content, and specific to one machine's view settings.
+desktop.ini
+
+# Compressed runtime texture cache (BC7_UNORM), regenerated from the shipped PNGs and not
+# authored content. Never redistribute a binary the source PNG already covers.
+*.dds

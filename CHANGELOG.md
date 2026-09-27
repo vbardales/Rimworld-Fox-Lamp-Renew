@@ -6,6 +6,13 @@ display it in game.
 
 ## [1.0.0] — unreleased
 
+## [0.1.0] — 2026-09-23
+
+Creation of the Workshop item's `PublishedFileId.txt` (`3806767650`). This entry does not
+claim the mod is public or tested: the item is created private, as Steam creates every item,
+and stays private until switched by hand. `Mod/` at this commit is the content the item was
+created from.
+
 On release: create the `v1.0.0` tag and the matching GitHub release.
 
 First release of the 1.6 port of AmliFurx's **Fox Lamp**, carried to 1.5 by Megapa3yM as
