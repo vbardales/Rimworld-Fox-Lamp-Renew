@@ -31,3 +31,13 @@ mtime where the file is not versioned there).
 `STATUS.md`, `README.md`, `CHANGELOG.md`, `ATTRIBUTION.md` (root and `Mod/`), `TESTING.md`,
 `Tests/RESULTS.md`, `Tests/run.log`, `Mod/About/About.xml`. No `LICENSE`, `PUBLICATION.md`,
 `NOTES.md`, `BUGS.md` or `BACKLOG.md` exist for this mod; none is required yet at `preTest`.
+
+## 2026-09-28 follow-up (writing the Pickle suite)
+
+| Document | Version read | Mattered here? |
+| --- | --- | --- |
+| PickleTools/Authoring/README.md | 2026-09-26 mtime | Read in full this time. Sections 3 (pass matrix), 4 (isolation, `@requires`, the three timeouts) and 7 (evidence) shaped the suite and its README. |
+| PickleTools/docs/steps.md | 2026-09-25 mtime | Read. It lists only Nelim's Pickle Tools steps and points at Pickle's own catalogue upstream, which is not in the checkout. None of those steps was needed. |
+| Pickle's own vocabulary | installed Workshop 3791648678 | No local copy of its `Docs/steps.md`: read instead from the `Pickle/Features/*.feature` files it ships and from the step expressions in `RimWorks.Pickle.Vanilla.dll`. A step used from that source and not seen in another suite is a guess until a first run confirms it. |
+| Model suite | FireworkStand `Tests/Pickle/` | Read for structure (companion About, `wsl-ids.map`, dep maps, `Directory.Build.props`, step class idioms). Nothing copied that names its own mod. |
+| PickleTools/Headless/README.md, Ticket-Dispatcher SUBMIT.md and WELCOME.md, Release-Admin OPERATIONS.md | 2026-09-26 mtime | Still not read: they gate launching a run and publishing, and nothing was launched. |

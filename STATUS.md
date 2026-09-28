@@ -7,7 +7,7 @@ packageId:    nelim.foxlamprenew
 repo:         Rimworld-Fox-Lamp-Renew
 visibility:   public
 detached:     yes
-stage:        preTest
+stage:        done
 licence:      silent
 licence_at:   neither the 1.5 mod folder nor its Workshop page says anything
 dependencies: verified
@@ -15,21 +15,49 @@ showcase:     complete
 tested_on:
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 remaining:
-  - defect: TESTING.md's 14 scenarios are prose, not a Pickle/Gherkin suite. No suite exists
-    under Tests/Pickle/. PickleTools/Authoring/README.md states plainly that done requires
-    scenarios to be written for whatever only a running game can show, with no exemption for
-    a code-free XML mod, and every one of the 14 scenarios needs the game running.
-  - unverified: in-game scenarios, logs, English/French UI and save regressions not executed.
+  - unverified: the Pickle suite (Tests/Pickle/, 8 features) has never been run: no expression has been
+    checked against Pickle's engine, no scenario played, no @review capture taken. Passes to play: English,
+    French, and the incompatibility pass with the 1.5 fork (see Tests/Pickle/README.md).
+  - unverified: logs, English/French UI and captures a person must open (night lit/off, inspect pane).
+  - unverified: the upgrade case (a save made before the light existed) has no fixture and no step can make one.
 session:      local_208abe7c-10e5-485b-88d4-9ba6faadfd52
-updated:      2026-09-27, evidence-based workflow audit
+updated:      2026-09-28, Pickle suite written
 settings_audit: not_applicable
-audit_revision: 078710718b70360d1d337e69f184f667d26427a1
-audit_result: regressed_to_preTest
+audit_revision: 40fd02c8333db6c70c734ce115deb97fb62e72ea
+audit_result: passed_through_done
+---
+
+
+# Pickle suite written — 2026-09-28
+
+**preTest -> done.** The defect recorded on 2026-09-27 is closed: `Tests/Pickle/` now holds a companion mod
+(`nelim.foxlamprenew.pickletests`), a step assembly that compiles against the game and Pickle references, and
+eight features covering every scenario of `TESTING.md` that only a running game can show. Each omission is
+justified in the header of the feature that would hold it and in the "Scope" section of `Tests/Pickle/README.md`.
+No scenario is `@wip`; the one conditional feature (`08-incompatible-fork`, `@requires:mg.ferianstory.foxlamp`)
+runs only in its own pass. Passes, per `PickleTools/Authoring/README.md` §3: English, French, and one to look at
+the declared incompatibility with the 1.5 fork. Optional integrations, DLC-absent and restart passes are not
+applicable, each with its reason in the README.
+
+The offline checks were **rerun on the shipped files** (`Tests/run.log`, revision `07f1f21`): the description, the
+author line and `PublishedFileId.txt` had changed since the 2026-09-13 run, so its result no longer described them.
+Same result: pass. `.gitignore` now keeps Pickle evidence and build output out of git; `.dds` and `desktop.ini` were
+already ignored; `.gitattributes` marks DLL and ICO binary.
+
+**Not done, and not claimed:** nothing has run. The suite compiled, but no step expression was checked against
+Pickle's engine, so a first run may fail on a step text before it says anything about the mod. The next gate
+(`done -> tested`) is executing the three passes through `Submit-PickleRun.ps1`, reading `exitReason` and the counts
+before the numbers, and opening the `@review` captures (night lit and switched off, the inspect pane in each language).
+`tested` also needs the scenarios `@requires`-conditional to have run in their own pass and no manual test left to
+tick; there is none in this suite.
+
+Two files in `Art/` (`ModIcon.ico` modified, `Preview.ico` new) belong to another hand and were left untouched.
+
 ---
 
 # Workflow audit — 2026-09-27
 
-**preTest, regressed from the recorded `done`.** The 2026-09-13 audit that set `done` applied
+**preTest, regressed from the recorded `done` (superseded by the section above).** The 2026-09-13 audit that set `done` applied
 the gate criteria current at the time; `PickleTools/Authoring/README.md` (self-dated review
 2026-09-22, file touched 2026-09-26) now states without exemption that `preTest -> done`
 requires a written Pickle/Gherkin suite for whatever only a running game can show. This mod's
