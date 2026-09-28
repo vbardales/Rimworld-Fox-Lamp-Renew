@@ -10,6 +10,7 @@ detached:     yes
 stage:        done
 licence:      silent
 licence_at:   neither the 1.5 mod folder nor its Workshop page says anything
+upstream_mod_remotes: N/A
 dependencies: verified
 showcase:     complete
 tested_on:
