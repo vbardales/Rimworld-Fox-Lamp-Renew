@@ -36,8 +36,8 @@ powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod FoxL
 powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod FoxLampRenew -DepMap wsl-deps.incompat-foxlamp15.map -Filter "@requires:mg.ferianstory.foxlamp"
 ```
 
-`02-construction` has a colonist build a 24 000-work sculpture. Pickle's watchdog kills a run at 120 s per
-scenario and the launcher does not raise it: if that scenario is cut off, add `-Extra "-pickle-scenario-timeout=300"`.
+`02-construction` has a colonist build a 24 000-work sculpture. Pickle's watchdog kills the run when one scenario passes
+its limit, which the launcher sets to 300 s by default (Ticket-Dispatcher SUBMIT.md); if that scenario is cut off, add `-Extra '-pickle-scenario-timeout=600'`.
 
 ## The features
 

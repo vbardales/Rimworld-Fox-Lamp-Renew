@@ -4,9 +4,9 @@
 # FINISHING CONSTRUCTION. A lamp a step spawns never went through a frame, so this is the one scenario in the
 # suite that has a colonist build the lamp from a blueprint, materials and work, the way a player would.
 #
-# Skill 20 and ultrafast speed, because the piece costs 24 000 work. Pickle's watchdog kills the whole run at
-# 120 s per scenario by default and the launcher does not raise it: if this scenario is cut off, pass
-# `-Extra "-pickle-scenario-timeout=300"` (see PickleTools/Authoring/README.md, "three timeouts").
+# Skill 20 and ultrafast speed, because the piece costs 24 000 work. Pickle's watchdog kills the whole run when a
+# scenario passes its limit, 300 s by default from the launcher: if this scenario is cut off, pass
+# `-Extra '-pickle-scenario-timeout=600'` (see PickleTools/Authoring/README.md, "three timeouts").
 #
 # What is NOT asserted, and why. TESTING.md step 3 (a second lamp by a much worse artist also reads 800) is
 # not a scenario of its own: "no CompQuality" is asserted here on the finished lamp, and a flat Beauty is what
