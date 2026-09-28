@@ -7,6 +7,11 @@ whether its Beauty finally reaches the inspect pane.
 
 It is not shipped: it lives beside `Mod/`, never inside it, so Steam never receives it.
 
+The in-game scenarios below are written as a Pickle suite in [Tests/Pickle/](Tests/Pickle/README.md): the README there
+maps each scenario to its feature, says what was left out of Gherkin and why, and names the passes to play. Scenario 1 (this
+mod without its dependency), the absence-of-comp checks of 6.7 to 6.9, 8, 9, 13.3 and 13.4 are not in it, each justified in the
+"Scope" section of that README. The suite has never been run.
+
 Offline validation and reproducible commands are recorded in [Tests/RESULTS.md](Tests/RESULTS.md).
 These scenarios remain pending until executed in game; offline checks are not gameplay results.
 

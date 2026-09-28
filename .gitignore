@@ -21,3 +21,9 @@ desktop.ini
 # Compressed runtime texture cache (BC7_UNORM), regenerated from the shipped PNGs and not
 # authored content. Never redistribute a binary the source PNG already covers.
 *.dds
+
+# Pickle evidence and build output: kept on disk, never in git (PickleTools can produce gigabytes in a day).
+# A one-line text summary per run goes in docs/runs/ instead.
+Tests/Pickle/Evidence/
+Tests/Pickle/runs/
+.build/

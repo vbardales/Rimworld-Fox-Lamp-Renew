@@ -6,3 +6,5 @@
 
 # Binaries: neither normalised nor diffed as text.
 *.png binary
+*.dll binary
+*.ico binary

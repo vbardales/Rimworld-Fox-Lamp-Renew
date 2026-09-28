@@ -1,10 +1,11 @@
-# Offline validation — 2026-09-13
+# Offline validation — 2026-09-28
 
 Result: **PASS**, ready for final in-game validation (`done`, not `tested`).
 
-Tested distribution: revision `a88095fd927706409966bb6d870502a24c5ad5b8`.
-`run.log` records UTC time and SHA256 for every shipped file. No shipped file changed
-after that run; subsequent changes concern tests and documentation only.
+Tested distribution: revision `07f1f21c3b72f1a3b05b62fdc713fe82a6441cd7` (rerun on 2026-09-28: the
+description, the author line and `About/PublishedFileId.txt` had changed since the 2026-09-13 run, so its
+result no longer described the shipped files). `run.log` records UTC time and SHA256 for every shipped file.
+Every shared check returned the same result as on 2026-09-13.
 
 Environment: Windows, PowerShell, RimWorld **1.6.4871 rev590**, installed SydailyFox
 Workshop `3540588386/1.6`, ilspycmd 8.2 on .NET 8 using DOTNET_ROLL_FORWARD=Major.

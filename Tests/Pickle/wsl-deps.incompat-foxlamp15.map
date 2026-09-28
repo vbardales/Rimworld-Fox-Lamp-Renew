@@ -1,0 +1,7 @@
+# The pass that goes and LOOKS at the declared incompatibility: 【1.5】Fox Lamp Forked is staged beside
+# this mod, and 05-incompatible-fork.feature asserts the documented symptom (the duplicate Fox_Lamp
+# defName) instead of expecting a red. The fork declares SydailyFox as its own dependency, which the
+# main mod already brings in.
+#
+# Run: powershell.exe -ExecutionPolicy Bypass -File scripts/Run-PickleWsl.ps1 -Mod FoxLampRenew -DepMap wsl-deps.incompat-foxlamp15.map
+mg.ferianstory.foxlamp
