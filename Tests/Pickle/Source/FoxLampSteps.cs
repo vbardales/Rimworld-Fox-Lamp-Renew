@@ -265,6 +265,9 @@ namespace FoxLampRenew.PickleSteps
             var target = new IntVec3(toX, 0, toZ);
             ctx.Require(target.InBounds(map), $"x={toX} z={toZ} is off the map");
             Thing inner = minified.InnerThing;
+            // Take the lamp out of the minified thing BEFORE destroying it: MinifiedThing.Destroy destroys what it
+            // holds, and spawning a destroyed thing was the first run's "Spawning destroyed thing" error.
+            ctx.Assert(minified.GetDirectlyHeldThings().Remove(inner), "the lamp could not be taken out of the minified thing");
             minified.Destroy(DestroyMode.Vanish);
             GenSpawn.Spawn(inner, target, map);
 

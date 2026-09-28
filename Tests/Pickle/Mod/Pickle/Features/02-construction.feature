@@ -23,8 +23,8 @@ Feature: a colonist builds the lamp, and finishing it sets up the art without a 
     And "Builder" has backstory "Blacksmith7"
     Then "Builder" can do "Construction"
     Given "Builder" skill "Construction" is set to level 20
-    When I create a stockpile from (150, 160) to (152, 162)
-    And 100 "BlocksMarble" is spawned at the stockpile
+    When 75 "BlocksMarble" is spawned at the stockpile
+    And 75 "BlocksMarble" is spawned at the stockpile
     And I set "Builder" priority "Construction" to 1
     And I use the build designator for "Fox_Lamp" at (145, 150)
     Then a blueprint for "Fox_Lamp" is at (145, 150)
