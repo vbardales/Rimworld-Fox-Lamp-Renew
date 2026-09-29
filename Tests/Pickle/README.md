@@ -7,9 +7,11 @@ the Workshop folder.
 
 ## Status
 
-Written 2026-09-28. **Never run.** The step assembly compiles against the game and Pickle references; no
-scenario has been played, no expression has been checked against Pickle's engine, and no `@review` capture
-has been taken. A green run will say that the trajectory ran, not that an image shows anything.
+Written 2026-09-28, first run 2026-09-29. English pass: 16 of 16, after two step bugs found and fixed
+(minify destroyed the lamp before taking it out; construction had no builder reach the stockpile). The
+incompatibility pass found no collision: the 1.5 fork's `LoadFolders.xml` has no `v1.6` entry, so it
+contributes no Defs under 1.6 and `08-incompatible-fork` was rewritten to assert that instead of a
+duplicate error. French pass and the `@review` captures: not yet reviewed by a person.
 
 ## The passes
 
@@ -17,7 +19,7 @@ has been taken. A green run will say that the trajectory ran, not that an image 
 | --- | --- | --- | --- |
 | Minimal, English | none (the default set: Core, DLCs, Harmony, RimLogging, Pickle, SydailyFox, this mod) | English | The mod stands on its own and beside its one hard dependency |
 | Minimal, French | none | French | Same, with the French text |
-| Declared incompatibility | `wsl-deps.incompat-foxlamp15.map` | English | The 1.5 fork still collides as declared (`08-incompatible-fork`) |
+| Declared incompatibility | `wsl-deps.incompat-foxlamp15.map` | English | The 1.5 fork loads no Defs under 1.6, so it does not collide (`08-incompatible-fork`) |
 
 Every other pass of the matrix in `PickleTools/Authoring/README.md` is **not applicable**, and why:
 
@@ -50,7 +52,7 @@ its limit, which the launcher sets to 300 s by default (Ticket-Dispatcher SUBMIT
 | `05-save-reload` | a lamp with known fuel and a title | same fuel, same title, no error after a reload | none |
 | `06-language` | the active language | the description starts in the language of the pass; the label stays `Fox Lamp` in both | none |
 | `07-inspect-pane` | a selected lamp | it is a `Building_Art` before the capture | 1 still, in the language of the pass |
-| `08-incompatible-fork` (`@requires`) | the 1.5 fork beside this mod | both mods loaded; the duplicate `Fox_Lamp` is logged | none |
+| `08-incompatible-fork` (`@requires`) | the 1.5 fork beside this mod | both mods loaded; only this mod's `Fox_Lamp` exists; no error names the fork | none |
 
 ## What a person looks at
 
