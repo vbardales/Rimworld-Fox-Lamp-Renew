@@ -28,6 +28,19 @@ audit_revision: 40fd02c8333db6c70c734ce115deb97fb62e72ea
 audit_result: passed_through_done
 ---
 
+# Showcase: ModIcon composited onto the Preview — 2026-09-29
+
+`Mod/About/Preview.png` now carries the detoured `ModIcon.png` in its bottom-left corner, tilted
++15deg (PUBLISHING.md, 2026-09-29 rule: left corner +15deg, right corner -15deg). `Art/cutout-icon.cjs`
+flood-fills the icon's near-black background from the border; the mascot's own outline is untouched.
+`showcase: complete` still holds — this refines an already-complete Preview, it does not reopen the gate.
+896x504, 377,290 bytes, still under 1 MB.
+
+The other new rule, the gallery folder's `00-` starting as a byte copy of `Preview.png`, is
+not yet applicable: this mod has no `PUBLICATION.md` and no gallery folder, since it has not
+reached `tested -> prepublished`. Noted here so it is not missed when that folder is made.
+
+---
 
 # Pickle suite written — 2026-09-28
 
