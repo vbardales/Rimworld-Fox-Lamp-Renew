@@ -16,14 +16,13 @@ showcase:     complete
 tested_on:
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 remaining:
-  - unverified: the Pickle suite (Tests/Pickle/, 8 features) has never been run: no expression has been
-    checked against Pickle's engine, no scenario played, no @review capture taken. Passes to play: English,
-    French, and the incompatibility pass with the 1.5 fork (see Tests/Pickle/README.md).
-  - unverified: logs, English/French UI and captures a person must open (night lit/off, inspect pane).
+  - unverified: French Pickle pass (Tests/Pickle/, 8 features) not yet run. English pass (16/16) and the
+    incompatibility pass with the 1.5 fork (2/2, ticket 8b2f) both passed 2026-09-29 (see Tests/Pickle/README.md).
+  - unverified: the @review captures (night lit/off, inspect pane) not yet opened by a person.
   - unverified: the upgrade case (a save made before the light existed) has no fixture and no step can make one.
   - unverified: French review by Virginie
 session:      local_208abe7c-10e5-485b-88d4-9ba6faadfd52
-updated:      2026-09-30, French review generated
+updated:      2026-09-30, incompatibility pass confirmed (ticket 8b2f, 2/2), French review generated
 settings_audit: not_applicable
 audit_revision: 40fd02c8333db6c70c734ce115deb97fb62e72ea
 audit_result: passed_through_done

@@ -11,7 +11,8 @@ Written 2026-09-28, first run 2026-09-29. English pass: 16 of 16, after two step
 (minify destroyed the lamp before taking it out; construction had no builder reach the stockpile). The
 incompatibility pass found no collision: the 1.5 fork's `LoadFolders.xml` has no `v1.6` entry, so it
 contributes no Defs under 1.6 and `08-incompatible-fork` was rewritten to assert that instead of a
-duplicate error. French pass and the `@review` captures: not yet reviewed by a person.
+duplicate error, confirmed 2/2 passed after the rewrite (ticket `8b2f`, `Evidence/20260929-incompat-3`).
+French pass and the `@review` captures: not yet reviewed by a person.
 
 ## The passes
 
