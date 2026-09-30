@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: complete
+translation_fr: partial
 mod:          Fox Lamp Renew (unofficial)
 packageId:    nelim.foxlamprenew
 repo:         Rimworld-Fox-Lamp-Renew
@@ -21,11 +21,32 @@ remaining:
     French, and the incompatibility pass with the 1.5 fork (see Tests/Pickle/README.md).
   - unverified: logs, English/French UI and captures a person must open (night lit/off, inspect pane).
   - unverified: the upgrade case (a save made before the light existed) has no fixture and no step can make one.
+  - unverified: French review by Virginie
 session:      local_208abe7c-10e5-485b-88d4-9ba6faadfd52
-updated:      2026-09-28, Pickle suite written
+updated:      2026-09-30, French review generated
 settings_audit: not_applicable
 audit_revision: 40fd02c8333db6c70c734ce115deb97fb62e72ea
 audit_result: passed_through_done
+---
+
+# Translation audit: French gender-agreement rule, review file generated — 2026-09-30
+
+`translation_fr` reset to `unchecked` by TRANSLATIONS.md's 2026-09-30 change (the three-segment
+gender switch and the systematic French review by Virginie), then raised to `partial` here: this
+mod has no pawn-agreeing text to check (only `Fox_Lamp.label` and `Fox_Lamp.description`, neither
+addresses a pawn), so the gender-agreement rule adds nothing to verify, but `translation_fr` still
+cannot reach `complete` until Virginie has read the French herself.
+
+French lives in one file: `Mod/Languages/French/DefInjected/ThingDef/Fox_Lamp.xml` (label,
+description). No Keyed folder — the mod has no C# `.Translate()` calls — and no grammar files.
+`_tools/Generate-FrenchReview.ps1` (adapted from `FoodCourt/_tools/`) reads it and the matching
+Def/English text and writes `FRENCH_REVIEW.md` at the mod root. Nothing flagged with `?`: no
+`{PAWN_gender` token appears (nothing here agrees with a pawn) and no `???`/`TODO` placeholder.
+
+Original column in `FRENCH_REVIEW.md` reads English throughout: AmliFurx wrote the piece in
+Chinese, the Chinese source is quoted once in `ATTRIBUTION.md` but not stored separately, so
+English is the closest available original, as the file itself says at the top.
+
 ---
 
 # Showcase: ModIcon composited onto the Preview — 2026-09-29
