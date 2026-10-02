@@ -17,8 +17,6 @@ tested_on:
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: done
 remaining:
-  - unverified: French pass, two scenarios new there: the minify scenario of 04 (red on 2026-09-28 on a step DLL from before
-    the fix, never green in French) and 02-construction (not proven to have run on the fixed staging). Small ticket first.
   - unverified: final non-regression on the final revision, English and French, deposited together at the end (last).
   - unverified: the @review captures (night lit/off, inspect pane in each language) not yet opened by a person.
   - unverified: French review by Virginie (FRENCH_REVIEW.md regenerated 2026-10-02, review line empty).
