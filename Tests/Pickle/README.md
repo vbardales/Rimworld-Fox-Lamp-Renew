@@ -7,12 +7,23 @@ the Workshop folder.
 
 ## Status
 
-Written 2026-09-28, first run 2026-09-29. English pass: 16 of 16, after two step bugs found and fixed
-(minify destroyed the lamp before taking it out; construction had no builder reach the stockpile). The
-incompatibility pass found no collision: the 1.5 fork's `LoadFolders.xml` has no `v1.6` entry, so it
-contributes no Defs under 1.6 and `08-incompatible-fork` was rewritten to assert that instead of a
-duplicate error, confirmed 2/2 passed after the rewrite (ticket `8b2f`, `Evidence/20260929-incompat-3`).
-French pass and the `@review` captures: not yet reviewed by a person.
+Written 2026-09-28, first runs 2026-09-28 and 29, state read from the evidence on disk on 2026-10-02.
+
+- **English, minimal:** 16 scenarios discovered. `Evidence/20260928-english` (2026-09-28): 12 passed, 2 failed, 2 skipped by
+  their `@requires`. The 2 failures were step bugs (the minify step destroyed the lamp before taking it out; the
+  construction scenario had no builder reach the stockpile), fixed in `6ec3002` and replayed together with the meditation
+  scenario: 3 of 3 (`Evidence/20260928-english-fix`, 2026-09-29). Every English scenario therefore has a green run on the
+  current logic. (The old line "English pass 16 of 16" counted the 2 skipped ones; they are played in the incompatibility pass.)
+- **French, minimal** (`Evidence/20260928-french`, 2026-09-28): 13 passed, 1 failed (the same minify step, on the step DLL from
+  before the fix), 2 skipped. **The minify scenario has never been green in French, and `02-construction` is not proven to
+  have run on the fixed staging there**: both are new, not non-regression.
+- **Incompatibility pass** (`Evidence/20260929-incompat-3`, ticket `8b2f`): 2 of 2 passed after `08-incompatible-fork` was
+  rewritten to assert the real finding: the 1.5 fork's `LoadFolders.xml` has no `v1.6` entry, so it contributes no Defs under
+  1.6 and nothing collides.
+- **The `@review` captures** (night lit and off, the inspect pane in each language) have not been opened by a person.
+
+Next, in the order AUDIT.md asks for: a small French ticket for the two new scenarios, then the full suite in both languages
+on the final revision (non-regression, last, together).
 
 ## The passes
 
@@ -59,7 +70,7 @@ its limit, which the launcher sets to 300 s by default (Ticket-Dispatcher SUBMIT
 
 | Capture | The one question |
 | --- | --- |
-| `03` "fox lamp, lit at night" | Is the pool warm amber, about the size of a torch's, and does the sculpture read as lit from inside its frame? |
+| `03` "fox lamp, lit at night" | Is the pool warm amber, about the size of a torch's, and does the sculpture read as lit from inside its frame? Is the sculpture drawn in its own marble greys, with no tint and no solid dark or magenta silhouette (TESTING.md 7)? |
 | `03` "fox lamp, switched off at night" | Is the ground dark again, the sculpture still standing? |
 | `07` "its inspect pane", both languages | Is there a Beauty line reading 800, a fuel bar and a switch? Any raw key, English left in French, broken accent, clipped line or wrong paragraph break? |
 
@@ -91,3 +102,17 @@ Reports are gitignored (`Evidence/`, `runs/`, `.build/`) and can reach gigabytes
 Delete the rest as soon as a newer report replaces it: a report about a superseded build proves nothing about
 the current one. Never keep a whole `screenshots/` folder, which the shared report folder fills with every mod's
 files. Never delete a report a `STATUS.md` field still points to; repoint it first.
+
+**Disk state, 2026-10-02 (minified from 91 MB to about 14 MB):** four folders remain in `Evidence/`, each holding
+`summary.json`, `summary.md`, `junit.xml`, `Player.log`, `evidence-complete.txt`:
+
+| Folder | Why it stays |
+| --- | --- |
+| `20260928-english` | Latest English report for 11 of the 14 non-skipped scenarios (the 3 `@review` captures are kept there) |
+| `20260928-english-fix` | Latest English report for the 3 scenarios fixed in `6ec3002` |
+| `20260928-french` | Latest French report (13 green; the red minify scenario is replaced by the next French ticket); its `07` capture is kept |
+| `20260929-incompat-3` | Latest incompatibility pass, 2 of 2 |
+
+`report.html`, `messages.ndjson` and every non-`@review` capture were deleted; the first incompatibility folders
+(`20260928-incompat`, no report, and `20260928-incompat-2`, red on an obsolete assertion) were deleted as superseded.
+Each folder goes as soon as a final run replaces what it proves.

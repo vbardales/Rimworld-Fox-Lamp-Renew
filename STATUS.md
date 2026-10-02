@@ -15,18 +15,76 @@ dependencies: verified
 showcase:     complete
 tested_on:
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
+workflow_stage: done
 remaining:
-  - unverified: French Pickle pass (Tests/Pickle/, 8 features) not yet run. English pass (16/16) and the
-    incompatibility pass with the 1.5 fork (2/2, ticket 8b2f) both passed 2026-09-29 (see Tests/Pickle/README.md).
-  - unverified: the @review captures (night lit/off, inspect pane) not yet opened by a person.
-  - unverified: the upgrade case (a save made before the light existed) has no fixture and no step can make one.
-  - unverified: French review by Virginie
-session:      local_208abe7c-10e5-485b-88d4-9ba6faadfd52
-updated:      2026-09-30, incompatibility pass confirmed (ticket 8b2f, 2/2), French review generated
+  - unverified: French pass, two scenarios new there: the minify scenario of 04 (red on 2026-09-28 on a step DLL from before
+    the fix, never green in French) and 02-construction (not proven to have run on the fixed staging). Small ticket first.
+  - unverified: final non-regression on the final revision, English and French, deposited together at the end (last).
+  - unverified: the @review captures (night lit/off, inspect pane in each language) not yet opened by a person.
+  - unverified: French review by Virginie (FRENCH_REVIEW.md regenerated 2026-10-02, review line empty).
+  - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
+    applicable to the gate, residual risk.
+session:      local_f3473595-810d-4ae4-9997-793ebcede53a
+updated:      2026-10-02, workflow audit: done holds; evidence minified; tested criteria written in TESTING.md
 settings_audit: not_applicable
-audit_revision: 40fd02c8333db6c70c734ce115deb97fb62e72ea
+audit_revision: cec3ce0cc1edae66c54a1dd39c41f9f3d52c6a99
 audit_result: passed_through_done
 ---
+
+# Workflow audit — 2026-10-02
+
+**done -> done, held.** Revision `cec3ce0`; the working tree also holds changes that are not this audit's
+(`Mod/About/Preview.png`, `Art/ModIcon.ico`, new files in `Art/`: Virginie's icon and Preview work, left untouched) and this
+audit's own documentation edits. Session title: `foxlamprenew / done`.
+
+## Checks, against the current AUDIT.md / TRANSLATIONS.md / PUBLISHING.md
+
+- **options -> l10n.** `settings_audit: not_applicable` unchanged (one ThingDef, no assembly, no MainButtonDef, no settings).
+  Plural rule (2026-09-25): no counted noun is displayed, so no `.One`/`.Many` is due. Gender-agreement rule (2026-09-30): the
+  two texts (`Fox_Lamp.label`, `Fox_Lamp.description`) address no pawn. `FRENCH_REVIEW.md` **regenerated with the shared
+  `scripts/Make-FrenchReview.ps1`** (it now carries the review line for Virginie); the local `_tools/Generate-FrenchReview.ps1`
+  it replaces was removed. `translation_fr` stays `partial` until she has read it.
+- **l10n -> preTest.** `About.xml` unchanged in what it declares: `Mlie.AFSydailyFox` in `modDependencies` and `loadAfter`,
+  `mg.ferianstory.foxlamp` in `incompatibleWith`, no patch, no `LoadFolders`, no `MayRequire`. Last verified 2026-09-27, cited,
+  not redone: nothing it depends on changed.
+- **preTest -> done.** `Tests/Run-Checks.ps1` **rerun today** on the working tree: PASS (26 rules, 9 types, 0 type errors,
+  29 patch operations applied, 2 keys checked, 0 errors); the committed `Tests/*.log` are byte-identical to the new output. The
+  Pickle suite is written (8 features, no `@wip`), its scope justified in `Tests/Pickle/README.md`.
+- **Local folder icons** (AUDIT.md, new convention): root `desktop.ini` points to `Art\ModIcon.ico` and `Mod/desktop.ini` to
+  `..\Art\Preview.ico`; both targets exist. `Art/Preview.ico` is untracked, `Art/ModIcon.ico` is modified: Virginie's, left as is.
+  `desktop.ini` is gitignored; `Mod/` does not ship it from git (the CI uploads the checkout).
+- **`.dds`.** Not in git (`git ls-files` finds none) and `*.dds` is already in `.gitignore` since 2026-09-27. Two files remain on
+  disk in `Mod/Textures/Thankyou/` (the game's texture cache, regenerated); an upload from the game's button would send them,
+  an upload by the CI would not.
+- **Origin repository.** Neither AmliFurx's original (Workshop 2166575832) nor Megapa3yM's 1.5 fork (3248294052) has a linked Git
+  repository (checked 2026-09-27); `upstream_mod_remotes: N/A` stands. No fork and no pull request is possible, so nothing
+  goes into `BACKLOG.md`.
+- **Prepublication `0.1.0`.** `Mod/About/PublishedFileId.txt` exists (3806767650, commit `18d18a4`) and `CHANGELOG.md` opens with
+  `## [0.1.0]` "creation of the publishIdFile" above an `unreleased` `1.0.0` (the 1.0.0 entry now lists what changed in
+  `Mod/` since `18d18a4`: the description sections and the Preview only). Item private; nothing here changed that.
+
+## Evidence
+
+91 MB minified to about 14 MB, nothing of it was in git. Kept, per pass: `Evidence/20260928-english`,
+`20260928-english-fix`, `20260928-french`, `20260929-incompat-3` (summary, junit, Player.log, and the 4 `@review` captures).
+Deleted as superseded: `20260928-incompat` (no report), `20260928-incompat-2` (obsolete assertion), all `report.html`,
+`messages.ndjson` and non-review captures. The shared `pickle-reports-archive/` holds no run of this mod, so none was deleted.
+`docs/runs/history.md` repointed (it cited a folder `145a` that does not exist). Which proofs to keep is written in
+`TESTING.md` and `Tests/Pickle/README.md`.
+
+## Correction to the previous status
+
+The line "English pass 16/16 passed" was wrong: 12 passed, 2 failed (step bugs) and 2 skipped on the first run; the 2 failures
+were replayed green (with a third scenario) after the fix; the 2 skipped are the incompatibility pass's. Every English
+scenario has a green run on the current logic; French has 13 green and one red never replayed.
+
+## Next, to reach `tested` (AUDIT.md 9, as of 2026-10-02)
+
+1. No `@wip`: holds. 2. Conditional scenarios ran: `08` played 2/2 in its own pass, holds. 3. No manual test left: every scenario
+of `TESTING.md` is now classified (Pickle / offline / not applicable with a reason), see its table. 4. Still to do: the French
+ticket (minify and construction, new there), then the final non-regression in both languages, then Virginie opens the `@review`
+captures. Nothing here is a defect.
+
 
 # Translation audit: French gender-agreement rule, review file generated — 2026-09-30
 

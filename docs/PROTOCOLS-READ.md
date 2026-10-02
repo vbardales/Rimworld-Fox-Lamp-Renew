@@ -6,6 +6,39 @@ document that never mattered here unless it has moved since. "Version" is the fi
 `git log -1 --format=%h --date=short --format="%h %ad"` in the monorepo (or working-tree
 mtime where the file is not versioned there).
 
+## 2026-10-02 audit (session `local_f3473595`)
+
+**Version note.** The protocol documents moved to `vbardales/Rimworld-protocols` (git dir `../rimworld-protocols.git`, work tree =
+monorepo root). `git log` from the monorepo returns the commit that *deleted* them, so the versions below were read with
+`git --git-dir=../rimworld-protocols.git --work-tree=. log -1 -- <file>`. The two earlier tables above used the monorepo log and
+their versions are not reliable. `[M]` = modified, uncommitted at read time.
+
+| Document | Version | Read | Mattered here? |
+| --- | --- | --- | --- |
+| AGENTS.md | `7fd7475` 2026-09-29 | in full (loaded as project instructions) | Yes: evidence rule, gates, CI publishing rule. |
+| AUDIT.md | `d1fdbe1` 2026-10-02 | in full | Yes: this run's instructions; the new `done -> tested` lines (no `@wip`, conditional passes, no manual test), pass order, title format. |
+| MOD_SETTINGS.md | `b83933b` 2026-09-23 | in full | Confirmed `not_applicable`. Nothing new for a mod with no settings. |
+| TRANSLATIONS.md | `af8427f` 2026-10-02 | in full | Yes: French review file by Virginie, three-segment gender rule (n/a here, no pawn text), plural rule (n/a, no counted noun). |
+| PUBLISHING.md | `4e8f11a` 2026-10-02 | sections only: "Départ depuis le projet d'origine", "Sources hors du dossier publié", "Juste après", "À chaque mise à jour"; headings and grep for the rest | Origin-repo/PR rule (no origin repo exists here), `PublishedFileId.txt`, fail-fast. CI mechanics and description sections not reread: the mod is not at `prepublished`. |
+| STYLE_RIMWORLD.md | `c105a43` 2026-10-01 [M] | not read | Gates icon and Preview generation, which this audit does not touch (owner's). |
+| WORKSHOP_COMMENTS.md | `7fd7475` 2026-09-29 | not read | Gates the thank-you comments at `tested -> prepublished`. |
+| scripts/SEARCHING.md | `50de695` 2026-09-28 | not read | No Workshop search needed (origin repos already checked 2026-09-27). |
+| PickleTools/README.md | `ff20d89` 2026-09-29 [M] | first 80 lines (tool table, layout) | No tool is needed by this suite. |
+| PickleTools/Authoring/README.md | `a47799f` 2026-09-29 | in full | Yes: pass matrix, evidence rules, the three timeouts. |
+| PickleTools/Headless/README.md | `ed4e73a` 2026-09-26 | not read | Launching goes through the dispatcher's `Submit-PickleRun.ps1`; WELCOME and SUBMIT cover what a session does. |
+| PickleTools/docs/steps.md | `da7c3b0` 2026-09-28 [M] | not read | No new step is written in this pass. |
+| Rimworld-Release-Admin/docs/OPERATIONS.md | `3c03f51` 2026-09-26 | not read | Gates the CI `publish`, unreachable before `prepublished`. |
+| Rimworld-Ticket-Dispatcher/docs/WELCOME.md | `77ca9d7` 2026-09-27 | in full | Yes: `REGISTER`, one ticket per pass, the tree must stay frozen, docs-read note, the protocols-repo quirk above. |
+| Rimworld-Ticket-Dispatcher/docs/SUBMIT.md | `d07b2b8` 2026-09-26 | in full | Yes: options of `Submit-PickleRun.ps1`, exit codes, `-EvidenceDir` never overwrites. |
+
+Not useful to a mod at `done` with no code and no settings, so not to be reread when they move unless the mod advances:
+STYLE_RIMWORLD.md, WORKSHOP_COMMENTS.md, SEARCHING.md, Headless/README.md, steps.md, OPERATIONS.md.
+
+**Mod-local documents.** Read this pass: `STATUS.md`, `CHANGELOG.md` (structure and the 0.1.0 entry), `TESTING.md`,
+`Tests/Pickle/README.md`, the 8 feature files, `docs/runs/history.md`, `Mod/About/About.xml`. Not reread (unchanged in this
+pass and not gating it): `README.md`, `ATTRIBUTION.md` and `Mod/ATTRIBUTION.md`. Absent, and not required before
+`prepublished`: `LICENSE` (licence `silent`, nothing to grant), `PUBLICATION.md`, `NOTES.md`, `BUGS.md`, `BACKLOG.md`.
+
 ## 2026-09-27 audit
 
 | Document | Version read | Mattered here? |

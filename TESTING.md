@@ -10,10 +10,72 @@ It is not shipped: it lives beside `Mod/`, never inside it, so Steam never recei
 The in-game scenarios below are written as a Pickle suite in [Tests/Pickle/](Tests/Pickle/README.md): the README there
 maps each scenario to its feature, says what was left out of Gherkin and why, and names the passes to play. Scenario 1 (this
 mod without its dependency), the absence-of-comp checks of 6.7 to 6.9, 8, 9, 13.3 and 13.4 are not in it, each justified in the
-"Scope" section of that README. The suite has never been run.
+"Scope" section of that README.
 
 Offline validation and reproducible commands are recorded in [Tests/RESULTS.md](Tests/RESULTS.md).
-These scenarios remain pending until executed in game; offline checks are not gameplay results.
+Offline checks are not gameplay results. Where a scenario below is played in game, the run is in
+[docs/runs/history.md](docs/runs/history.md) and the verdict in `STATUS.md`.
+
+## What `done -> tested` needs (AUDIT.md, 2026-10-02)
+
+1. **No scenario is `@wip`.** None is: `grep -r "@wip" Tests/Pickle` returns nothing.
+2. **Every conditional scenario has run.** One feature is conditional, `08-incompatible-fork`
+   (`@requires:mg.ferianstory.foxlamp`). It is skipped in the two minimal passes (that is its design) and played in its
+   own pass, `wsl-deps.incompat-foxlamp15.map`, whose report must show 2 of 2 played, not skipped.
+3. **No manual test left to validate.** Every scenario below is in exactly one of the three columns of the next table:
+   a Pickle scenario that is green, an offline check that passed, or "not applicable" with its reason. What a person
+   still does is read the `@review` captures (see `Tests/Pickle/README.md`, "What a person looks at"); that is reading
+   an image a scenario already proved to be in the wanted state, not a test.
+4. The suite is green in English **and** in French, and `exitReason`, played against discovered, and the pass name
+   were read before any count.
+
+### The passes: three
+
+| Pass | Map | Language | Plays |
+| --- | --- | --- | --- |
+| Minimal, English | none | English | `01` to `07` (`08` skipped by its tag) |
+| Minimal, French | none | French | same |
+| Declared incompatibility | `wsl-deps.incompat-foxlamp15.map` | English | `08` |
+
+No optional integration exists (no `loadAfter` beyond the hard dependency, no patch, no `LoadFolders`), so there is
+no "with optional mods" pass. No DLC is touched, so no DLC-absent pass. Nothing reads state across processes, so no
+restart pass. The incompatibility pass is replayed when the 1.5 fork moves, not at each publication.
+
+**Order.** What never ran or is red first, as a small ticket. The full suite in both languages, which replays what is
+already green, is deposited last, together, on the final revision. A scenario is a non-regression as soon as it has a
+green run on the current logic; a change to the mod or to a step it uses makes it new again.
+
+### Every scenario, and where it is answered
+
+| TESTING.md | Answered by |
+| --- | --- |
+| 1 Without its dependency | Not applicable: the game does not activate a mod without its hard dependency, which is the game's own behaviour. The declaration is read offline (`Check-DefRefs`, `About.xml`). |
+| 2 Architect tab, no research, cost | Pickle `01-loads`. Tooltip text: `06-language` for the description, `07-inspect-pane`. |
+| 3 Build-menu icon is a book | Not applicable as a scenario: authored art, untouched since 2020. A missing texture would log at load and fail `01-loads` "no errors". The picture itself is not asserted. |
+| 4 Beauty in the inspect pane | Pickle `02-construction` (class, Beauty 800) and `07-inspect-pane` (capture). 4.2, the room's own beauty maths: not applicable, vanilla. |
+| 5 Art without quality | Pickle `02-construction`. The second lamp by another artist: not a scenario, see the header of that feature. |
+| 6.1 Radius ring while placing | Not applicable as a scenario: `PlaceWorker_GlowRadius` is vanilla's and the def names it (offline type check). |
+| 6.2 to 6.6 Lit, switch, fuel, run dry | Pickle `03-light-fuel-switch`, with the two night captures. |
+| 6.7 to 6.9 No heat, no flame, no fire | Offline: absence of comps and Flammability 0, read off the def. |
+| 7 No colour mask, no tint | Offline: the mask file is not shipped. The tint is a question put to a person on the night captures. |
+| 8 Drawn at 4.92 cells, 9 Walk-through | Offline: authored def fields. The night captures show the drawn size. |
+| 10.1 Meditation focus | Pickle `04-meditation-and-moving`. 10.2 four lamps worth one: offline, the vanilla offset names three defs and not this one. |
+| 11.1 and 11.2 Minify, put back, keep the title | Pickle `04-meditation-and-moving`. Stockpile filter tree and 11.3 deconstruct: vanilla behaviour driven by def fields read offline. |
+| 12 French | Pickle `06-language` and `07-inspect-pane` in the French pass. |
+| 13.1 Save and reload, 13.2 Added to a colony | Pickle `05-save-reload`, `01-loads` (load of a save with the mod). |
+| 13.3 Removed from a colony | Not applicable: the game's own missing-content handling. |
+| 13.4 A save from before the light | Not applicable to the gate: no step can produce that save. Residual risk, kept in `STATUS.md`. |
+| 14.1 Mod-list warning | Not applicable: the game's reaction to a declaration. The declaration is read offline. |
+| 14.2 Both loaded | Pickle `08-incompatible-fork`: the fork loads no Defs under 1.6, so nothing collides. |
+| 14.3 Description tells fork users to leave | Read in `About.xml`, no test. |
+
+### Proofs to keep after a run
+
+Per pass and scenario, the latest report for the revision now in the repository, minified: `summary.json`, `summary.md`,
+`junit.xml`, `Player.log`, `evidence-complete.txt` (and `dropped-mods.txt` when present), plus the `@review` captures a
+person has opened: the two night stills of `03` once, the inspect pane of `07` in each language. Delete `report.html`,
+`messages.ndjson` and every other capture as soon as a newer report replaces it. One text line per run in
+`docs/runs/history.md`. Details and the folder-by-folder state: `Tests/Pickle/README.md`, "Evidence".
 
 ## Before starting
 
