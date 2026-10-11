@@ -14,13 +14,13 @@ dependencies: verified
 showcase:     complete
 tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 and 2026-10-02, incompatibility pass 2026-09-29)
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
-workflow_stage: playTests[1.0.0]
+workflow_stage: shootGallery[1.0.0]
 remaining:
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_10a859b9-27db-4555-b97c-3be885f5403d
-updated:      2026-10-11, French review done and applied; writeTests exit met, now playTests[1.0.0]
+updated:      2026-10-11, playTests exit met; now shootGallery[1.0.0]
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
@@ -42,5 +42,6 @@ Older sections moved to `docs/runs/status-history.md`.
 - **@review captures (8.d), opened by the session 2026-10-11.** Lit at night: warm pool, tile reads "Lit (50%)". Switched off: "Dark (0%)", no pool. Inspect pane EN and FR: fuel 12 / 12 (30 days), beauty 800, generated title and author, French strings translated. All four accepted.
 - **Criteria 1 to 7 re-checked on the files, 2026-10-11.** Offline `Tests/Run-Checks.ps1` rerun: PASS (11587 defs, 29 patch operations, 0 errors). `ModIcon.png` 128x128, 29.8 KB; `Preview.png` 896x504, 353 KB; `Art/Gallery/0-preview.png` byte-identical to it; no `PROMPT_*.md`; CHANGELOG `[1.0.0]` present; dependency and incompatibility declared in `About.xml`. Scenarios live in `TESTING.md` (no `TEST_SCENARIOS.md`). Open, not mine: `Art/ModIcon-original.png` and `README-art.md` are outside the minimal set of PUBLISHING.md (Virginie's migration, left); the `Tests/Run-Checks.ps1` row of `scripts/LOCAL_SCRIPTS.md` has no validation yet (Audit workflow session).
 - **Translation audit, French review (6.g), 2026-10-11.** Virginie read the whole text at `05bddb1` and asked 4 corrections (description intro EN and FR; CHANGELOG 0.1.0 and fuel sentences), all applied in `f5e9b8d` with `FRENCH_REVIEW.md` regenerated and the review line filled. Offline checks rerun green. `translation_fr: complete`; the stage moves to `playTests[1.0.0]`. The code review covers the text-only diff.
-- **Next (playTests).** Deploy the build to `Mods/` (text changed, 8.b), then the non-regression tickets in both languages after the commit and deployment. No ticket now.
+- **playTests exit, 2026-10-11 (8.a to 8.m).** Deployed: `Mods/FoxLampRenew` is a junction to `Mod/`. Every scenario has a green run; the 06 and 07 assertions read the description prefix and the pane, unchanged by the 2026-10-11 wording. The text-only change since the last runs is covered by the non-regression in both languages, deposited after the commit at `followUp` (8.c, 14.a), not before. No ticket now.
+- **Next (shootGallery).** Direct the gallery: scenarios in `SanctuaryBacklot`, candidates in `Art/Gallery/`, the session judges each capture first (AGENTS.md, gallery refresh).
 - `settings_audit: not_applicable` unchanged.
