@@ -1,7 +1,7 @@
 ---
 localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 mod:          Fox Lamp Renew (unofficial)
 packageId:    nelim.foxlamprenew
 repo:         Rimworld-Fox-Lamp-Renew
@@ -14,19 +14,18 @@ dependencies: verified
 showcase:     complete
 tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 and 2026-10-02, incompatibility pass 2026-09-29)
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
-workflow_stage: writeTests[1.0.0]
+workflow_stage: playTests[1.0.0]
 remaining:
-  - unverified: French review by Virginie (FRENCH_REVIEW.md, review line empty): required before the deployment (AUDIT.md 8.b).
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_10a859b9-27db-4555-b97c-3be885f5403d
-updated:      2026-10-11, workflow audit: old `done` migrated to `writeTests[1.0.0]`; code review done
+updated:      2026-10-11, French review done and applied; writeTests exit met, now playTests[1.0.0]
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
-code_review_sha: 05bddb172279da82563ed9e3116b42d8512f0ea8
-protocols_read_sha: 71363b2e20b7f8457c78f8f5d87e2b01ae06d782
+code_review_sha: f5e9b8dfea4d854ff4249b2e47ca65109b22c378
+protocols_read_sha: 3fe114c83324fbdb439d60868016ab707a778d83
 ---
 
 # Workflow audit: 2026-10-11
@@ -42,5 +41,6 @@ Older sections moved to `docs/runs/status-history.md`.
   `08-incompatible-fork` played 2/2. No ticket in the queue, none due before the final non-regression.
 - **@review captures (8.d), opened by the session 2026-10-11.** Lit at night: warm pool, tile reads "Lit (50%)". Switched off: "Dark (0%)", no pool. Inspect pane EN and FR: fuel 12 / 12 (30 days), beauty 800, generated title and author, French strings translated. All four accepted.
 - **Criteria 1 to 7 re-checked on the files, 2026-10-11.** Offline `Tests/Run-Checks.ps1` rerun: PASS (11587 defs, 29 patch operations, 0 errors). `ModIcon.png` 128x128, 29.8 KB; `Preview.png` 896x504, 353 KB; `Art/Gallery/0-preview.png` byte-identical to it; no `PROMPT_*.md`; CHANGELOG `[1.0.0]` present; dependency and incompatibility declared in `About.xml`. Scenarios live in `TESTING.md` (no `TEST_SCENARIOS.md`). Open, not mine: `Art/ModIcon-original.png` and `README-art.md` are outside the minimal set of PUBLISHING.md (Virginie's migration, left); the `Tests/Run-Checks.ps1` row of `scripts/LOCAL_SCRIPTS.md` has no validation yet (Audit workflow session).
-- **Waiting on Virginie.** French review (`FRENCH_REVIEW.md`), then the deployment; only then `shootGallery`.
+- **Translation audit, French review (6.g), 2026-10-11.** Virginie read the whole text at `05bddb1` and asked 4 corrections (description intro EN and FR; CHANGELOG 0.1.0 and fuel sentences), all applied in `f5e9b8d` with `FRENCH_REVIEW.md` regenerated and the review line filled. Offline checks rerun green. `translation_fr: complete`; the stage moves to `playTests[1.0.0]`. The code review covers the text-only diff.
+- **Next (playTests).** Deploy the build to `Mods/` (text changed, 8.b), then the non-regression tickets in both languages after the commit and deployment. No ticket now.
 - `settings_audit: not_applicable` unchanged.
