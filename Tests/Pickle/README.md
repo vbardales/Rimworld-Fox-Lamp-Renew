@@ -91,7 +91,7 @@ header of the feature that would have held it. In short:
 
 ## Evidence: what to keep after a run
 
-Reports are gitignored (`Evidence/`, `runs/`, `.build/`) and can reach gigabytes. Launch with
+Reports are gitignored (`Evidence/`, `runs/`, `build/`) and can reach gigabytes. Launch with
 `-EvidenceDir Tests/Pickle/Evidence/<run>`, check `exitReason` and the discovered/played counts, then keep:
 
 - the latest run per pass and scenario for the revision now in the repository (`summary`, `junit`, `Player.log`);

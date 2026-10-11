@@ -26,4 +26,7 @@ desktop.ini
 # A one-line text summary per run goes in docs/runs/ instead.
 Tests/Pickle/Evidence/
 Tests/Pickle/runs/
-.build/
+build/
+
+# Reproducible Preview diagnostics generated locally by the shared renderer.
+Art/.render/
