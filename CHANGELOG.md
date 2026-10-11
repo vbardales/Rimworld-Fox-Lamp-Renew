@@ -18,15 +18,14 @@ claim the mod is public or tested: the item is created private, as Steam creates
 and stays private until switched by hand. `Mod/` at this commit is the content the item was
 created from.
 
-First release of the 1.6 port of AmliFurx's **Fox Lamp**, carried to 1.5 by Megapa3yM as
+Initial pre-publication of the 1.6 port of AmliFurx's **Fox Lamp**, carried to 1.5 by Megapa3yM as
 **【1.5】Fox Lamp Forked** and stopped there.
 
 ### Added
 
 - **The lantern lights.** `CompProperties_Glower` at radius 10 in the family amber
   `(227,115,32,0)`, `CompProperties_Flickable` for the switch, and
-  `CompProperties_Refuelable` on hay, wood or chemfuel — 0.4 a day against a 12-unit frame,
-  so thirty days to a tank, and `initialFuelPercent` 1 so a finished piece is lit without
+  `CompProperties_Refuelable` on hay, wood or chemfuel — 0.4 fuel units per day, with a capacity of 12 units: enough for thirty days on a full tank, and `initialFuelPercent` 1 so a finished piece is lit without
   waiting on a hauler. `destroyOnNoFuel` is false: run dry and it goes dark, never away.
   The colour and the fuel are AmliFurx's own `BambooShootLamp`, the nearest thing he drew
   to this and the same subject. **The radius is not**, and that is rebalancing rather than

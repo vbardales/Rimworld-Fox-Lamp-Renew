@@ -14,7 +14,7 @@
   <ThingDef ParentName="AF_NaturalBuildingBase">
     <defName>Fox_Lamp</defName>
     <label>Fox Lamp</label>
-    <description>A bamboo shoot carved from marble, set in an open lantern frame. Fill the frame and light it, and it throws a warm pool over whatever is worth looking at nearby.
+    <description>A bamboo shoot carved from marble, set in an open lantern frame. Fuel the lantern and light it, and it casts a warm pool of light over whatever is worth admiring nearby.
 
 DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
 
