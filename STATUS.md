@@ -24,7 +24,7 @@ updated:      2026-10-11, playTests exit met; now shootGallery[1.0.0]
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
-code_review_sha: f5e9b8dfea4d854ff4249b2e47ca65109b22c378
+code_review_sha: c96488856b612a29f0a36c2b8ad10599a6bcfe5c
 protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
 ---
 
@@ -34,7 +34,7 @@ Old `done` mapped to `playTests` by the table, but the re-audit puts it at `writ
 icon, Preview and gallery work (`Art/`, `Mod/About/ModIcon.png`, `Mod/About/Preview.png`), left untouched, not mine to commit.
 Older sections moved to `docs/runs/status-history.md`.
 
-- **Code review (8.m), done.** `Mod/Defs/Fox_Lamp.xml`, `Mod/About/About.xml` and the French DefInjected, from the first commit
+- **Code review (8.m), done.** `Mod/Defs/Fox_Lamp.xml`, `Mod/About/About.xml` and the French DefInjected, from the first commit 2026-10-13, revue du diff : images et texte seuls (`f5e9b8d..c964885`: `ModIcon.png`, `Preview.png`, description de `About.xml`), 8.m non rouvert (Audit, AUDIT.md e1a1959), `code_review_sha` avancé, pas de nouveau playTests.
   to HEAD. No defect found: glow, fuel and switch are paired by the game (`CompGlower` reads `CompRefuelable` and `CompFlickable`),
   30 days a tank (12 units at 0.4 a day), no code, no patch. `code_review_sha` set.
 - **Pickle (8.c).** Every scenario has a green run on the current logic (`docs/runs/history.md`); no `@wip`; the conditional
