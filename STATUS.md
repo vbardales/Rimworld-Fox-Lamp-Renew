@@ -19,13 +19,13 @@ remaining:
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
-session:      local_10a859b9-27db-4555-b97c-3be885f5403d
+session:      local_0e16ab66-25f8-4309-b62f-ed30346620a5
 updated:      2026-10-11, playTests exit met; now shootGallery[1.0.0]
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: f5e9b8dfea4d854ff4249b2e47ca65109b22c378
-protocols_read_sha: 3fe114c83324fbdb439d60868016ab707a778d83
+protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
 ---
 
 # Workflow audit: 2026-10-11
