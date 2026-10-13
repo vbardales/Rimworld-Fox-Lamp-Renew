@@ -25,6 +25,7 @@ Feature: gallery: a marble lamp on the calm zone
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 12
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And a "Fox_Lamp" is built at (200, 187)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
@@ -47,6 +48,7 @@ Feature: gallery: a marble lamp on the calm zone
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 19
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And a "Fox_Lamp" is built at (200, 187)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
@@ -70,6 +72,7 @@ Feature: gallery: a marble lamp on the calm zone
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 23
     And I set the weather to "Clear"
+    And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And a "Fox_Lamp" is built at (200, 187)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
