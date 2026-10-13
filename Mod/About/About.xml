@@ -22,11 +22,11 @@
   </incompatibleWith>
   <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-The Fox Lamp, brought to RimWorld 1.6 - a bamboo shoot carved from marble, set in an open lantern frame.
+The Fox Lamp, brought to the latest RimWorld version - a bamboo shoot carved from marble, set in an open lantern frame.
 
 I am not the author of this mod. The piece is AmliFurx's, made in July 2020 as a thank-you to a player. Megapa3yM kept it running through 1.5. Credit goes to them; mistakes here are mine. If either of them comes back to it, or asks me to take this down, it comes down.
 
-Most of what I did was the work needed to make it run on 1.6. One thing is not that, and it is the first thing you will notice: the lantern lights now. AmliFurx never gave the piece a light and the 1.5 fork never added one, so that is a change to his work rather than a repair of it. It is described below, and it is why this mod is a Renew rather than a straight port.
+Most of what I did was the work needed to make it run on the latest RimWorld version. One thing is not that, and it is the first thing you will notice: the lantern lights now. AmliFurx never gave the piece a light and the 1.5 fork never added one, so that is a change to his work rather than a repair of it. It is described below, and it is why this mod is a Renew rather than a straight port.
 
 Original: https://steamcommunity.com/sharedfiles/filedetails/?id=2166575832 (AmliFurx)
 1.5 fork: https://steamcommunity.com/sharedfiles/filedetails/?id=3248294052 (Megapa3yM, stopped at 1.5)
@@ -39,9 +39,9 @@ It appears in the "AmliFurx" architect tab, alongside the other thank-you pieces
 
 READ THIS BEFORE SUBSCRIBING
 
-If you are here for the fox lamps - the fur lights, the tiny one, the bamboo shoot lamp - you do not want this mod. You want 【AF】SydailyFox (Continued), which is required below and which already ships every one of them, on 1.6, unchanged.
+If you are here for the fox lamps - the fur lights, the tiny one, the bamboo shoot lamp - you do not want this mod. You want 【AF】SydailyFox (Continued), which is required below and which already ships every one of them, for the latest RimWorld version, unchanged.
 
-The 1.5 mod this one comes from was a fork of that mod's lamps. All of them have since been carried to 1.6 by Mlie in the parent mod itself, so republishing them here would only put duplicate defNames against a mod you are required to have. Exactly one def in the fork was never in the parent: this one. That is all this mod adds.
+The 1.5 mod this one comes from was a fork of that mod's lamps. All of them have since been carried forward by Mlie in the parent mod itself, so republishing them here would only put duplicate defNames against a mod you are required to have. Exactly one def in the fork was never in the parent: this one. That is all this mod adds.
 
 If you are still subscribed to that 1.5 fork, unsubscribe or disable it. This mod declares it incompatible, because the two ship the same defName and RimWorld would keep only one of them, at random as far as you can tell. You lose nothing: everything the fork had is either here or in the mod required below.
 
@@ -63,9 +63,9 @@ It lights because I wanted it to light. If you want the sculpture he actually ma
 
 No heat pusher, and no flame drawn on the sprite. The first would have a marble carving warming a room; the second would put a vanilla flame at the foot of the piece rather than inside the lantern, because the art is drawn five times the size of the cell it stands on.
 
-WHAT CHANGED IN THE 1.6 UPDATE
+WHAT CHANGED IN THIS UPDATE
 
-Every field was checked against the 1.6 game files. Nothing in the def was broken by 1.6 itself - it loads on 1.6 as written. Three things were wrong before it, and are now fixed:
+Every field was checked against the game files. Nothing in the def was broken by the new version itself - it loads as written. Three things were wrong before it, and are now fixed:
 
 - The colour mask never loaded, in any version, since 2020. It shipped as Fox_Lampm.png, but the game looks for the texture path plus "_m" - Fox_Lamp_m.png - and gives up silently when it is missing. It is not shipped rather than renamed: renaming it would change how the piece is drawn, and it should look like the mod people knew. For the curious, the mask covers the marble shoot and nothing else - the lantern frame is not in it. It was a colour mask, never a glow map.
 - Beauty was never shown. The piece is built around a Beauty of 800, but it used the plain Building class instead of vanilla's Building_Art, which is what puts the Beauty line in the inspect pane.
