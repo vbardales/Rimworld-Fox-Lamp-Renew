@@ -13,7 +13,7 @@
 # the place and cleans the filth.
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran. What the
 # lamp does (lit, off, fuel) is asserted by 03; here the state is only asserted before a capture so the image is worth opening.
-@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio
+@requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace
 @review
 Feature: gallery: a marble lamp on the calm zone
 
@@ -30,7 +30,6 @@ Feature: gallery: a marble lamp on the calm zone
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Jacket" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
-    And Nelim's Sanctuary: Nelim has her own face
     When I wait 10 ticks
     And Fox Lamp: the lamp at x=200 z=187 is switched off
     And I wait 10 ticks
@@ -38,6 +37,11 @@ Feature: gallery: a marble lamp on the calm zone
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 4.5
+    And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: I let 5 frames pass
+    And Nelim's Pickle Tools: "Nelim" face state is logged
+    And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     Then I take a screenshot "gallery 1 - the lamp at noon (calm zone)"
 
   Scenario: 2. at dusk Nelim brings hay and the lantern is lit
@@ -56,12 +60,16 @@ Feature: gallery: a marble lamp on the calm zone
     And I spawn a "Hay" at (199, 185)
     And I spawn a "Hay" at (199, 185)
     And I spawn a "Hay" at (199, 185)
-    And Nelim's Sanctuary: Nelim has her own face
     When I wait 10 ticks
     Then Fox Lamp: the light of the lamp at x=200 z=187 is on
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (199, 187) at zoom 4
+    And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: I let 5 frames pass
+    And Nelim's Pickle Tools: "Nelim" face state is logged
+    And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     Then I take a screenshot "gallery 2 - dusk, the lantern is lit"
 
   Scenario: 3. at night the pool of light holds Nelim and Shogun
@@ -78,12 +86,16 @@ Feature: gallery: a marble lamp on the calm zone
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
-    And Nelim's Sanctuary: Nelim has her own face
     When I wait 60 ticks
     Then Fox Lamp: the light of the lamp at x=200 z=187 is on
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 7
+    And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: I let 5 frames pass
+    And Nelim's Pickle Tools: "Nelim" face state is logged
+    And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     Then I take a screenshot "gallery 3 - the lamp at night"
 
   Scenario: 4. the lamp up close, its inspect pane
