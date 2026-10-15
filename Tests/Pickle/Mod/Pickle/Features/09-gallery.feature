@@ -11,7 +11,7 @@
 #   3. 23:00  Night: her arms are empty, the pool of light holds Nelim and Shogun, and the square around it is dark.
 #   4. 23:00  Close: the inspect pane of the same lamp: Beauty 800, its art title, its fuel 12 / 12 (30 days), its switch.
 # Nelim wears a light teal shirt (28, 98, 104), the complement of the lamp's amber, and the dark pants, for a summer evening at 20 degrees; her hair is a Bob. Her face follows the story: noon a calm smirk, dusk a small smile as the lantern lights, night a peaceful one.
-# The only animal in the story is a dog, awake at every hour used. Every scenario reloads the save, removes the animals of
+# The only animal in the story is a dog, awake at every hour used, turned to face the camera (South), never shown from behind. Every scenario reloads the save, removes the animals of
 # the place, cleans the filth, and sets the map to 20 degrees so that the face shows no sweat (the thermal state is logged
 # before each capture, the cause of any sweat is read in the report: run dc17 found a memory thought, SleptInHeat, not the jacket).
 # The face is set last, after every wait: Facial Animation recomputes it at every tick (SanctuaryBacklot, run 56b0).
@@ -38,6 +38,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
     When I wait 20 ticks
     Then Fox Lamp: the lamp at x=200 z=187 holds 0 units of fuel
     And Fox Lamp: the light of the lamp at x=200 z=187 is off
@@ -68,6 +69,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
     And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
     When Fox Lamp: the lamp at x=200 z=187 is refuelled with 12 units
     And Fox Lamp: the lamp at x=200 z=187 is switched on
     And I wait 20 ticks
@@ -101,6 +103,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
     When I wait 60 ticks
     Then Fox Lamp: the lamp at x=200 z=187 holds 12 units of fuel
     And Fox Lamp: the light of the lamp at x=200 z=187 is on
