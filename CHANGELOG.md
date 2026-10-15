@@ -7,8 +7,8 @@ display it in game.
 ## [1.0.0] — unreleased
 
 Changed since 0.1.0: the About description is reshaped into the labelled `IF I GO QUIET` / `AI-GENERATED` / `THANKS`
-sections (the description is not re-sent to Steam by an update), and the Preview carries the composited ModIcon. No Def,
-texture or translation changed. On release: the CI creates the `v1.0.0` tag and the matching GitHub release,
+sections (the description is not re-sent to Steam by an update), and the Preview carries the composited ModIcon. No Def field,
+texture or translation changed except one value: the build-menu icon scale (`uiIconScale`) is 1, down from 1.8, so the icon stays inside its square. On release: the CI creates the `v1.0.0` tag and the matching GitHub release,
 after a successful Steam upload (PUBLISHING.md).
 
 ## [0.1.0] — 2026-09-23

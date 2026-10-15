@@ -153,7 +153,7 @@ DO! NOT! EAT! THE! BAMBOO! SHOOT!!!!
 
     <designationCategory>AF_Thankyou</designationCategory>
     <uiIconPath>Thankyou/UI_Fox_Lamp</uiIconPath>
-    <uiIconScale>1.8</uiIconScale>
+    <uiIconScale>1</uiIconScale>
   </ThingDef>
 
 </Defs>
