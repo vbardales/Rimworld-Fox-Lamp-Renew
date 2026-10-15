@@ -17,6 +17,7 @@ workshop:     3806767650 (0.1.0 prepublication, private item, not tested or revi
 workflow_stage: shootGallery[1.0.0]
 remaining:
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
+  - unverified: the build-menu icon at scale 1 stays inside its square (Mod/Defs/Fox_Lamp.xml, 2026-10-15, Virginie): read on the gallery 4 capture (Build copy gizmo). Diff reviewed: one field, `uiIconScale` 1.8 to 1, no code, no patch; `code_review_sha` advanced.
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_0e16ab66-25f8-4309-b62f-ed30346620a5
@@ -24,7 +25,7 @@ updated:      2026-10-11, playTests exit met; now shootGallery[1.0.0]
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
-code_review_sha: c96488856b612a29f0a36c2b8ad10599a6bcfe5c
+code_review_sha: 7c83144db5f38b206589743363a60d09b783be3e
 protocols_read_sha: 2f4e0002e2543fcde57999c51ff8b2f0dfc8efdb
 ---
 
