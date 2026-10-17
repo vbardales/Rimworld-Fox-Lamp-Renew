@@ -1,33 +1,22 @@
 # Fox Lamp Renew — in-game test scenarios
 
-This mod is one building and no code at all: a single `ThingDef`, two textures and a French
-translation. Everything below has to be watched in a running colony, because nothing that can be
-checked off the disk tells you whether the piece draws, whether a colonist can meditate at it, or
-whether its Beauty finally reaches the inspect pane.
+Mod = one building, no code: single `ThingDef`, two textures, French translation. All must be watched in running colony. Nothing checkable off disk says whether piece draws, colonist can meditate at it, or Beauty reaches inspect pane.
 
-It is not shipped: it lives beside `Mod/`, never inside it, so Steam never receives it.
+Not shipped: lives beside `Mod/`, never inside, so Steam never gets it.
 
-The in-game scenarios below are written as a Pickle suite in [Tests/Pickle/](Tests/Pickle/README.md): the README there
-maps each scenario to its feature, says what was left out of Gherkin and why, and names the passes to play. Scenario 1 (this
-mod without its dependency), the absence-of-comp checks of 6.7 to 6.9, 8, 9, 13.3 and 13.4 are not in it, each justified in the
-"Scope" section of that README.
+In-game scenarios below written as Pickle suite in [Tests/Pickle/](Tests/Pickle/README.md): README maps each scenario to feature, says what left out of Gherkin and why, names passes to play. Scenario 1 (mod without dependency), absence-of-comp checks of 6.7 to 6.9, 8, 9, 13.3 and 13.4 not in it, each justified in README "Scope" section.
 
-Offline validation and reproducible commands are recorded in [Tests/RESULTS.md](Tests/RESULTS.md).
-Offline checks are not gameplay results. Where a scenario below is played in game, the run is in
-[docs/runs/history.md](docs/runs/history.md) and the verdict in `STATUS.md`.
+Offline validation and reproducible commands in [Tests/RESULTS.md](Tests/RESULTS.md).
+Offline checks not gameplay results. Where scenario below played in game, run in
+[docs/runs/history.md](docs/runs/history.md), verdict in `STATUS.md`.
 
 ## What `done -> tested` needs (AUDIT.md, 2026-10-02)
 
-1. **No scenario is `@wip`.** None is: `grep -r "@wip" Tests/Pickle` returns nothing.
-2. **Every conditional scenario has run.** One feature is conditional, `08-incompatible-fork`
-   (`@requires:mg.ferianstory.foxlamp`). It is skipped in the two minimal passes (that is its design) and played in its
-   own pass, `wsl-deps.incompat-foxlamp15.map`, whose report must show 2 of 2 played, not skipped.
-3. **No manual test left to validate.** Every scenario below is in exactly one of the three columns of the next table:
-   a Pickle scenario that is green, an offline check that passed, or "not applicable" with its reason. What a person
-   still does is read the `@review` captures (see `Tests/Pickle/README.md`, "What a person looks at"); that is reading
-   an image a scenario already proved to be in the wanted state, not a test.
-4. The suite is green in English **and** in French, and `exitReason`, played against discovered, and the pass name
-   were read before any count.
+1. **No scenario `@wip`.** `grep -r "@wip" Tests/Pickle` returns nothing.
+2. **Every conditional scenario has run.** One feature conditional, `08-incompatible-fork`
+   (`@requires:mg.ferianstory.foxlamp`). Skipped in two minimal passes (by design), played in own pass, `wsl-deps.incompat-foxlamp15.map`, report must show 2 of 2 played, not skipped.
+3. **No manual test left to validate.** Every scenario below in exactly one of three columns of next table: green Pickle scenario, passed offline check, or "not applicable" with reason. Person still reads `@review` captures (see `Tests/Pickle/README.md`, "What a person looks at"); that is reading image a scenario already proved in wanted state, not a test.
+4. Suite green in English **and** French; `exitReason`, played against discovered, pass name read before any count.
 
 ### The passes: three
 
@@ -37,67 +26,56 @@ Offline checks are not gameplay results. Where a scenario below is played in gam
 | Minimal, French | none | French | same |
 | Declared incompatibility | `wsl-deps.incompat-foxlamp15.map` | English | `08` |
 
-No optional integration exists (no `loadAfter` beyond the hard dependency, no patch, no `LoadFolders`), so there is
-no "with optional mods" pass. No DLC is touched, so no DLC-absent pass. Nothing reads state across processes, so no
-restart pass. The incompatibility pass is replayed when the 1.5 fork moves, not at each publication.
+No optional integration (no `loadAfter` beyond hard dependency, no patch, no `LoadFolders`), so no "with optional mods" pass. No DLC touched, so no DLC-absent pass. Nothing reads state across processes, so no restart pass. Incompatibility pass replayed when 1.5 fork moves, not each publication.
 
-**Order.** What never ran or is red first, as a small ticket. The full suite in both languages, which replays what is
-already green, is deposited last, together, on the final revision. A scenario is a non-regression as soon as it has a
-green run on the current logic; a change to the mod or to a step it uses makes it new again.
+**Order.** Never-ran or red first, as small ticket. Full suite both languages, replaying what already green, deposited last, together, on final revision. Scenario is non-regression once it has green run on current logic; change to mod or step it uses makes it new again.
 
 ### Every scenario, and where it is answered
 
 | TESTING.md | Answered by |
 | --- | --- |
-| 1 Without its dependency | Not applicable: the game does not activate a mod without its hard dependency, which is the game's own behaviour. The declaration is read offline (`Check-DefRefs`, `About.xml`). |
-| 2 Architect tab, no research, cost | Pickle `01-loads`. Tooltip text: `06-language` for the description, `07-inspect-pane`. |
-| 3 Build-menu icon is a book | Not applicable as a scenario: authored art, untouched since 2020. A missing texture would log at load and fail `01-loads` "no errors". The picture itself is not asserted. |
-| 4 Beauty in the inspect pane | Pickle `02-construction` (class, Beauty 800) and `07-inspect-pane` (capture). 4.2, the room's own beauty maths: not applicable, vanilla. |
-| 5 Art without quality | Pickle `02-construction`. The second lamp by another artist: not a scenario, see the header of that feature. |
-| 6.1 Radius ring while placing | Not applicable as a scenario: `PlaceWorker_GlowRadius` is vanilla's and the def names it (offline type check). |
-| 6.2 to 6.6 Lit, switch, fuel, run dry | Pickle `03-light-fuel-switch`, with the two night captures. |
-| 6.7 to 6.9 No heat, no flame, no fire | Offline: absence of comps and Flammability 0, read off the def. |
-| 7 No colour mask, no tint | Offline: the mask file is not shipped. The tint is a question put to a person on the night captures. |
-| 8 Drawn at 4.92 cells, 9 Walk-through | Offline: authored def fields. The night captures show the drawn size. |
-| 10.1 Meditation focus | Pickle `04-meditation-and-moving`. 10.2 four lamps worth one: offline, the vanilla offset names three defs and not this one. |
+| 1 Without its dependency | Not applicable: game does not activate mod without hard dependency, game's own behaviour. Declaration read offline (`Check-DefRefs`, `About.xml`). |
+| 2 Architect tab, no research, cost | Pickle `01-loads`. Tooltip text: `06-language` for description, `07-inspect-pane`. |
+| 3 Build-menu icon is a book | Not applicable as scenario: authored art, untouched since 2020. Missing texture would log at load and fail `01-loads` "no errors". Picture itself not asserted. |
+| 4 Beauty in the inspect pane | Pickle `02-construction` (class, Beauty 800) and `07-inspect-pane` (capture). 4.2, room's own beauty maths: not applicable, vanilla. |
+| 5 Art without quality | Pickle `02-construction`. Second lamp by another artist: not a scenario, see header of that feature. |
+| 6.1 Radius ring while placing | Not applicable as scenario: `PlaceWorker_GlowRadius` is vanilla's, def names it (offline type check). |
+| 6.2 to 6.6 Lit, switch, fuel, run dry | Pickle `03-light-fuel-switch`, with two night captures. |
+| 6.7 to 6.9 No heat, no flame, no fire | Offline: absence of comps and Flammability 0, read off def. |
+| 7 No colour mask, no tint | Offline: mask file not shipped. Tint is question put to person on night captures. |
+| 8 Drawn at 4.92 cells, 9 Walk-through | Offline: authored def fields. Night captures show drawn size. |
+| 10.1 Meditation focus | Pickle `04-meditation-and-moving`. 10.2 four lamps worth one: offline, vanilla offset names three defs, not this one. |
 | 11.1 and 11.2 Minify, put back, keep the title | Pickle `04-meditation-and-moving`. Stockpile filter tree and 11.3 deconstruct: vanilla behaviour driven by def fields read offline. |
-| 12 French | Pickle `06-language` and `07-inspect-pane` in the French pass. |
-| 13.1 Save and reload, 13.2 Added to a colony | Pickle `05-save-reload`, `01-loads` (load of a save with the mod). |
-| 13.3 Removed from a colony | Not applicable: the game's own missing-content handling. |
-| 13.4 A save from before the light | Not applicable to the gate: no step can produce that save. Residual risk, kept in `STATUS.md`. |
-| 14.1 Mod-list warning | Not applicable: the game's reaction to a declaration. The declaration is read offline. |
-| 14.2 Both loaded | Pickle `08-incompatible-fork`: the fork loads no Defs under 1.6, so nothing collides. |
+| 12 French | Pickle `06-language` and `07-inspect-pane` in French pass. |
+| 13.1 Save and reload, 13.2 Added to a colony | Pickle `05-save-reload`, `01-loads` (load of save with mod). |
+| 13.3 Removed from a colony | Not applicable: game's own missing-content handling. |
+| 13.4 A save from before the light | Not applicable to gate: no step can produce that save. Residual risk kept in `STATUS.md`. |
+| 14.1 Mod-list warning | Not applicable: game's reaction to declaration. Declaration read offline. |
+| 14.2 Both loaded | Pickle `08-incompatible-fork`: fork loads no Defs under 1.6, so nothing collides. |
 | 14.3 Description tells fork users to leave | Read in `About.xml`, no test. |
 
 ### Proofs to keep after a run
 
-Per pass and scenario, the latest report for the revision now in the repository, minified: `summary.json`, `summary.md`,
-`junit.xml`, `Player.log`, `evidence-complete.txt` (and `dropped-mods.txt` when present), plus the `@review` captures a
-person has opened: the two night stills of `03` once, the inspect pane of `07` in each language. Delete `report.html`,
-`messages.ndjson` and every other capture as soon as a newer report replaces it. One text line per run in
-`docs/runs/history.md`. Details and the folder-by-folder state: `Tests/Pickle/README.md`, "Evidence".
+Per pass and scenario, latest report for revision now in repository, minified: `summary.json`, `summary.md`,
+`junit.xml`, `Player.log`, `evidence-complete.txt` (and `dropped-mods.txt` when present), plus `@review` captures a
+person opened: two night stills of `03` once, inspect pane of `07` each language. Delete `report.html`,
+`messages.ndjson` and every other capture once newer report replaces it. One text line per run in
+`docs/runs/history.md`. Details and folder-by-folder state: `Tests/Pickle/README.md`, "Evidence".
 
 ## Before starting
 
-- RimWorld 1.6. **No DLC required.** The `Artistic` meditation focus is a Core def, not a Royalty
-  one, so scenario 10 works on a bare install. Development mode on, so silent failures become red
-  text.
-- Enable **Harmony**, required by the installed SydailyFox dependency, before SydailyFox.
+- RimWorld 1.6. **No DLC required.** `Artistic` meditation focus is Core def, not Royalty, so scenario 10 works on bare install. Development mode on, so silent failures become red text.
+- Enable **Harmony**, required by installed SydailyFox dependency, before SydailyFox.
 - **【AF】SydailyFox (Continued)** (`Mlie.AFSydailyFox`, Workshop 3540588386) must be installed and
-  loaded **before** this mod. It is a hard requirement, not a courtesy: the parent def, the
-  architect tab and both item categories all come from it.
-- **【1.5】Fox Lamp Forked** (`mg.ferianstory.foxlamp`) must be **disabled**. It is still in the
-  Workshop folder and it declares the same `Fox_Lamp`. See scenario 14.
-- The log to read afterwards, and to attach to any report:
+  loaded **before** this mod. Hard requirement, not courtesy: parent def, architect tab and both item categories all come from it.
+- **【1.5】Fox Lamp Forked** (`mg.ferianstory.foxlamp`) must be **disabled**. Still in Workshop folder, declares same `Fox_Lamp`. See scenario 14.
+- Log to read afterwards, and attach to any report:
   `C:\Users\nelim\AppData\LocalLow\Ludeon Studios\RimWorld by Ludeon Studios\Player.log`
-- Materials: **80 marble blocks**, so a marble-bearing map or Debug actions → Spawn thing →
-  `BlocksMarble`. The piece costs **24 000 work**, four fifths of a vanilla large sculpture, and
-  will take a builder days; Debug actions → Finish construction is the way through it, except in
-  scenario 5, where the work has to complete normally.
-- Fuel for scenario 6: **hay, wood or chemfuel**. It is built with a full frame, so none is needed
-  to see it light, but some is needed to see it refuelled.
+- Materials: **80 marble blocks**, so marble-bearing map or Debug actions → Spawn thing →
+  `BlocksMarble`. Piece costs **24 000 work**, four fifths of vanilla large sculpture, takes builder days; Debug actions → Finish construction is the way through, except scenario 5, where work must complete normally.
+- Fuel for scenario 6: **hay, wood or chemfuel**. Built with full frame, so none needed to see it light, but some needed to see it refuelled.
 
-Useful comparisons, all read out of the vanilla files:
+Useful comparisons, all read out of vanilla files:
 
 | | Beauty | Work |
 |---|---|---|
@@ -106,20 +84,19 @@ Useful comparisons, all read out of the vanilla files:
 | Grand sculpture | 400 | 105 000 |
 | **Fox Lamp** | **800** | **24 000** |
 
-So it is twice as beautiful as the best sculpture vanilla has, for less than a quarter of its work.
-That is not a balance the port introduced — it is AmliFurx's, unchanged — but it is worth knowing
-before judging whether the piece feels right. A legendary vanilla sculpture also reaches a
-meditation focus strength of 0.28, where this sits flat at **0.4**.
+So twice as beautiful as best vanilla sculpture, for under quarter of its work.
+Port did not introduce this balance — AmliFurx's, unchanged — but worth knowing
+before judging whether piece feels right. Legendary vanilla sculpture reaches meditation focus strength 0.28, this sits flat at **0.4**.
 
 ## 1. Without its dependency, it must fail loudly
 
-The first thing to prove, because every other scenario assumes it. Four separate names in the def
-belong to the other mod, and none of them is optional.
+First thing to prove, since every other scenario assumes it. Four separate names in def
+belong to other mod, none optional.
 
-1. Enable **this mod alone**, with SydailyFox disabled. Let the game load.
+1. Enable **this mod alone**, SydailyFox disabled. Let game load.
 
-**Pass:** the def does not load, the building is absent from every architect tab, and the log says
-so in as many words. The lines to find:
+**Pass:** def does not load, building absent from every architect tab, log says
+so in as many words. Lines to find:
 
 ```
 XML error: Could not find parent node named "AF_NaturalBuildingBase" for node "ThingDef"
@@ -127,271 +104,267 @@ Could not resolve cross-reference to RimWorld.DesignationCategoryDef named AF_Th
 Could not resolve cross-reference to Verse.ThingCategoryDef named AF_TC_RimFurry_Building_Thankyou
 ```
 
-**Fail:** the building appears anyway, or the game loads in silence. A silent load would mean the
-def resolved names from somewhere unexpected, which is worth knowing before release.
+**Fail:** building appears anyway, or game loads in silence. Silent load would mean def resolved names from somewhere unexpected, worth knowing before release.
 
 2. Re-enable SydailyFox, load again.
 
-**Pass:** none of those three lines is in the log, and nothing red names `Fox_Lamp`.
+**Pass:** none of those three lines in log, nothing red names `Fox_Lamp`.
 
 ## 2. It is in AmliFurx's tab, buildable on day one
 
-1. Open the Architect menu and find the **AmliFurx** tab.
+1. Open Architect menu, find **AmliFurx** tab.
 
-**Pass:** **Fox Lamp** is in it, beside the other thank-you pieces the parent mod ships. No research
-prerequisite, cost 80 marble blocks, tech level neolithic — a tribe must be able to build it on day
-one, materials permitting. The tooltip carries the description, ending on AmliFurx's signature and
-the 2020 date.
+**Pass:** **Fox Lamp** in it, beside other thank-you pieces parent mod ships. No research
+prerequisite, cost 80 marble blocks, tech level neolithic — tribe must be able to build on day
+one, materials permitting. Tooltip carries description, ending on AmliFurx's signature and
+2020 date.
 
-**Fail:** absent from the tab, or filed in a vanilla tab such as Furniture or Misc.
+**Fail:** absent from tab, or filed in vanilla tab such as Furniture or Misc.
 
 ## 3. The build-menu icon is a book, and that is correct
 
-Read this before reporting it as a bug.
+Read before reporting as bug.
 
-**Pass:** the icon in the build menu is a small **book**, not a picture of the sculpture. AmliFurx
-drew a series of stylised cards rather than representations, and the file is shipped untouched. It
-is scaled to 1.8 because the source art is small in its canvas.
+**Pass:** build menu icon is small **book**, not picture of sculpture. AmliFurx
+drew series of stylised cards rather than representations, file shipped untouched. Scaled to 1.8 because source art small in its canvas.
 
-**Fail:** a pink or missing-texture square. That is a real fault; a book is not.
+**Fail:** pink or missing-texture square. Real fault; book is not.
 
 ## 4. Beauty reaches the inspect pane
 
-This is the fix the port exists for. Before it, the piece was built around a Beauty of 800 and never
-showed it, because the def used the plain `Building` class it inherits instead of vanilla's
+Fix the port exists for. Before it, piece built around Beauty 800 and never
+showed it, because def used plain `Building` class it inherits instead of vanilla's
 `Building_Art`.
 
-1. Build one. Select it and read the inspect pane.
+1. Build one. Select, read inspect pane.
 
-**Pass:** a **Beauty** line is there, reading **800**. For scale, stand a vanilla grand sculpture
-beside it: that one reads 400, and it is the best vanilla has.
-**Fail:** no Beauty line at all. That means the `thingClass` override was lost.
+**Pass:** **Beauty** line there, reading **800**. For scale, stand vanilla grand sculpture
+beside it: reads 400, best vanilla has.
+**Fail:** no Beauty line. Means `thingClass` override lost.
 
-2. Put it in a small room and check the room's stats.
+2. Put in small room, check room stats.
 
-**Pass:** the room's beauty and impressiveness jump. 800 in one cell is a great deal, and it should
+**Pass:** room beauty and impressiveness jump. 800 in one cell is a lot, should
 be obvious.
 
 ## 5. It becomes a work of art without ever having a quality
 
-The subtle one, and the one an obvious "fix" would break. The def carries `CompProperties_Art` with
-**no** `CompQuality`, unlike every vanilla art building. It works because
-`Frame.CompleteConstruction` calls `InitializeArt` itself when the finished thing has no quality
-comp — so the art is set up **by the act of finishing construction**.
+Subtle one, and one an obvious "fix" would break. Def carries `CompProperties_Art` with
+**no** `CompQuality`, unlike every vanilla art building. Works because
+`Frame.CompleteConstruction` calls `InitializeArt` itself when finished thing has no quality
+comp — art set up **by act of finishing construction**.
 
-1. Build one the ordinary way, letting a colonist finish the work. **Do not** use Debug actions →
-   Spawn thing for this scenario, and do not skip the frame: spawning the finished building bypasses
-   the very code path being tested.
-2. Select it and open the **Art** tab.
+1. Build one ordinary way, colonist finishing work. **Do not** use Debug actions →
+   Spawn thing here, do not skip frame: spawning finished building bypasses
+   the very code path tested.
+2. Select, open **Art** tab.
 
-**Pass:** it has a generated title, a named author, and a sculpture description in the art tab. The
-inspect pane shows **no quality label** — no "good", no "excellent", nothing. Beauty stays flat at
-800 whoever built it, because there is no quality to scale it.
+**Pass:** generated title, named author, sculpture description in art tab. Inspect
+pane shows **no quality label** — no "good", no "excellent", nothing. Beauty stays flat at
+800 whoever built it, no quality to scale it.
 
-**Fail:** an empty or missing art tab, or a null-reference in the log at the moment the frame
-completes. Also a fail, in the other direction: a quality label appearing, which would mean a
-`CompQuality` crept in and the flat Beauty is now being scaled.
+**Fail:** empty or missing art tab, or null-reference in log when frame
+completes. Also fail, other direction: quality label appearing, meaning a
+`CompQuality` crept in and flat Beauty now scaled.
 
-3. Build a second one with a much better or much worse artist.
+3. Build second with much better or much worse artist.
 
-**Pass:** both read 800. The trade for having no quality is that the piece never rolls.
+**Pass:** both read 800. Trade for no quality: piece never rolls.
 
 ## 6. It lights, and that part is not AmliFurx's
 
-The one thing in this mod that is a change to his work rather than a repair of it, so it gets the
-longest scenario. Three comps do it, and the game wires them together: `CompGlower` asks
-`CompRefuelable` for fuel and `CompFlickable` for the switch. Vanilla's torch pairs the first two
-but has no switch; the three together are the wood-fired and chemfuel generators, so that trio is
-the pattern being followed and the one to compare against if a step below misbehaves.
+Only thing in mod that is change to his work rather than repair, so longest scenario. Three comps do it, game wires them together: `CompGlower` asks
+`CompRefuelable` for fuel and `CompFlickable` for switch. Vanilla torch pairs first two
+but has no switch; all three together are wood-fired and chemfuel generators, so that trio is
+pattern followed and one to compare against if step below misbehaves.
 
-1. Place one, and watch the placement ghost before confirming.
+1. Place one, watch placement ghost before confirming.
 
-**Pass:** a lit-radius ring is drawn around the ghost while you position it, the way it is for any
+**Pass:** lit-radius ring drawn around ghost while positioning, as for any
 vanilla lamp. That is `PlaceWorker_GlowRadius`.
 
-2. Finish building it, then wait for night or Debug actions → set the hour to 2.
+2. Finish building, then wait for night or Debug actions → set hour to 2.
 
-**Pass:** it is **already lit**, without anyone hauling fuel to it first — `initialFuelPercent` is
-1, so it is built with a full frame. The pool reaches radius 10, the same as a vanilla torch or
-brazier, in the warm amber of its sister lamps rather than the white of an electric light. Stand a
-torch beside it and the two pools should look the same size.
+**Pass:** **already lit**, no one hauling fuel first — `initialFuelPercent` is
+1, so built with full frame. Pool reaches radius 10, same as vanilla torch or
+brazier, in warm amber of sister lamps rather than white of electric light. Stand torch beside it, two pools should look same size.
 
-**Fail:** built dark. That means the initial fuel was lost, and a player would reasonably conclude
-the light does not work.
+**Fail:** built dark. Means initial fuel lost, player would reasonably conclude
+light does not work.
 
-3. Read the inspect pane.
+3. Read inspect pane.
 
-**Pass:** a fuel bar, a refuelling job when it runs low, and an on/off switch. Twelve units at full.
+**Pass:** fuel bar, refuelling job when low, on/off switch. Twelve units at full.
 
-4. Switch it off.
+4. Switch off.
 
-**Pass:** the glow goes out at once and fuel stops draining. Switch it back on and the light
+**Pass:** glow goes out at once, fuel stops draining. Switch back on, light
 returns.
 
-5. Check what it will accept as fuel.
+5. Check what it accepts as fuel.
 
-**Pass:** hay, wood and chemfuel, and nothing else. Those are its sister lamp's three, not a choice
+**Pass:** hay, wood and chemfuel, nothing else. Sister lamp's three, not choice
 made here.
 
-6. Let it run dry, or Debug actions → empty the fuel.
+6. Let run dry, or Debug actions → empty fuel.
 
-**Pass:** it goes dark and **stays standing**. `destroyOnNoFuel` is false, so an unattended
-monument is an unlit monument, never a lost one. Beauty, the art title and the meditation focus all
-survive being unlit — none of them is wired to the glow.
+**Pass:** goes dark and **stays standing**. `destroyOnNoFuel` false, so unattended
+monument is unlit monument, never lost one. Beauty, art title and meditation focus all
+survive being unlit — none wired to glow.
 
-7. Put it in a small sealed room and watch the temperature.
+7. Put in small sealed room, watch temperature.
 
-**Pass:** the room does **not** warm up. It has no heat pusher, deliberately: a marble carving
-warming a room is the part that would not read. Its sister lamp does push heat; this one does not.
+**Pass:** room does **not** warm. No heat pusher, deliberately: marble carving
+warming room would not read. Sister lamp pushes heat; this does not.
 
-8. Look at the sprite while it is lit.
+8. Look at sprite while lit.
 
-**Pass:** no flame is drawn on the art — only the light on the ground changes. There is no fire
-overlay, on purpose: vanilla draws that flame at the centre of the cell, and this piece is drawn
-at 4.92 cells, so the flame would sit at its foot instead of inside the lantern frame.
+**Pass:** no flame drawn on art — only light on ground changes. No fire
+overlay, on purpose: vanilla draws flame at cell centre, piece drawn
+at 4.92 cells, so flame would sit at its foot instead of inside lantern frame.
 
-9. Start a fire next to it.
+9. Start fire next to it.
 
-**Pass:** it does not catch. Flammability is 0, which is what vanilla's own torch base uses too.
+**Pass:** does not catch. Flammability 0, same as vanilla torch base.
 
 ## 7. No colour mask, and no tint
 
-The companion mask file never loaded in any version since 2020 and is deliberately not shipped, but
-the `CutoutComplex` shader that would use it is kept so the piece draws exactly as players knew it.
+Companion mask file never loaded in any version since 2020, deliberately not shipped, but
+`CutoutComplex` shader that would use it kept so piece draws exactly as players knew it.
 
-**Pass:** the sculpture is drawn in its own marble greys and blacks, the way the texture looks. No
+**Pass:** sculpture drawn in own marble greys and blacks, as texture looks. No
 colour-picker gizmo, no faction colour, no black or magenta silhouette.
-**Fail:** the piece renders solid dark or takes on a tint. That would mean the shader is now finding
-a mask where it should find none.
+**Fail:** piece renders solid dark or takes tint. Means shader now finding
+mask where should find none.
 
 ## 8. It is drawn five times the size of the cell it occupies
 
-`drawSize` is 4.92 on a 1x1 building. This is authored and correct, but it looks wrong the first
+`drawSize` 4.92 on 1x1 building. Authored and correct, but looks wrong first
 time.
 
-1. Build one in the open.
+1. Build one in open.
 
-**Pass:** the art spills well beyond its own cell, with a shadow under it, while the building
-**occupies exactly one cell**. Build a wall in the cell directly north of it: the wall goes up
-normally and the two overlap on screen without either refusing to be placed.
+**Pass:** art spills well beyond own cell, shadow under it, while building
+**occupies exactly one cell**. Build wall in cell directly north: wall goes up
+normally, two overlap on screen, neither refusing placement.
 
 ## 9. You can walk through it
 
-`fillPercent` 0, `pathCost` 0, `passability` PassThroughOnly, and `isEdifice` false. This piece
-blocks nothing at all, which is unusual — a vanilla sculpture has a path cost of 50 and fills half
+`fillPercent` 0, `pathCost` 0, `passability` PassThroughOnly, `isEdifice` false. Piece
+blocks nothing, unusual — vanilla sculpture has path cost 50 and fills half
 its cell.
 
-1. Put it in the middle of a corridor and watch the traffic.
+1. Put in middle of corridor, watch traffic.
 
-**Pass:** colonists walk straight over its cell without slowing or stepping around, and no red
-pathing error appears.
+**Pass:** colonists walk straight over cell without slowing or stepping around, no red
+pathing error.
 
-2. Put it in a doorway-width gap in a wall and check the room.
+2. Put in doorway-width gap in wall, check room.
 
-**Pass:** the two sides are still **one room**. It is not an edifice, so it does not divide space
-and it does not count towards a room's structure.
+**Pass:** two sides still **one room**. Not edifice, so does not divide space
+and does not count toward room's structure.
 
-3. Try to paint a growing zone over its cell.
+3. Try painting growing zone over its cell.
 
-**Pass:** the zone refuses that one cell. `canOverlapZones` is false.
+**Pass:** zone refuses that one cell. `canOverlapZones` false.
 
 ## 10. Meditation: a flat focus, stronger than a legendary sculpture
 
-1. Assign a colonist a meditation focus and look for the Fox Lamp in the list. Have them meditate
+1. Assign colonist meditation focus, look for Fox Lamp in list. Have them meditate
    in front of it.
 
-**Pass:** it is offered as an **Artistic** focus, and its focus strength reads **0.4**. Meditation
-proceeds normally with the colonist facing it.
+**Pass:** offered as **Artistic** focus, focus strength reads **0.4**. Meditation
+proceeds normally, colonist facing it.
 
-2. Build three more within a few cells and check the strength again.
+2. Build three more within few cells, check strength again.
 
-**Pass:** still 0.4. Vanilla gives a bonus for standing among several sculptures, but that offset
-names `SculptureSmall`, `SculptureLarge` and `SculptureGrand` by def, and `Fox_Lamp` is not among
-them. Four of these are worth exactly what one is.
+**Pass:** still 0.4. Vanilla gives bonus for standing among several sculptures, but that offset
+names `SculptureSmall`, `SculptureLarge` and `SculptureGrand` by def, `Fox_Lamp` not among
+them. Four of these worth exactly what one is.
 
-3. Compare against a legendary vanilla sculpture.
+3. Compare against legendary vanilla sculpture.
 
-**Pass:** the legendary one reaches 0.28 and this one sits at 0.4, unchanging. That is the trade for
-having no quality: it cannot roll badly, and it cannot roll well either.
+**Pass:** legendary reaches 0.28, this sits at 0.4, unchanging. Trade for
+no quality: cannot roll badly, cannot roll well either.
 
 ## 11. It moves house, and it keeps its name
 
-1. Select it and choose **Uninstall**. Let a colonist carry it away.
+1. Select, choose **Uninstall**. Let colonist carry it away.
 
-**Pass:** it becomes a minified Fox Lamp, an item that can be hauled and stored. It appears in a
-stockpile's filter tree under the parent mod's two thank-you categories, not under a vanilla one.
+**Pass:** becomes minified Fox Lamp, item that can be hauled and stored. Appears in
+stockpile filter tree under parent mod's two thank-you categories, not vanilla one.
 
-2. Re-install it somewhere else.
+2. Re-install elsewhere.
 
-**Pass:** it goes back up and **keeps the art title and author** it was given when it was first
-built. A new title would mean the art comp is being re-initialised on every install.
+**Pass:** goes back up and **keeps art title and author** given when first
+built. New title would mean art comp re-initialised on every install.
 
 3. Deconstruct one instead.
 
 **Pass:** marble blocks come back, as `leaveResourcesWhenKilled` promises.
 
-Watch the log at load for `is not minifiable yet has thing categories`. This def has both a
-`minifiedDef` and two thing categories, so it satisfies that check; the line appearing would mean
-the `minifiedDef` was lost, and it takes the whole def down with it.
+Watch log at load for `is not minifiable yet has thing categories`. Def has both
+`minifiedDef` and two thing categories, so satisfies check; line appearing means
+`minifiedDef` lost, takes whole def down with it.
 
 ## 12. French
 
-Switch the game to French and walk scenarios 2, 4 and 5 again.
+Switch game to French, walk scenarios 2, 4 and 5 again.
 
-**Pass:** the description reads *Une pousse de bambou taillée dans le marbre…* in the build menu and
-the inspect pane, with its paragraph breaks intact and the shout on its own line. The label stays
-**Fox Lamp** in English — that is deliberate and not a missing translation. It is the title AmliFurx
-gave the piece, and translating it would rename someone's artwork.
+**Pass:** description reads *Une pousse de bambou taillée dans le marbre…* in build menu and
+inspect pane, paragraph breaks intact, shout on own line. Label stays
+**Fox Lamp** in English — deliberate, not missing translation. Title AmliFurx
+gave piece, translating would rename someone's artwork.
 
-**Fail:** the English description showing through, or accented characters arriving mangled.
+**Fail:** English description showing through, or accented characters arriving mangled.
 
 ## 13. Saves, before and after
 
-The `defName` is unchanged from the 1.5 mod on purpose, so that a colony that already has one
+`defName` unchanged from 1.5 mod on purpose, so colony that already has one
 standing does not lose it.
 
 1. Build one, save, reload.
 
-**Pass:** it is still there, still with its art title, no red line on load.
+**Pass:** still there, still with art title, no red line on load.
 
-2. Add the mod to a colony that never had it.
+2. Add mod to colony that never had it.
 
-**Pass:** the building appears in the AmliFurx tab, nothing else changes, no error.
+**Pass:** building appears in AmliFurx tab, nothing else changes, no error.
 
-3. Remove it from a colony that had one built.
+3. Remove from colony that had one built.
 
-**Pass:** the game gives its usual missing-content warning, the colony loads and plays, and the
-piece is gone. Deconstruct any you have built first if you would rather avoid the warning.
+**Pass:** game gives usual missing-content warning, colony loads and plays, piece
+gone. Deconstruct any built first if you prefer avoiding warning.
 
-4. The upgrade case, if you can reach it: a save made while the piece was still unlit, loaded with
-   this version. Either an old save from before the light was added, or one made with the 1.5 fork
+4. Upgrade case, if reachable: save made while piece still unlit, loaded with
+   this version. Either old save from before light added, or one made with 1.5 fork
    in place of this mod.
 
-**Pass:** the standing piece gains the fuel frame and the switch, loads without a red line, and
-keeps its art title. Whether it comes back lit or empty is not the test — either is acceptable, and
-worth writing down, since the fuel comp is new to a thing that was saved without one.
+**Pass:** standing piece gains fuel frame and switch, loads without red line, and
+keeps art title. Whether it comes back lit or empty not the test — either acceptable, and
+worth writing down, since fuel comp is new to thing saved without one.
 
 ## 14. The 1.5 fork and this mod must never be enabled together
 
-Both declare `Fox_Lamp`, and the 1.5 mod additionally declares the four lamps that SydailyFox now
+Both declare `Fox_Lamp`, 1.5 mod additionally declares four lamps SydailyFox now
 ships itself.
 
-Since 2026-09-12 the About declares `mg.ferianstory.foxlamp` in `<incompatibleWith>`, so the game
+Since 2026-09-12 About declares `mg.ferianstory.foxlamp` in `<incompatibleWith>`, so game
 says so rather than leaving it to be discovered.
 
-1. Enable **【1.5】Fox Lamp Forked** and this mod at the same time, in the mod list.
+1. Enable **【1.5】Fox Lamp Forked** and this mod together, in mod list.
 
-**Pass:** the mod list marks the pair as incompatible and warns before you start, naming the 1.5
-fork. The warning is the whole point: the duplicate it prevents is silent otherwise.
+**Pass:** mod list marks pair incompatible and warns before start, naming 1.5
+fork. Warning is whole point: duplicate it prevents is silent otherwise.
 
-2. Ignore the warning and load anyway.
+2. Ignore warning, load anyway.
 
-**Expected:** RimWorld keeps one `Fox_Lamp` and logs a duplicate-defName error; whichever loads
-last wins. Nothing crashes, but one of the two mods is doing nothing. This is what the declaration
-exists to stop, so seeing it here is the confirmation, not a failure of the mod.
+**Expected:** RimWorld keeps one `Fox_Lamp`, logs duplicate-defName error; whichever loads
+last wins. Nothing crashes, but one of two mods does nothing. This is what declaration
+exists to stop, so seeing it here is confirmation, not failure of mod.
 
-3. Read the mod description in the list.
+3. Read mod description in list.
 
-**Pass:** it tells anyone still subscribed to the fork to unsubscribe or disable it, and says they
-lose nothing by doing so — everything the fork had is either in this mod or in the parent it
+**Pass:** tells anyone still subscribed to fork to unsubscribe or disable it, says they
+lose nothing doing so — everything fork had is in this mod or in parent it
 requires.
