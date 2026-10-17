@@ -23,7 +23,7 @@
 # Faces follow the story (noon a calm smirk, dusk a small smile, night a peaceful one). Every scenario reloads the save, removes
 # the animals of the place, cleans the filth, and sets the map to 20 degrees so that the face shows no sweat (the thermal state
 # is logged before each capture, the cause of any sweat is read in the report: run dc17 found a memory thought, SleptInHeat).
-# Plant and decor defNames (Plant_Rose, PlantPot_Bonsai, PlantPot, Stool, Plant_Daylily) are read from the game's own lists, not
+# Plant and decor defNames (Plant_Rose, PlantPot_Bonsai, PlantPot, Plant_Daylily; GALLERY-PROPS.md: an empty pot does not read, so the daylily is grown in it) are read from the game's own lists, not
 # played here yet: a wrong name fails the step and says so. The decor belongs to one image and is removed after it.
 # The face is set last, after every wait: Facial Animation recomputes it at every tick (SanctuaryBacklot, run 56b0).
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran. What the
@@ -47,6 +47,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
@@ -87,6 +88,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
@@ -130,6 +132,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 70, 80)
