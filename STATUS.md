@@ -25,7 +25,7 @@ updated:      2026-10-11, playTests exit met; now shootGallery[1.0.0]
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
-code_review_sha: 7c83144db5f38b206589743363a60d09b783be3e
+code_review_sha: 845707521bca5800b561eee72efdac7ced615ba1
 protocols_read_sha: 117fb9642df7e57bece2318904c644a9c39296df
 ---
 # Workflow audit: 2026-10-11
