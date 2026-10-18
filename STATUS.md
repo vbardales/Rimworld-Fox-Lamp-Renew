@@ -51,9 +51,9 @@ Story "the evening the lamp is filled", calm zone, Nelim keeper of the lamp, Sho
 
 | # | Shot (place, hour, zoom) | Outfit and face of Nelim | Action | Decor (removed after) | Living | Estimate | Risk | Plan | Verdict after run |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | calm zone, 12:00, zoom 6 | cream collar shirt, olive trousers, straw flophat, Bob, calm smirk | brings an armful of hay | 2 roses, bonsai pot, daylily pot, hay bale | Shogun front, 2 hens | 4 | defNames never played, hens leave frame | replay the scene alone; animals placed after the wait | pending |
-| 2 | calm zone, 19:00, zoom 4 off-centre | lilac shirt, indigo trousers, rust headwrap, Ponytails, small smile | last armful of hay, the lantern lights | yellow tall grass, daylily pot, stool, hay pile | Shogun front, cat Tama front | 4 | cat leaves frame, weak dusk glow | cat placed after the wait, lamp asserted lit, tight zoom | pending |
+| 1 | calm zone, 12:00, zoom 6 | cream collar shirt, olive trousers, straw flophat over long loose hair (Long), calm smirk | brings an armful of hay | 2 roses, bonsai pot, daylily pot, hay bale | Shogun front, 2 hens | 4 | defNames never played, hens leave frame | replay the scene alone; animals placed after the wait | pending |
+| 2 | calm zone, 19:00, zoom 4 off-centre | lilac shirt, indigo trousers, rust headwrap over long wavy hair (Wavy), small smile | last armful of hay, the lantern lights | yellow tall grass, daylily pot, stool, hay pile | Shogun front, cat Tama front | 4 | cat leaves frame, weak dusk glow | cat placed after the wait, lamp asserted lit, tight zoom | pending |
 | 3 | calm zone, 23:00, zoom 5.5 | white shirt, teal cape, dark trousers, FancyBun, star tattoo, peaceful smile | holds a cup of tea | 2 roses, bonsai pot, daylily pot | Shogun front | 4 | Face_Stars untested, cup may not draw | drop the tattoo if bad; else carry the last Hay, replay alone | pending |
 | 4 | inspect pane of the lamp, 23:00, zoom 3.5 | none | none (inspect tab on the place of the story) | none | none | 4 | none known | none | pending (accepted 2026-10-15) |
 
-Lowest estimate 4. Shogun facing (drawn from behind in run gallery-5) is the series risk: if it repeats, ask NPT for the diagnostic step that reads `pawn.Rotation` before the capture.
+Hat rule (GALLERY.md d): Show Hair Under Stuff added to the pass map, long loose hair under every hat. Lowest estimate 4. Shogun facing (drawn from behind in run gallery-5) is the series risk: if it repeats, ask NPT for the diagnostic step that reads `pawn.Rotation` before the capture.

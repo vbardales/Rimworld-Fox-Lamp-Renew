@@ -10,7 +10,7 @@
 # set-up; each scene is an episode that moves the story: the lamp waits (noon), the lamp is filled and lights (dusk), the lamp
 # burns on its own and she rests (night), then the close look at what it holds (inspect pane). Shogun, her labrador, is in every picture and faces the camera (placed AFTER the waits: a job can turn an animal
 # during a wait, and run gallery-5 drew him from behind though the step said South; NPT, 2026-10-18: South is toward the camera).
-# Free cells of the square: x 195-205, z 183-191 (SANCTUAIRE-CASES.md). The second monument of the zone is outside every frame
+# HAIR UNDER HATS (GALLERY.md d, 2026-10-18): the pass map carries Show Hair Under Stuff (RaccoonCuddler.ShowHair), and Nelim wears long loose\n# hair (Long, Wavy) with the flophat and the headwrap, never a ponytail or a bun; the bun is only worn bareheaded, at night.\n# Free cells of the square: x 195-205, z 183-191 (SANCTUAIRE-CASES.md). The second monument of the zone is outside every frame
 # below (zoom 7 showed it in run gallery-5: never wider than 6). Every scenario reloads the save, removes the animals of the
 # place, cleans the filth, sets the map to 20 degrees (no sweat on the face; run dc17 found a memory thought SleptInHeat as the
 # cause once) and removes its decor after the capture. The face is set last, after every wait (Facial Animation recomputes it
@@ -22,7 +22,7 @@
 #      Decor: two roses (198, 189) (202, 189), a bonsai pot (196, 186), a flower pot with a daylily (204, 186), a bale of hay on
 #      the ground (199, 184).
 #      Living: Nelim at (198, 186) facing East toward the lamp, holding an armful of hay (she is bringing it), cream collar shirt
-#      (238, 228, 200), olive trousers (96, 110, 70), straw flophat (214, 188, 112), Bob under the hat, calm smirk
+#      (238, 228, 200), olive trousers (96, 110, 70), straw flophat (214, 188, 112), her long hair (Long) loose and visible under the hat, calm smirk
 #      (MouthSmirkSmile, BrowNormal, LidNormal); Shogun at (202, 185) facing the camera; two hens (Hen A (203, 184), Hen B
 #      (204, 183)) pecking at the right, a diurnal animal for a noon scene.
 #      Says: the lamp stands dark, and the hay that will light it is on its way.
@@ -34,7 +34,7 @@
 #      Decor, different from 1: two tufts of yellow tall grass (197, 184) (203, 183) that read as straw, a daylily pot (196, 186), a
 #      stool (204, 185), a pile of hay at her feet (199, 186).
 #      Living: Nelim at (198, 186) facing East, the last armful of hay in her hands, lilac shirt (156, 138, 184), indigo trousers
-#      (50, 56, 96), rust headwrap (176, 84, 52), her hair in Ponytails, a small smile (MouthSmile, BrowNormal, LidCheerful);
+#      (50, 56, 96), rust headwrap (176, 84, 52), her long wavy hair (Wavy) loose and visible under the wrap, a small smile (MouthSmile, BrowNormal, LidCheerful);
 #      Shogun facing the camera; a cat Tama at (204, 188) facing South, sitting.
 #      Says: the tank is filled, the lantern lights, the hay was the cause.
 #      Risk: Tama leaves the frame, the dusk glow reads weak. Plan: Tama is placed after the wait; the lamp is asserted lit before
@@ -80,7 +80,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (238, 228, 200)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
     And Nelim's Pickle Tools: an adult animal of kind "Chicken" named "Hen A" is spawned at (203, 184)
     And Nelim's Pickle Tools: an adult animal of kind "Chicken" named "Hen B" is spawned at (204, 183)
@@ -126,7 +126,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (156, 138, 184)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 56, 96)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Headwrap" dyed rgb (176, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Wavy"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 184)
     And Nelim's Pickle Tools: an adult animal of kind "Cat" named "Tama" is spawned at (204, 188)
     When Fox Lamp: the lamp at x=200 z=187 is refuelled with 12 units
