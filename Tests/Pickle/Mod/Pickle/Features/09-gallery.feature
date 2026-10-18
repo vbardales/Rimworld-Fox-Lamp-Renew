@@ -12,7 +12,8 @@
 # toward the camera, cause not established; the scenario now logs nothing more, the capture is the proof).
 #   1. 12:00  Noon, zoom 6, the lamp centred between its four plants: tank empty, lantern dark, the piece is a sculpture first.
 #             Nelim by it facing East, Shogun at the front facing South, two hens (diurnal) pecking at the right, a sunny quiet.
-#             Says: the lamp waits, nothing yet lights it.
+#             A bale of hay lies at (199, 184): the cause of the next picture is already in the frame.
+#             Says: the lamp waits, and the hay that will light it waits too.
 #   2. 19:00  Dusk, zoom 4 on (202, 186): the lamp falls to the left third, Nelim crosses toward it with an armful of hay (she
 #             carries it, drawn in her hands), Shogun in the foreground, a cat sitting at the right. The tank is filled to its 12
 #             units and the lantern lights, the first amber of the pool on the stone. Says: the hay is the cause of the light.
@@ -47,6 +48,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (199, 184)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
