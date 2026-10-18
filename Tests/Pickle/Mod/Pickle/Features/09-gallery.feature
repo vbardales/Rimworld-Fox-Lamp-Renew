@@ -1,39 +1,63 @@
 # Workshop gallery of Fox Lamp Renew: one story, in one place, staged (PUBLISHING.md: every gallery capture is a staged photo).
 #
-# SHOOTING PLAN (recomposed 2026-10-18 after the refusal of the plain series of 2026-10-15; vanilla and DLC only, no new mod).
-# The story, "the evening the lamp is filled": on the cream square of Nelim's tribe (the calm zone: no roof, no torch, no wall
-# shadow; the statue garden lost the pool of light among its torches, run 14e0) stands a marble bamboo-shoot lamp. It is a monument
-# you top up now and then, so it spends its day dark. Nelim is its keeper: a straw flophat, a teal shirt (28, 98, 104), the
-# complement of the lamp's amber, dark pants, her Bob. The lamp is at (200, 187). Two roses (198, 189) and (202, 189), a bonsai
-# pot (196, 186) and a flower pot (204, 186) frame it; the free cells of the square are x 195-205, z 183-191 (SANCTUAIRE-CASES.md),
-# the second monument of the zone stands outside every frame below (zoom 7 showed it in run gallery-5: never wider than 6).
-# Shogun the labrador is in every picture and always faces the camera: he is placed AFTER every wait, like the face, because a
-# job can turn an animal during a wait (run gallery-5 drew him from behind though the step said South; NPT, 2026-10-18: South is
-# toward the camera, cause not established; the scenario now logs nothing more, the capture is the proof).
-#   1. 12:00  Noon, zoom 6, the lamp centred between its four plants: tank empty, lantern dark, the piece is a sculpture first.
-#             Nelim by it facing East, Shogun at the front facing South, two hens (diurnal) pecking at the right, a sunny quiet.
-#             A bale of hay lies at (199, 184): the cause of the next picture is already in the frame.
-#             Says: the lamp waits, and the hay that will light it waits too.
-#   2. 19:00  Dusk, zoom 4 on (202, 186): the lamp falls to the left third, Nelim crosses toward it with an armful of hay (she
-#             carries it, drawn in her hands), Shogun in the foreground, a cat sitting at the right. The tank is filled to its 12
-#             units and the lantern lights, the first amber of the pool on the stone. Says: the hay is the cause of the light.
-#   3. 23:00  Night, zoom 5.5: arms empty, hat off, a deep teal cape (20, 70, 80), the pool of light holds Nelim, Shogun, the
-#             roses and the pots; a star tattoo under her eye (Ideology, untested with Facial Animation: dropped if it reads badly).
-#             The hens are gone, the cat too. Says: one tank burns for thirty days.
-#   4. 23:00  Close: the inspect pane of the same lamp: Beauty 800, its art title, its fuel 12 / 12 (30 days), its switch.
-# Faces follow the story (noon a calm smirk, dusk a small smile, night a peaceful one). Every scenario reloads the save, removes
-# the animals of the place, cleans the filth, and sets the map to 20 degrees so that the face shows no sweat (the thermal state
-# is logged before each capture, the cause of any sweat is read in the report: run dc17 found a memory thought, SleptInHeat).
-# Plant and decor defNames (Plant_Rose, PlantPot_Bonsai, PlantPot, Plant_Daylily; GALLERY-PROPS.md: an empty pot does not read, so the daylily is grown in it) are read from the game's own lists, not
-# played here yet: a wrong name fails the step and says so. The decor belongs to one image and is removed after it.
-# The face is set last, after every wait: Facial Animation recomputes it at every tick (SanctuaryBacklot, run 56b0).
+# SHOOTING PLAN, v3 (2026-10-18; replaces the plain series of 2026-10-15; vanilla and DLC only, no new mod). Scored against the
+# criteria a to j of GALLERY-SHOTLIST-AUDIT.md; table and verdicts in STATUS.md.
+# STORY, "the evening the lamp is filled": on the cream square of Nelim's tribe (the calm zone: no roof, no torch, no wall shadow;
+# the statue garden lost the pool of light among its torches, run 14e0) stands a marble bamboo-shoot lamp at (200, 187). It is a
+# monument you top up now and then, so it spends its day dark. Nelim is its keeper and brings it hay (the lamp burns 12 units, 30
+# days a tank). Shogun, her labrador, is in every picture and faces the camera (placed AFTER the waits: a job can turn an animal
+# during a wait, and run gallery-5 drew him from behind though the step said South; NPT, 2026-10-18: South is toward the camera).
+# Free cells of the square: x 195-205, z 183-191 (SANCTUAIRE-CASES.md). The second monument of the zone is outside every frame
+# below (zoom 7 showed it in run gallery-5: never wider than 6). Every scenario reloads the save, removes the animals of the
+# place, cleans the filth, sets the map to 20 degrees (no sweat on the face; run dc17 found a memory thought SleptInHeat as the
+# cause once) and removes its decor after the capture. The face is set last, after every wait (Facial Animation recomputes it
+# every tick, SanctuaryBacklot run 56b0). defNames below are read from the game's lists, not yet played: a wrong one fails the
+# step and names itself, then that scenario alone is replayed.
+#
+#   1. 12:00 Clear, 20 degrees, no time passes beyond the 20-tick set-up. Noon, zoom 6 on the lamp (200, 187), wide and calm,
+#      the lamp dead centre between its plants, sun from above. Subject: the lamp waits, dark, its tank empty.
+#      Decor: two roses (198, 189) (202, 189), a bonsai pot (196, 186), a flower pot with a daylily (204, 186), a bale of hay on
+#      the ground (199, 184).
+#      Living: Nelim at (198, 186) facing East toward the lamp, holding an armful of hay (she is bringing it), cream collar shirt
+#      (238, 228, 200), olive trousers (96, 110, 70), straw flophat (214, 188, 112), Bob under the hat, calm smirk
+#      (MouthSmirkSmile, BrowNormal, LidNormal); Shogun at (202, 185) facing the camera; two hens (Hen A (203, 184), Hen B
+#      (204, 183)) pecking at the right, a diurnal animal for a noon scene.
+#      Says: the lamp stands dark, and the hay that will light it is on its way.
+#      Risk: Plant_Rose, PlantPot_Bonsai, Plant_Daylily, Hay, Chicken never played here, hens may leave the frame.
+#      Plan: a wrong name fails the step and names itself, the scene alone is replayed; animals are placed after the wait, the
+#      game is paused.
+#   2. 19:00 Clear. Dusk, zoom 4 on (202, 186): the lamp falls to the left third, tight, light turning amber, Shogun in the
+#      foreground (201, 184), Nelim and the cat behind. Subject: the lantern lights.
+#      Decor, different from 1: two tufts of yellow tall grass (197, 184) (203, 183) that read as straw, a daylily pot (196, 186), a
+#      stool (204, 185), a pile of hay at her feet (199, 186).
+#      Living: Nelim at (198, 186) facing East, the last armful of hay in her hands, lilac shirt (156, 138, 184), indigo trousers
+#      (50, 56, 96), rust headwrap (176, 84, 52), her hair in Ponytails, a small smile (MouthSmile, BrowNormal, LidCheerful);
+#      Shogun facing the camera; a cat Tama at (204, 188) facing South, sitting.
+#      Says: the tank is filled, the lantern lights, the hay was the cause.
+#      Risk: Tama leaves the frame, the dusk glow reads weak. Plan: Tama is placed after the wait; the lamp is asserted lit before
+#      the capture and the zoom is tight so the first amber fills the frame.
+#   3. 23:00 Clear. Night, zoom 5.5 on the lamp, hat off, the pool of light holds everything in the middle, the square dark
+#      around it. Subject: one tank burns for thirty days.
+#      Decor, different from 1 and 2: two roses (198, 189) (203, 190), a bonsai pot (204, 186), a daylily pot (196, 186).
+#      Living: Nelim at (198, 186) facing East, a night cup in her hands (PsychiteTea), a deep teal cape (20, 70, 80) over a
+#      white shirt (232, 232, 236), dark trousers (40, 44, 60), her hair in a FancyBun, a star tattoo under her eye (Face_Stars,
+#      Ideology), a peaceful smile (MouthLipsSmallSmile, BrowNormal, LidCheerful); Shogun facing the camera. The hens and the
+#      cat are gone.
+#      Says: the lamp burns on its own now, and she can rest.
+#      Risk: Face_Stars with Facial Animation untested; PsychiteTea may not draw in her hands. Plan: the tattoo is dropped if it
+#      reads badly; if the cup does not draw, she carries one last handful of Hay and the scene is replayed alone.
+#   4. 23:00 Close: the inspect pane of the same lamp: Beauty 800, its art title, its fuel 12 / 12 (30 days), its switch.
+#      An inspect tab on the place of the story, not a centred interface window. Risk: none known (accepted 2026-10-15).
+#
+# Shogun's facing is the risk of the whole series: if he is drawn from behind again on the run, the next move is a diagnostic
+# step that reads pawn.Rotation just before the capture (offered by NPT, 2026-10-18).
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran. What the
 # lamp does (lit, off, fuel) is asserted by 03; here the state is only asserted before a capture so the image is worth opening.
 @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.stagedecor
 @review
 Feature: gallery: the evening a marble lamp is filled
 
-  Scenario: 1. at noon the tank is empty and the lamp is a sculpture among the roses
+  Scenario: 1. at noon the tank is empty and Nelim brings the hay among the roses
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
@@ -48,10 +72,10 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (199, 184)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (199, 184)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (238, 228, 200)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 185)
@@ -59,6 +83,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: an adult animal of kind "Chicken" named "Hen B" is spawned at (204, 183)
     When I wait 20 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
+    And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 185) facing South
     And Nelim's Pickle Tools: the animal "Hen A" stands at (203, 184) facing South
     And Nelim's Pickle Tools: the animal "Hen B" stands at (204, 183) facing West
@@ -68,14 +93,17 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 6
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
-    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidNormal"
+    And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: I let 5 frames pass
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     Then I take a screenshot "gallery 1 - the lamp at noon, its tank empty (calm zone)"
     And Nelim's Pickle Tools: the decor is removed
 
-  Scenario: 2. at dusk Nelim brings an armful of hay and the lantern lights
+  Scenario: 2. at dusk the tank is filled and the lantern lights
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
@@ -86,24 +114,25 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And a "Fox_Lamp" is built at (200, 187)
     And Fox Lamp: the lamp at x=200 z=187 is emptied of its fuel
-    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (198, 189) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
-    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (197, 184) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (203, 183) fully grown
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (196, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (196, 186) fully grown
+    And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (199, 186)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (156, 138, 184)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (50, 56, 96)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Headwrap" dyed rgb (176, 84, 52)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Ponytails"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 184)
     And Nelim's Pickle Tools: an adult animal of kind "Cat" named "Tama" is spawned at (204, 188)
     When Fox Lamp: the lamp at x=200 z=187 is refuelled with 12 units
     And Fox Lamp: the lamp at x=200 z=187 is switched on
     And I wait 20 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
-    And Nelim's Pickle Tools: "Nelim" carries 12 of the item "Hay"
+    And Nelim's Pickle Tools: "Nelim" carries 4 of the item "Hay"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 184) facing South
-    And Nelim's Pickle Tools: the animal "Tama" stands at (204, 188) facing West
+    And Nelim's Pickle Tools: the animal "Tama" stands at (204, 188) facing South
     Then Fox Lamp: the lamp at x=200 z=187 holds 12 units of fuel
     And Fox Lamp: the light of the lamp at x=200 z=187 is on
     When Nelim's Pickle Tools: all filth is cleaned
@@ -117,10 +146,10 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I let 5 frames pass
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
-    Then I take a screenshot "gallery 2 - dusk, Nelim brings hay and the lantern lights"
+    Then I take a screenshot "gallery 2 - dusk, the tank is filled and the lantern lights"
     And Nelim's Pickle Tools: the decor is removed
 
-  Scenario: 3. at night the pool of light holds Nelim, Shogun and the roses
+  Scenario: 3. at night the pool of light holds Nelim with her cup, Shogun and the roses
     Given the save "Nelims-tribe" is loaded
     And game speed is paused
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
@@ -131,18 +160,19 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And a "Fox_Lamp" is built at (200, 187)
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (198, 189) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
-    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (28, 98, 104)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (60, 60, 70)
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (203, 190) fully grown
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (204, 186)
+    And Nelim's Pickle Tools: I place the decor "PlantPot" at (196, 186)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (196, 186) fully grown
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (232, 232, 236)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (40, 44, 60)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 70, 80)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Bob"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "FancyBun"
     And Nelim's Pickle Tools: "Nelim" face tattoo is "Face_Stars"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 186)
     When I wait 60 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (198, 186) facing East
+    And Nelim's Pickle Tools: "Nelim" carries the item "PsychiteTea"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
     Then Fox Lamp: the lamp at x=200 z=187 holds 12 units of fuel
     And Fox Lamp: the light of the lamp at x=200 z=187 is on

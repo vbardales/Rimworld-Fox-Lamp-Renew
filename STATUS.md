@@ -45,15 +45,15 @@ Older sections moved to `docs/runs/status-history.md`.
 - **playTests exit, 2026-10-11 (8.a to 8.m).** Deployed: `Mods/FoxLampRenew` is junction to `Mod/`. Every scenario has green run; 06 and 07 assertions read description prefix and pane, unchanged by 2026-10-11 wording. Text-only change since last runs covered by non-regression in both languages, deposited after commit at `followUp` (8.c, 14.a), not before. No ticket now.
 - **shootGallery, 2026-10-12.** Series in `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature` (calm zone, lamp at (200, 187)): v1 in statue garden ran 4/4 green but judged weak, dropped; v2 (ticket `f356`, 4/4 green, `Evidence/20261012-gallery-2`) opened by session and kept: `Art/Gallery/1-candidate-noon.jpg`, `2-candidate-dusk.jpg`, `3-candidate-night.jpg`, `4-candidate-inspect-pane.jpg` (cropped). 2026-10-13: Virginie refused all four. 1 to 3 show sweat on Nelim's face (known limit of gallery faces, SanctuaryBacklot GALERIE.md, ticket 524c at NPT); 4 refused too. Four files deleted; gallery holds only `0-preview.png`. 2026-10-15: series recomposed (story "the evening the lamp is filled": empty tank at noon, hay carried at dusk, Shogun in all, Nelim in light shirt with Bob, face parts per image, map at 20 degrees), run `Evidence/20261015-gallery-5` 4/4 green; candidates `1-candidate-noon.jpg` to `4-candidate-inspect-pane.jpg` (4 recropped) wait on Virginie. Open: whether sweat gone (SleptInHeat memory thought, no clearing step).
 - `settings_audit: not_applicable` unchanged.
-## Shotlist (2026-10-18, owner rule: every scene 4/5 or more before it is played)
+## Shotlist v3 (2026-10-18, owner rule: every scene 4/5 or more, criteria a to j of GALLERY-SHOTLIST-AUDIT.md, before it is played)
 
-Story "the evening the lamp is filled": calm zone, Nelim keeper of the lamp, Shogun in every image; plan in the header of `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`. Self-check score of the series: 4/5 (weak point: nothing played yet, defNames unverified).
+Story "the evening the lamp is filled", calm zone, Nelim keeper of the lamp, Shogun in every image facing the camera. Full plan in the header of `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`. Series score 4/5.
 
-| # | Shot | Estimate | Main risk | Verdict after run |
-|---|---|---|---|---|
-| 1 | Noon, zoom 6, empty lamp between roses, hay on the ground, Nelim, Shogun front, two hens | 4 (was 3 before the hay was added: the dark tank did not read) | Plant_Rose, PlantPot_Bonsai, Hay, Chicken defNames never played; hens may leave the frame | pending |
-| 2 | Dusk, zoom 4, lamp at left third, Nelim carries the hay, cat, lantern lights | 4 | Cat may leave the frame; dusk glow may read weak | pending |
-| 3 | Night, zoom 5.5, pool of light on Nelim, Shogun, roses; cape, star tattoo | 4 | Face_Stars tattoo with Facial Animation untested (dropped if it reads badly) | pending |
-| 4 | Inspect pane of the lamp (interface capture, no subtitle) | 5 | none known; accepted in the 2026-10-15 series | pending |
+| # | Shot (place, hour, zoom) | Outfit and face of Nelim | Action | Decor (removed after) | Living | Estimate | Risk | Plan | Verdict after run |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | calm zone, 12:00, zoom 6 | cream collar shirt, olive trousers, straw flophat, Bob, calm smirk | brings an armful of hay | 2 roses, bonsai pot, daylily pot, hay bale | Shogun front, 2 hens | 4 | defNames never played, hens leave frame | replay the scene alone; animals placed after the wait | pending |
+| 2 | calm zone, 19:00, zoom 4 off-centre | lilac shirt, indigo trousers, rust headwrap, Ponytails, small smile | last armful of hay, the lantern lights | yellow tall grass, daylily pot, stool, hay pile | Shogun front, cat Tama front | 4 | cat leaves frame, weak dusk glow | cat placed after the wait, lamp asserted lit, tight zoom | pending |
+| 3 | calm zone, 23:00, zoom 5.5 | white shirt, teal cape, dark trousers, FancyBun, star tattoo, peaceful smile | holds a cup of tea | 2 roses, bonsai pot, daylily pot | Shogun front | 4 | Face_Stars untested, cup may not draw | drop the tattoo if bad; else carry the last Hay, replay alone | pending |
+| 4 | inspect pane of the lamp, 23:00, zoom 3.5 | none | none (inspect tab on the place of the story) | none | none | 4 | none known | none | pending (accepted 2026-10-15) |
 
-Lowest estimate: 4. The 2026-10-15 candidates (1 to 4) were judged weak by the session and are replaced by this series.
+Lowest estimate 4. Shogun facing (drawn from behind in run gallery-5) is the series risk: if it repeats, ask NPT for the diagnostic step that reads `pawn.Rotation` before the capture.
