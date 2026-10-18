@@ -5,7 +5,10 @@
 # STORY, "the evening the lamp is filled": on the cream square of Nelim's tribe (the calm zone: no roof, no torch, no wall shadow;
 # the statue garden lost the pool of light among its torches, run 14e0) stands a marble bamboo-shoot lamp at (200, 187). It is a
 # monument you top up now and then, so it spends its day dark. Nelim is its keeper and brings it hay (the lamp burns 12 units, 30
-# days a tank). Shogun, her labrador, is in every picture and faces the camera (placed AFTER the waits: a job can turn an animal
+# days a tank). WHO: Nelim, the keeper, and Shogun. WHERE: the cream calm zone of Nelim's tribe, one place, one corner. WHICH DAY:
+# one summer day at 20 degrees, clear sky. RHYTHM OF TIME: one hour per image (12:00, 19:00, 23:00), no cumulative wait beyond the
+# set-up; each scene is an episode that moves the story: the lamp waits (noon), the lamp is filled and lights (dusk), the lamp
+# burns on its own and she rests (night), then the close look at what it holds (inspect pane). Shogun, her labrador, is in every picture and faces the camera (placed AFTER the waits: a job can turn an animal
 # during a wait, and run gallery-5 drew him from behind though the step said South; NPT, 2026-10-18: South is toward the camera).
 # Free cells of the square: x 195-205, z 183-191 (SANCTUAIRE-CASES.md). The second monument of the zone is outside every frame
 # below (zoom 7 showed it in run gallery-5: never wider than 6). Every scenario reloads the save, removes the animals of the
