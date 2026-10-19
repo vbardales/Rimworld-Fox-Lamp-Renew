@@ -30,3 +30,7 @@ build/
 
 # Reproducible Preview diagnostics generated locally by the shared renderer.
 Art/.render/
+
+# Pickle results awaiting triage and kept failures (AGENTS.md, Test evidence).
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/
