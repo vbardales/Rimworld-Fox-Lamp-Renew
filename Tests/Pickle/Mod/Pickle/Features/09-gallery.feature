@@ -15,11 +15,11 @@
 # place, cleans the filth, sets the map to 20 degrees (no sweat on the face; run dc17 found a memory thought SleptInHeat as the
 # cause once) and removes its decor after the capture. The face is set last, after every wait (Facial Animation recomputes it
 # every tick, SanctuaryBacklot run 56b0). defNames below are read from the game's lists, not yet played: a wrong one fails the
-# step and names itself, then that scenario alone is replayed.
+# step and names itself, then that scenario alone is replayed. Run gallery-6 (2026-10-18): a PlantPot cell refuses a plant placed on it, so the daylilies grow in the soil, no empty pot.
 #
 #   1. 12:00 Clear, 20 degrees, no time passes beyond the 20-tick set-up. Noon, zoom 6 on the lamp (200, 187), wide and calm,
 #      the lamp dead centre between its plants, sun from above. Subject: the lamp waits, dark, its tank empty.
-#      Decor: two roses (198, 189) (202, 189), a bonsai pot (196, 186), a flower pot with a daylily (204, 186), a bale of hay on
+#      Decor: two roses (198, 189) (202, 189), a bonsai pot (196, 186), a daylily (204, 186), a bale of hay on
 #      the ground (199, 184).
 #      Living: Nelim at (198, 186) facing East toward the lamp, holding an armful of hay (she is bringing it), cream collar shirt
 #      (238, 228, 200), olive trousers (96, 110, 70), straw flophat (214, 188, 112), her long hair (Long) loose and visible under the hat, calm smirk
@@ -31,7 +31,7 @@
 #      game is paused.
 #   2. 19:00 Clear. Dusk, zoom 4 on (202, 186): the lamp falls to the left third, tight, light turning amber, Shogun in the
 #      foreground (201, 184), Nelim and the cat behind. Subject: the lantern lights.
-#      Decor, different from 1: two tufts of yellow tall grass (197, 184) (203, 183) that read as straw, a daylily pot (196, 186), a
+#      Decor, different from 1: two tufts of yellow tall grass (197, 184) (203, 183) that read as straw, a daylily (196, 186), a
 #      stool (204, 185), a pile of hay at her feet (199, 186).
 #      Living: Nelim at (198, 186) facing East, the last armful of hay in her hands, lilac shirt (156, 138, 184), indigo trousers
 #      (50, 56, 96), rust headwrap (176, 84, 52), her long wavy hair (Wavy) loose and visible under the wrap, a small smile (MouthSmile, BrowNormal, LidCheerful);
@@ -41,7 +41,7 @@
 #      the capture and the zoom is tight so the first amber fills the frame.
 #   3. 23:00 Clear. Night, zoom 5.5 on the lamp, hat off, the pool of light holds everything in the middle, the square dark
 #      around it. Subject: one tank burns for thirty days.
-#      Decor, different from 1 and 2: two roses (198, 189) (203, 190), a bonsai pot (204, 186), a daylily pot (196, 186).
+#      Decor, different from 1 and 2: two roses (198, 189) (203, 190), a bonsai pot (204, 186), a daylily (196, 186).
 #      Living: Nelim at (198, 186) facing East, a night cup in her hands (PsychiteTea), a deep teal cape (20, 70, 80) over a
 #      white shirt (232, 232, 236), dark trousers (40, 44, 60), her hair in a FancyBun, a star tattoo under her eye (Face_Stars,
 #      Ideology), a peaceful smile (MouthLipsSmallSmile, BrowNormal, LidCheerful); Shogun facing the camera. The hens and the
@@ -74,7 +74,6 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (198, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (202, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (204, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Hay" at (199, 184)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (238, 228, 200)
@@ -119,7 +118,6 @@ Feature: gallery: the evening a marble lamp is filled
     And Fox Lamp: the lamp at x=200 z=187 is emptied of its fuel
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (197, 184) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (203, 183) fully grown
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (196, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
     And Nelim's Pickle Tools: I place the decor "Hay" at (199, 186)
@@ -165,7 +163,6 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (198, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (203, 190) fully grown
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (204, 186)
-    And Nelim's Pickle Tools: I place the decor "PlantPot" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (196, 186) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (232, 232, 236)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (40, 44, 60)
