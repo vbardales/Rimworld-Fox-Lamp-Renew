@@ -26,7 +26,7 @@ settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: 845707521bca5800b561eee72efdac7ced615ba1
-protocols_read_sha: e552fd9823504a685ddedd14953c3f62a699851b
+protocols_read_sha: b48ecc4cf0af35ec316379c537490a7c025a8c06
 ---
 # Workflow audit: 2026-10-11
 
@@ -57,4 +57,5 @@ Story "the evening the lamp is filled", calm zone, Nelim keeper of the lamp, Sho
 | 4 | inspect pane of the lamp, 23:00, zoom 3.5 | none | none (inspect tab on the place of the story) | none | none | 4 | none known | none | pending (accepted 2026-10-15) |
 
 Hat rule (GALLERY.md d): Show Hair Under Stuff added to the pass map, long loose hair under every hat. Lowest estimate 4. Shogun facing (drawn from behind in run gallery-5) is the series risk: if it repeats, ask NPT for the diagnostic step that reads `pawn.Rotation` before the capture.
-Open (2026-10-20): ticket 20261020-003632-284-07f6 (scenes 1 to 3, evidence in Tests/Pickle/Inbox/20261020-gallery-9) is queued, owner local_84c81574 (id changes after a clear: resume-mod re-registers with the TM). On RUN_DONE: read summary.json and junit.xml, open every capture, give the verdict per scene against the estimates above, minify green proofs into Evidence/ (RELEASE.md each), delete failures. A first run died of memory saturation (stalled at start), not a mod fault. Candidates in Art/Gallery/ are still the weak 2026-10-15 ones, to replace by the v3 captures; subtitles only after acceptance and reindex.
+Run 07f6 (gallery-9, 2026-10-23): 3/3 green. Captures read 2026-10-25. Scene 1 (noon, hay, flophat, Shogun front, hens, roses): 4, keep. Scene 2 (dusk, lit pool, rust headwrap, Shogun front, cat): 4, keep. Scene 3 (night, cup): Shogun drawn from BEHIND, series risk realised, 3: replay alone after asking NPT for a step that sets `pawn.Rotation` (South) before the capture. Candidates in Art/Gallery/ not yet replaced; Inbox gallery-9 kept until scene 3 replayed and 1, 2 minified into Evidence/ (RELEASE.md each).
+Open (older, 2026-10-20): ticket 07f6 was queued, owner local_84c81574 (id changes after a clear: resume-mod re-registers with the TM). On RUN_DONE: read summary.json and junit.xml, open every capture, give the verdict per scene against the estimates above, minify green proofs into Evidence/ (RELEASE.md each), delete failures. A first run died of memory saturation (stalled at start), not a mod fault. Candidates in Art/Gallery/ are still the weak 2026-10-15 ones, to replace by the v3 captures; subtitles only after acceptance and reindex.
