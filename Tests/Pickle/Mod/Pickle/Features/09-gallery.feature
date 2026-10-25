@@ -185,6 +185,8 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: I let 5 frames pass
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 186) facing South
+    And Nelim's Pickle Tools: "Shogun" faces South
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     Then I take a screenshot "gallery 3 - the lamp at night"
