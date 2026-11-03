@@ -21,12 +21,12 @@ remaining:
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_0e16ab66-25f8-4309-b62f-ed30346620a5
-updated:      2026-10-11, playTests exit met; now shootGallery[1.0.0]
+updated:      2026-11-03, resume: protocols read (41d2629), Preview regenerated after echo.width/height/color removal (echo overlaps end of copy line, accepted 2026-10-25), shootGallery[1.0.0]
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: 845707521bca5800b561eee72efdac7ced615ba1
-protocols_read_sha: b64c0668c5e891395288750fb050e54c2891f497
+protocols_read_sha: 41d262941096aae0bf063c8599109ddf0165c55d
 ---
 # Workflow audit: 2026-10-11
 
