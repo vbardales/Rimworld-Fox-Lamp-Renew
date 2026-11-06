@@ -1,2 +1,5 @@
 # Regenerated class-name inventory; retain reports, not the full game type list.
 game-types.txt
+
+# Generated logs of the offline checks.
+*.log
