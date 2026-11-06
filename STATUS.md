@@ -21,12 +21,12 @@ remaining:
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_0e16ab66-25f8-4309-b62f-ed30346620a5
-updated:      2026-11-03, resume: protocols read (70aa4922); ticket 8b2b done 2/2 green, scenes 1-2 v4 captures in Tests/Pickle/Inbox/20261030-gallery-11 read, not yet judged by Virginie (1: Shogun drawn from behind; 2: Shogun overlaps a second dog); ticket 20261103-161806-483-703c queued for scenes 3-4 (Inbox/20261103-gallery-12, DepMap wsl-deps.sanctuary.map, tree 0f37f31, owner id changes after clear: resume-mod re-registers); on RUN_DONE read summary.json + junit.xml, open captures, then judge 1-4 with Virginie; Prune-Evidence.ps1 -Apply for gallery-11 after verdict
+updated:      2026-11-06, resume: protocols read (2eac6514); ticket 703c done: scene 3 passed (capture read: Nelim cup in hand seen from the side, Shogun lying, lamp lit), scene 4 FAILED at "place the decor Beer at (204, 185)": cell already holds Stool (feature line 189-190, fix: drop the Stool placement there or move the cup, then replay 4 alone); scenes 1-2 v4 (Inbox/20261030-gallery-11) and 3 v4 (Inbox/20261103-gallery-12) await Virginie verdict; v3 candidates 1-4 removed from Art/Gallery (GALLERY.md rule 2026-11-06, history keeps them); Prune-Evidence.ps1 -Apply for gallery-11 after verdict
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: 845707521bca5800b561eee72efdac7ced615ba1
-protocols_read_sha: 70aa4922f19ac4df5b64764c38ed8681034da913
+protocols_read_sha: 2eac65149980c52963036a11b453867138dc1dc7
 ---
 # Workflow audit: 2026-10-11
 
