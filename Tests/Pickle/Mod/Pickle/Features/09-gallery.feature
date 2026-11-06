@@ -187,7 +187,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
-    And Nelim's Pickle Tools: I place the decor "Beer" at (204, 185)
+    And Nelim's Pickle Tools: 1 of the item "Beer" are spawned at (204, 185)
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 188)
     When I wait 60 ticks
     And Nelim's Pickle Tools: the animal "Shogun" lies at (201, 188) facing East
