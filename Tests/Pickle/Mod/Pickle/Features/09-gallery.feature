@@ -7,7 +7,7 @@
 # its keeper and brings it hay (the lamp burns 12 units, 30 days a tank). WHO: Nelim, the keeper, and Shogun, her labrador.
 # WHERE: the cream calm zone, one corner. WHICH DAY: one summer day, clear sky, 20 degrees; the map drops to 12 degrees at 23:00.
 # RHYTHM: one hour per image (12:00, 19:00, 23:00, 00:30 approximated by hour 0), no cumulative wait beyond the set-up.
-# SAME OUTFIT ALL DAY: rust shirt (176, 84, 52), olive trousers (96, 110, 70), long loose hair (Long), no tattoo; only the
+# SAME OUTFIT ALL DAY: rust shirt (176, 84, 52), olive trousers (96, 110, 70), canon hair (high ponytail Roo_HD_Hair_Highpony, Roo_Royal_LongHD under the hat), canon tattoos kept (Face_Love, Body_Heart); only the
 # headwear changes: straw flophat at noon, hat off at dusk, bareheaded with a teal cape (20, 70, 80) at night (GALLERY.md d: the
 # pass map carries Show Hair Under Stuff, long hair stays visible under the hat).
 # FIXED PLANTS, every scene: roses (198, 189) (203, 190), bonsai pot (196, 186), daylily (204, 186). Free cells of the square:
@@ -65,7 +65,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 183)
     When I wait 20 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (197, 184) facing East
@@ -108,7 +108,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Hay" at (199, 186)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
     When Fox Lamp: the lamp at x=200 z=187 is refuelled with 12 units
     And Fox Lamp: the lamp at x=200 z=187 is switched on
@@ -149,7 +149,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 70, 80)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Long"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 188)
     When I wait 60 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (197, 187) facing East

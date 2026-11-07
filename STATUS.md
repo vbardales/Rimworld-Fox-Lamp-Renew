@@ -57,7 +57,7 @@ Places read: 2026-11-07 (`SANCTUAIRE-LIEUX.md` rows and section of `calm-zone`, 
 
 | Colonist | Shots | Outfit per shot | Last read | Exceptions |
 |---|---|---|---|---|
-| Nelim | 1, 2, 3 | rust shirt, olive trousers all day (story: keeper in work clothes, not the validated tunic); flophat at noon (sun), hat off at dusk, teal cape at night (cold, 12 degrees) | 2026-11-07 | hairstyle `Long` instead of canon `Roo_HD_Hair_Highpony` (under hat canon is `Roo_Royal_LongHD`); header says "no tattoo" (canon `Face_Love` and `Body_Heart`); lids `LidNormal` (canon `LidCheerful`); no quoted validation: PENDING |
+| Nelim | 1, 2, 3 | rust shirt, olive trousers all day (story: keeper in work clothes, not the validated tunic); flophat at noon (sun), hat off at dusk, teal cape at night (cold, 12 degrees) | 2026-11-07 | none since 2026-11-07: Virginie chose canon ("canon, vu que pas de raison"): scenes 2 and 3 `Roo_HD_Hair_Highpony`, scene 1 under the hat `Roo_Royal_LongHD`, tattoos kept (header fixed); lids are scene expression, free; scenes 2 and 3 to replay |
 
 | Animal | Shots | Outfit | Last read | Exceptions |
 |---|---|---|---|---|
