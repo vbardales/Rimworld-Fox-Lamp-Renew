@@ -22,7 +22,7 @@
 #   1. 12:00 Clear, 20 degrees. Zoom 4, medium, the lamp at the left third, sun from above. Subject: the lamp waits, dark, its
 #      tank empty, and the hay is on its way. Foreground: the hay bale (199, 184), Nelim walking in from the right.
 #      Living: Nelim from (197, 184), straw flophat (214, 188, 112), smirk (MouthSmirkSmile, BrowNormal, LidNormal), hauling Hay
-#      toward (199, 186), frozen by a pause after 25 ticks; Shogun front, forced walk South, mid-trot.
+#      toward (199, 186), frozen by a pause after 25 ticks; Shogun front: forced walk then `stands ... facing South` (2026-11-07, run gallery-11 drew her from behind).
 #      Says: the lamp stands dark; the hay that will light it is on its way.
 #      Risk: forced haul / forced walk fail if the cell is reserved: replay the scene alone.
 #   2. 19:00 Clear, amber. Zoom 3.5, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
@@ -73,6 +73,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Shogun" is forced to walk to (201, 185)
     And game speed is paused
     And Nelim's Pickle Tools: I advance the paused game by exactly 25 ticks
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 185) facing South
     Then Fox Lamp: the lamp at x=200 z=187 holds 0 units of fuel
     And Fox Lamp: the light of the lamp at x=200 z=187 is off
     When Nelim's Pickle Tools: all filth is cleaned
