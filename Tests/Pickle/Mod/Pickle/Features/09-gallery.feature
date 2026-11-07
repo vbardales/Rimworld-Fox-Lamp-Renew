@@ -22,12 +22,14 @@
 #   1. 12:00 Clear, 20 degrees. Zoom 4, medium, the lamp at the left third, sun from above. Subject: the lamp waits, dark, its
 #      tank empty, and the hay is on its way. Foreground: the hay bale (199, 184), Nelim walking in from the right.
 #      Living: Nelim from (197, 184), straw flophat (214, 188, 112), smirk (MouthSmirkSmile, BrowNormal, LidNormal), hauling Hay
-#      toward (199, 186), frozen by a pause after 25 ticks; Shogun front: forced walk then `stands ... facing South` (2026-11-07, run gallery-11 drew her from behind).
+#      toward (199, 186), frozen by a pause after 25 ticks; more decor (2026-11-07, bare floor): second hay (198, 183), stool (204, 185), rose (201, 190); Shogun front: forced walk then `stands ... facing South` (2026-11-07, run gallery-11 drew her from behind).
+#      More decor 2026-11-07 (bare floor): second hay (198, 183), stool (204, 185), rose (201, 190).
 #      Says: the lamp stands dark; the hay that will light it is on its way.
 #      Risk: forced haul / forced walk fail if the cell is reserved: replay the scene alone.
 #   2. 19:00 Clear, amber. Zoom 3.5, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
 #      Living: Nelim at (199, 187) facing East, hat off, small smile (MouthSmile, BrowNormal, LidCheerful), hands empty; Shogun
-#      sitting at (202, 187) facing West toward her. Decor: stool (204, 185), a smaller hay pile (199, 186).
+#      sitting at (202, 187) facing West toward her. Decor: stool (204, 185), a smaller hay pile (199, 186), a third rose (201, 190).
+#      More decor 2026-11-07: a third rose (201, 190).
 #      Says: the tank is filled and the lantern lights: the hay was the cause.
 #      Risk: the dusk glow reads weak: tight zoom, lamp asserted lit.
 #   3. 23:00 Clear, 12 degrees. Zoom 6, the pool of light in the dark square. Subject: the lamp burns on its own, she can rest.
@@ -37,7 +39,7 @@
 #      Risk: Beer may not draw in hand: then she carries Hay; `lies` never played: replay alone.
 #   4. Hour 0 (00:30 in the plan), 12 degrees. Zoom 3.5, big lit lamp centre-right, inspect pane bottom-left (art title, fuel
 #      12 / 12, Beauty 800, switch). She left a minute ago: the empty cup stands on the stool, Shogun has curled up at the foot
-#      of the lamp ((201, 188) facing East). Says: one tank for thirty days, the lamp keeps watch while everyone sleeps.
+#      of the lamp ((201, 186) facing East, 2026-11-07: was beside the lamp). Says: one tank for thirty days, the lamp keeps watch while everyone sleeps.
 #      Risk: `lies` never played; the cup on the stool may not draw.
 #
 # Nothing asserts about the image: a person opens each one, and a passing scenario says only that the route ran. What the
@@ -62,6 +64,9 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Hay" at (199, 184)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (198, 183)
+    And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (201, 190) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
@@ -108,6 +113,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (201, 190) fully grown
     And Nelim's Pickle Tools: I place the decor "Hay" at (199, 186)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
@@ -184,6 +190,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: all filth is cleaned
     And I set the hour to 0
     And I set the weather to "Clear"
+    And I wait 60 ticks
     And Nelim's Pickle Tools: the temperature of the map is 12 degrees
     And a "Fox_Lamp" is built at (200, 187)
     And Fox Lamp: the lamp at x=200 z=187 is given its art title
@@ -195,7 +202,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: 1 of the item "Beer" are spawned at (204, 185)
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     When I wait 60 ticks
-    And Nelim's Pickle Tools: the animal "Shogun" lies at (201, 188) facing East
+    And Nelim's Pickle Tools: the animal "Shogun" lies at (201, 186) facing East
     Then Fox Lamp: the lamp at x=200 z=187 is a work of art in the game's own class
     And Fox Lamp: the lamp at x=200 z=187 holds 12 units of fuel
     And Fox Lamp: the light of the lamp at x=200 z=187 is on
@@ -211,5 +218,7 @@ Feature: gallery: the evening a marble lamp is filled
     And game speed is paused
     And I wait 30 ticks
     And Nelim's Pickle Tools: the pawns within 30 cells of (200, 187) are listed
+    And Nelim's Pickle Tools: the light of the map is logged
+    And Nelim's Pickle Tools: the temperature of the map reads 12 degrees
     Then I take a screenshot "gallery 4 - the lamp at night, its inspect pane, Shogun asleep"
     And Nelim's Pickle Tools: the decor is removed
