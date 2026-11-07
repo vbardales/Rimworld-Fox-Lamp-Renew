@@ -102,6 +102,8 @@ k (series): one story, wide 3, medium 1, tight 2 and 4, opening 1, closing 4: ok
 
 ## Shotlist v3 (SUPERSEDED, 2026-10-18, owner rule: every scene 4/5 or more, criteria a to j of GALLERY-SHOTLIST-AUDIT.md, before it is played)
 
+Director verdict on captures (2026-11-07, opened by me, rate-gallery not run): 1 (gallery-11) keep as candidate but Shogun drawn from behind, lamp small; 2 (gallery-11) REDO: a second dog shape overlaps Shogun (anomaly), already replayed in ticket 983b; 3 (gallery-12) replaced by 983b (canon hair); 4 (gallery-13) candidate, night reads near daylight. Series gap c: no capture shows Shogun from the front. Proposed fix: after the haul in scene 1, `the animal "Shogun" stands at (x, z) facing South` before the capture, replay 1 alone.
+
 Story "the evening the lamp is filled", calm zone, Nelim keeper of the lamp, Shogun in every image facing the camera. Full plan in the header of `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature`. Series score 4/5.
 
 | # | Shot (place, hour, zoom) | Outfit and face of Nelim | Action | Decor (removed after) | Living | Estimate | Risk | Plan | Verdict after run |
