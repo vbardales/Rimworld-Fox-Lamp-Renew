@@ -66,7 +66,8 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 183)
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 183) facing South
     When I wait 20 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (197, 184) facing East
     And Nelim's Pickle Tools: "Nelim" is forced to haul 12 of the item "Hay" to (199, 186)
@@ -87,6 +88,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I let 5 frames pass
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
+    And Nelim's Pickle Tools: the pawns within 30 cells of (200, 187) are listed
     Then I take a screenshot "gallery 1 - the lamp at noon, dark, the hay on its way (calm zone)"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -110,7 +112,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 187)
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     When Fox Lamp: the lamp at x=200 z=187 is refuelled with 12 units
     And Fox Lamp: the lamp at x=200 z=187 is switched on
     And I wait 20 ticks
@@ -129,6 +131,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I let 5 frames pass
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
+    And Nelim's Pickle Tools: the pawns within 30 cells of (200, 187) are listed
     Then I take a screenshot "gallery 2 - dusk, the tank is filled and the lantern lights"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -151,7 +154,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 70, 80)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (202, 188)
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     When I wait 60 ticks
     And Nelim's Pickle Tools: "Nelim" stands at (197, 187) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "Beer"
@@ -169,6 +172,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I let 5 frames pass
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
+    And Nelim's Pickle Tools: the pawns within 30 cells of (200, 187) are listed
     Then I take a screenshot "gallery 3 - the lamp at night, she raises a cup"
     And Nelim's Pickle Tools: the decor is removed
 
@@ -189,7 +193,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
     And Nelim's Pickle Tools: 1 of the item "Beer" are spawned at (204, 185)
-    And Nelim's Pickle Tools: an adult animal of kind "LabradorRetriever" named "Shogun" is spawned at (201, 188)
+    And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     When I wait 60 ticks
     And Nelim's Pickle Tools: the animal "Shogun" lies at (201, 188) facing East
     Then Fox Lamp: the lamp at x=200 z=187 is a work of art in the game's own class
@@ -206,5 +210,6 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I move the mouse to (900, 300)
     And game speed is paused
     And I wait 30 ticks
+    And Nelim's Pickle Tools: the pawns within 30 cells of (200, 187) are listed
     Then I take a screenshot "gallery 4 - the lamp at night, its inspect pane, Shogun asleep"
     And Nelim's Pickle Tools: the decor is removed
