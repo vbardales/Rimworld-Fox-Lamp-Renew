@@ -45,6 +45,28 @@ Older sections moved to `docs/runs/status-history.md`.
 - **playTests exit, 2026-10-11 (8.a to 8.m).** Deployed: `Mods/FoxLampRenew` is junction to `Mod/`. Every scenario has green run; 06 and 07 assertions read description prefix and pane, unchanged by 2026-10-11 wording. Text-only change since last runs covered by non-regression in both languages, deposited after commit at `followUp` (8.c, 14.a), not before. No ticket now.
 - **shootGallery, 2026-10-12.** Series in `Tests/Pickle/Mod/Pickle/Features/09-gallery.feature` (calm zone, lamp at (200, 187)): v1 in statue garden ran 4/4 green but judged weak, dropped; v2 (ticket `f356`, 4/4 green, run folder deleted 2026-10-19, one line in `docs/runs/history.md`) opened by session and kept: `Art/Gallery/1-candidate-noon.jpg`, `2-candidate-dusk.jpg`, `3-candidate-night.jpg`, `4-candidate-inspect-pane.jpg` (cropped). 2026-10-13: Virginie refused all four. 1 to 3 show sweat on Nelim's face (known limit of gallery faces, SanctuaryBacklot GALERIE.md, ticket 524c at NPT); 4 refused too. Four files deleted; gallery holds only `0-preview.png`. 2026-10-15: series recomposed (story "the evening the lamp is filled": empty tank at noon, hay carried at dusk, Shogun in all, Nelim in light shirt with Bob, face parts per image, map at 20 degrees), run `20261015-gallery-5` (folder deleted 2026-10-19) 4/4 green; candidates `1-candidate-noon.jpg` to `4-candidate-inspect-pane.jpg` (4 recropped) wait on Virginie. Open: whether sweat gone (SleptInHeat memory thought, no clearing step).
 - `settings_audit: not_applicable` unchanged.
+## NSB (sync 2026-11-07)
+
+Rules of the owner (2026-11-05) applied: NSB places, colonists, animals free; colonist or domestic animal outside NSB needs express validation; colonist properties change only with express validation; every outfit free; every included animal in the gallery (rule 5, 2026-11-06).
+NSB since last sync: only validations and progress (Nelim 1.7 body hair, animals front/side/back, wardrobes) and the embellishment order; `calm-zone` unchanged and still kept free; Nelim wardrobe and Shogun wardrobe validated. Nothing moved or renamed for this mod. Shotlist and scenarios not touched (no owner answer yet).
+Places read: 2026-11-07 (`SANCTUAIRE-LIEUX.md` rows and section of `calm-zone`, `EMBELLISSEMENT-LIEUX.md` free-zone lines). Tribe read: 2026-11-07 (`NELIM-PROFIL.md`, `SHOGUN-PROFIL.md`, `VALIDE.md`, `AVANCEMENT.md`, `CATALOGUE-ANIMAUX.md` lines; roster, appearances canon, looks validation not opened).
+
+| Place | Shots | Changes for the gallery | Last read |
+|---|---|---|---|
+| `calm-zone` (cream square, centre (200, 187)) | 1 to 4 | decor inside the square (4 plants, hay, stool, Beer), all removed after the capture; hour and weather per scene | 2026-11-07 |
+
+| Colonist | Shots | Outfit per shot | Last read | Exceptions |
+|---|---|---|---|---|
+| Nelim | 1, 2, 3 | rust shirt, olive trousers all day (story: keeper in work clothes, not the validated tunic); flophat at noon (sun), hat off at dusk, teal cape at night (cold, 12 degrees) | 2026-11-07 | hairstyle `Long` instead of canon `Roo_HD_Hair_Highpony` (under hat canon is `Roo_Royal_LongHD`); header says "no tattoo" (canon `Face_Love` and `Body_Heart`); lids `LidNormal` (canon `LidCheerful`); no quoted validation: PENDING |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+|---|---|---|---|---|
+| Shogun | 1 to 4 | none (collar daily validated; bare validated; story has none, scene 4 asleep) | 2026-11-07 | spawned as a new `LabradorRetriever` named "Shogun" after the save's animals are removed, not the save pawn `LabradorRetriever59410` (coat (220,198,160), collar): same name, in NSB: none to ask, note only |
+
+| Included animal (rule 5) | Shots |
+|---|---|
+| none: the mod adds a lamp, no animal | n/a |
+
 ## Shotlist v4 (2026-10-25, supersedes v3 below; director pass by Opus, remarks kept: 1 plants fixed, 2 two jobs, 3 hands empty at the lamp, 5 blocking, 6 Shogun, 7 colour/tattoo, 8 prop, 9 zooms, 10 scene 4 time; remark 4 not kept, NPT confirmed steps exist)
 
 Story unchanged ("the evening the lamp is filled", calm zone, one summer day). Plants on FIXED cells all series: roses (198, 189) (203, 190), bonsai pot (196, 186), daylily (204, 186). Nelim keeps one outfit all day: rust shirt (176, 84, 52), olive trousers (96, 110, 70), long loose hair (Long), no tattoo; only headwear changes (flophat at noon for the sun, hat off at dusk, bareheaded at night with a teal cape (20, 70, 80) because the map drops to 12 degrees at 23:00). Gesture steps (NPT, 2026-10-25): `"Nelim" is forced to haul {int} of the item "Hay" to (x, z)` or carries + `is forced to walk to`, `game speed is paused`, `I advance the paused game by exactly {int} ticks`; Shogun `is forced to walk to`. Haul and advance are played (job-gallery); forced walk and trot are not.
