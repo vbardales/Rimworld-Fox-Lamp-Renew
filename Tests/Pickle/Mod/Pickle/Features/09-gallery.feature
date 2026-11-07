@@ -21,14 +21,14 @@
 #
 #   1. 12:00 Clear, 20 degrees. Zoom 4, medium, the lamp at the left third, sun from above. Subject: the lamp waits, dark, its
 #      tank empty, and the hay is on its way. Foreground: the hay bale (199, 184), Nelim walking in from the right.
-#      Living: Nelim from (197, 184), straw flophat (214, 188, 112), smirk (MouthSmirkSmile, BrowNormal, LidNormal), hauling Hay
-#      toward (199, 186), frozen by a pause after 25 ticks; more decor (2026-11-07, bare floor): second hay (198, 183), stool (204, 185), rose (201, 190); Shogun front: forced walk then `stands ... facing South` (2026-11-07, run gallery-11 drew her from behind).
+#      Living: Nelim from (197, 184), bareheaded (2026-11-08: the hat hid the face from above), high ponytail, smirk (MouthSmirkSmile, BrowNormal, LidNormal), hauling Hay
+#      toward (199, 186), frozen by a pause after 25 ticks; more decor (2026-11-08, gallery-17: bale was consumed by the haul): hay bales (196, 183) (200, 184), daylily (195, 189), rose (205, 189); earlier second hay (198, 183), stool (204, 185), rose (201, 190); Shogun front: forced walk then `stands ... facing South` (2026-11-07, run gallery-11 drew her from behind).
 #      More decor 2026-11-07 (bare floor): second hay (198, 183), stool (204, 185), rose (201, 190).
 #      Says: the lamp stands dark; the hay that will light it is on its way.
 #      Risk: forced haul / forced walk fail if the cell is reserved: replay the scene alone.
 #   2. 19:00 Clear, amber. Zoom 3.5, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
-#      Living: Nelim at (199, 187) facing East, hat off, small smile (MouthSmile, BrowNormal, LidCheerful), hands empty; Shogun
-#      sitting at (202, 187) facing West toward her. Decor: stool (204, 185), a smaller hay pile (199, 186), a third rose (201, 190).
+#      Living: Nelim at (199, 187) facing South (2026-11-08: smile readable), hat off, small smile (MouthSmile, BrowNormal, LidCheerful), hands empty; Shogun
+#      standing at (202, 187) (2026-11-08: no sit step) facing West toward her. Decor: stool (204, 185), a hay pile (199, 186) (198, 186) (198, 185), daylily (195, 189), rose (205, 189), a third rose (201, 190).
 #      More decor 2026-11-07: a third rose (201, 190).
 #      Says: the tank is filled and the lantern lights: the hay was the cause.
 #      Risk: the dusk glow reads weak: tight zoom, lamp asserted lit.
@@ -67,10 +67,13 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Hay" at (198, 183)
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (201, 190) fully grown
+    And Nelim's Pickle Tools: I place the decor "Hay" at (196, 183)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (200, 184)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 189) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 189) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 183) facing South
     When I wait 20 ticks
@@ -84,7 +87,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Fox Lamp: the light of the lamp at x=200 z=187 is off
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (202, 186) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (199, 186) at zoom 4
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
@@ -115,6 +118,10 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (201, 190) fully grown
     And Nelim's Pickle Tools: I place the decor "Hay" at (199, 186)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (198, 186)
+    And Nelim's Pickle Tools: I place the decor "Hay" at (198, 185)
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 189) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 189) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
@@ -122,7 +129,7 @@ Feature: gallery: the evening a marble lamp is filled
     When Fox Lamp: the lamp at x=200 z=187 is refuelled with 12 units
     And Fox Lamp: the lamp at x=200 z=187 is switched on
     And I wait 20 ticks
-    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (199, 187) facing South
     And Nelim's Pickle Tools: the animal "Shogun" stands at (202, 187) facing West
     Then Fox Lamp: the lamp at x=200 z=187 holds 12 units of fuel
     And Fox Lamp: the light of the lamp at x=200 z=187 is on
