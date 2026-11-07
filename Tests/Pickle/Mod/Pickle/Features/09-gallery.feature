@@ -21,7 +21,7 @@
 #
 #   1. 12:00 Clear, 20 degrees. Zoom 4, medium, the lamp at the left third, sun from above. Subject: the lamp waits, dark, its
 #      tank empty, and the hay is on its way. Foreground: the hay bale (199, 184), Nelim walking in from the right.
-#      Living: Nelim from (197, 184), bareheaded (2026-11-08: the hat hid the face from above), high ponytail, smirk (MouthSmirkSmile, BrowNormal, LidNormal), hauling Hay
+#      Living: Nelim from (197, 184), straw flophat (214, 188, 112) with long loose hair Roo_Royal_LongHD visible under it (2026-11-08, Virginie: keep the hat, show hair), smirk (MouthSmirkSmile, BrowNormal, LidNormal), hauling Hay
 #      toward (199, 186), frozen by a pause after 25 ticks; more decor (2026-11-08, gallery-17: bale was consumed by the haul): hay bales (196, 183) (200, 184), daylily (195, 189), rose (205, 189); earlier second hay (198, 183), stool (204, 185), rose (201, 190); Shogun front: forced walk then `stands ... facing South` (2026-11-07, run gallery-11 drew her from behind).
 #      More decor 2026-11-07 (bare floor): second hay (198, 183), stool (204, 185), rose (201, 190).
 #      Says: the lamp stands dark; the hay that will light it is on its way.
@@ -73,7 +73,8 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 189) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
-    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 183) facing South
     When I wait 20 ticks
