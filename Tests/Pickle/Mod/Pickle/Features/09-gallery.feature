@@ -26,7 +26,7 @@
 #      More decor 2026-11-07 (bare floor): second hay (198, 183), stool (204, 185), rose (201, 190).
 #      Says: the lamp stands dark; the hay that will light it is on its way.
 #      Risk: forced haul / forced walk fail if the cell is reserved: replay the scene alone.
-#   2. 19:00 Clear, amber. Zoom 3.5, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
+#   2. 20:00 Clear, amber (2026-11-09 REDO: was 19:00, zoom 3.5; hay stacks, closer, stronger pool). Zoom 2.5, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
 #      Living: Nelim at (199, 187) facing South (2026-11-08: smile readable), hat off, small smile (MouthSmile, BrowNormal, LidCheerful), hands empty; Shogun
 #      standing at (202, 187) (2026-11-08: no sit step) facing West toward her. Decor: stool (204, 185), a hay pile (199, 186) (198, 186) (198, 185), daylily (195, 189), rose (205, 189), a third rose (201, 190).
 #      More decor 2026-11-07: a third rose (201, 190).
@@ -107,7 +107,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Sanctuary: the animals are removed from the sanctuary "calm-zone"
     And Nelim's Sanctuary: I am at the sanctuary "calm-zone"
     And Nelim's Pickle Tools: all filth is cleaned
-    And I set the hour to 19
+    And I set the hour to 20
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
     And a "Fox_Lamp" is built at (200, 187)
@@ -118,9 +118,8 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (201, 190) fully grown
-    And Nelim's Pickle Tools: I place the decor "Hay" at (199, 186)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (198, 186)
-    And Nelim's Pickle Tools: I place the decor "Hay" at (198, 185)
+    And Nelim's Pickle Tools: 60 of the item "Hay" are spawned at (199, 186)
+    And Nelim's Pickle Tools: 30 of the item "Hay" are spawned at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 189) fully grown
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
@@ -136,7 +135,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Fox Lamp: the light of the lamp at x=200 z=187 is on
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3.5
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 2.5
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
