@@ -16,6 +16,7 @@ tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 a
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: shootGallery[1.0.0]
 remaining:
+  - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the build-menu icon at scale 1 stays inside its square (Mod/Defs/Fox_Lamp.xml, 2026-10-15, Virginie): read on the gallery 4 capture (Build copy gizmo). Diff reviewed: one field, `uiIconScale` 1.8 to 1, no code, no patch; `code_review_sha` advanced.
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not

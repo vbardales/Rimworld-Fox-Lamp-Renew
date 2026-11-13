@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <!-- The label is left in English on purpose: "Fox Lamp" is the title AmliFurx gave
-       the piece, not a common noun. Translating it would rename someone's artwork. -->
-  <Fox_Lamp.label>Fox Lamp</Fox_Lamp.label>
+  <!-- EN label: "Fox Lamp", the title AmliFurx gave the piece. The French label is "Lampe Fox":
+       "Fox" stays (the name of the piece), "Lamp" becomes "Lampe" (decided by Virginie, 2026-11-13). -->
+  <Fox_Lamp.label>Lampe Fox</Fox_Lamp.label>
   <!-- EN: A bamboo shoot carved from marble, set in an open lantern frame. Fuel the lantern
        and light it, and it casts a warm pool of light over whatever is worth admiring nearby. /
        DO! NOT! EAT! THE! BAMBOO! SHOOT!!!! -->

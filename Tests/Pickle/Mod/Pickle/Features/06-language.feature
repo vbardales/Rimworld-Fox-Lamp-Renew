@@ -7,8 +7,8 @@
 # resolved is the language pipeline's answer, not the file's. In developer mode, which every Pickle run is, a missing
 # key in the active language shows as accented gibberish rather than clean English, so an absent French entry fails.
 #
-# The label is deliberately "Fox Lamp" in both languages (the title AmliFurx gave the piece): the step asserts that
-# too, so a translated label would be caught as a change and not read as a fix.
+# The label is "Fox Lamp" in English and "Lampe Fox" in French (decided by Virginie, 2026-11-13): if the step asserts
+# the label too, the French pass needs the new value (see STATUS.md remaining).
 Feature: the lamp's description is in the language of the pass
 
   Scenario: the description starts in the language of the game
