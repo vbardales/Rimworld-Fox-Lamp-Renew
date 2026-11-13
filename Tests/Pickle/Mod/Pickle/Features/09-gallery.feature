@@ -8,7 +8,7 @@
 # WHERE: the cream calm zone, one corner. WHICH DAY: one summer day, clear sky, 20 degrees; the map drops to 12 degrees at 23:00.
 # RHYTHM: one hour per image (12:00, 19:00, 23:00, 00:30 approximated by hour 0), no cumulative wait beyond the set-up.
 # SAME OUTFIT ALL DAY: rust shirt (176, 84, 52), olive trousers (96, 110, 70), canon hair (high ponytail Roo_HD_Hair_Highpony, Roo_Royal_LongHD under the hat), canon tattoos kept (Face_Love, Body_Heart); only the
-# headwear changes: straw flophat at noon, hat off at dusk, bareheaded with a teal cape (20, 70, 80) at night (GALLERY.md d: the
+# headwear changes: straw flophat at noon, hat off at dusk, bareheaded and without cape at night (2026-11-13: the cape hid the trousers, refused) (GALLERY.md d: the
 # pass map carries Show Hair Under Stuff, long hair stays visible under the hat).
 # FIXED PLANTS, every scene: roses (198, 189) (203, 190), bonsai pot (196, 186), daylily (204, 186). Free cells of the square:
 # x 195-205, z 183-191. Zoom never wider than 6 (the second monument of the zone shows from 7).
@@ -19,7 +19,7 @@
 # cleans the filth, sets the map temperature and removes its decor after the capture. The face is set last, after every wait
 # (Facial Animation recomputes it every tick, SanctuaryBacklot run 56b0).
 #
-#   1. 12:00 Clear, 20 degrees. Zoom 4, medium, the lamp at the left third, sun from above. Subject: the lamp waits, dark, its
+#   1. 12:00 Clear, 20 degrees. Zoom 5 (2026-11-13: lamp 18 px at 268 was weak), medium, the lamp at the left third, sun from above. Subject: the lamp waits, dark, its
 #      tank empty, and the hay is on its way. Foreground: the hay bale (199, 184), Nelim walking in from the right.
 #      Living: Nelim from (197, 184), straw flophat (214, 188, 112) with long loose hair Roo_Royal_LongHD visible under it (2026-11-08, Virginie: keep the hat, show hair), smirk (MouthSmirkSmile, BrowNormal, LidNormal), hauling Hay
 #      toward (199, 186), frozen by a pause after 25 ticks; more decor (2026-11-08, gallery-17: bale was consumed by the haul): hay bales (196, 183) (200, 184), daylily (195, 189), rose (205, 189); earlier second hay (198, 183), stool (204, 185), rose (201, 190); Shogun front: forced walk then `stands ... facing South` (2026-11-07, run gallery-11 drew her from behind).
@@ -32,8 +32,8 @@
 #      More decor 2026-11-07: a third rose (201, 190).
 #      Says: the tank is filled and the lantern lights: the hay was the cause.
 #      Risk: the dusk glow reads weak: tight zoom, lamp asserted lit.
-#   3. 23:00 Clear, 12 degrees. Zoom 6, the pool of light in the dark square. Subject: the lamp burns on its own, she can rest.
-#      Living: Nelim at (197, 187) bareheaded, teal cape, peaceful smile (MouthLipsSmallSmile, BrowNormal, LidCheerful), raising a
+#   3. 23:00 Clear, 12 degrees. Zoom 5, the pool of light in the dark square. Subject: the lamp burns on its own, she can rest.
+#      Living: Nelim at (197, 187) bareheaded, no cape, peaceful smile (MouthLipsSmallSmile, BrowNormal, LidCheerful), raising a
 #      cup (Beer); Shogun lying at (202, 188) facing West toward the lamp. Decor: stool (204, 185).
 #      Says: the lamp burns on its own now, and she can rest.
 #      Risk: Beer may not draw in hand: then she carries Hay; `lies` never played: replay alone.
@@ -78,7 +78,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     And Nelim's Pickle Tools: the animal "Shogun" stands at (201, 183) facing South
     When I wait 20 ticks
-    And Nelim's Pickle Tools: "Nelim" stands at (197, 184) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (197, 184) facing South
     And Nelim's Pickle Tools: "Nelim" is forced to haul 12 of the item "Hay" to (199, 186)
     And Nelim's Pickle Tools: "Shogun" is forced to walk to (201, 185)
     And game speed is paused
@@ -88,7 +88,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Fox Lamp: the light of the lamp at x=200 z=187 is off
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (199, 186) at zoom 4
+    And Nelim's Pickle Tools: I frame the cell (199, 186) at zoom 5
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmirkSmile"
@@ -165,7 +165,6 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 70, 80)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     When I wait 60 ticks
@@ -176,7 +175,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Fox Lamp: the light of the lamp at x=200 z=187 is on
     When Nelim's Pickle Tools: all filth is cleaned
     And Nelim's Pickle Tools: studio presentation mode is enabled
-    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 6
+    And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 5
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
