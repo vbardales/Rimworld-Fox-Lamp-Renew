@@ -27,7 +27,7 @@
 #      Says: the lamp stands dark; the hay that will light it is on its way.
 #      Risk: forced haul / forced walk fail if the cell is reserved: replay the scene alone.
 #   2. 22:00 Clear, amber (2026-11-13 REDO after ticket 5ee2: NO dimming step any more. Scene 3 at hour 23 without it shows a clear amber pool on the cream square (Art/Gallery/3-candidate-night.jpg), while 4bec (ceiling 0.45) and 5ee2 (ceiling 0.3) both read unlit: the ceiling most likely caps the lamp glow too. Hour 22, zoom 3, one hay stack, Shogun faces South kept). Zoom 3, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
-#      Living: Nelim at (199, 187) facing South (2026-11-08: smile readable), hat off, small smile (MouthSmile, BrowNormal, LidCheerful), hands empty; Shogun
+#      Living: Nelim at (199, 187) facing South (2026-11-08: smile readable), hat off, small smile (MouthLipsSmallSmile, BrowNormal, LidCheerful; 2026-11-13 Virginie refused the lips of MouthSmile), hands empty; trousers dressed BEFORE the shirt (2026-11-13: scenes 1 to 3 refused, no trousers visible); Shogun
 #      standing at (202, 187) (2026-11-08: no sit step) facing South (front). Decor: stool (204, 185), a hay stack (198, 186), daylily (195, 189), rose (205, 189), a third rose (201, 190).
 #      More decor 2026-11-07: a third rose (201, 190).
 #      Says: the tank is filled and the lantern lights: the hay was the cause.
@@ -71,8 +71,8 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "Hay" at (200, 184)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 189) fully grown
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Flophat" dyed rgb (214, 188, 112)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_Royal_LongHD"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
@@ -121,8 +121,8 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: 30 of the item "Hay" are spawned at (198, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (195, 189) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (205, 189) fully grown
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
     When Fox Lamp: the lamp at x=200 z=187 is refuelled with 12 units
@@ -137,7 +137,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I frame the cell (200, 187) at zoom 3
     And Nelim's Pickle Tools: "Nelim" face kit is "neutral"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
-    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthLipsSmallSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" facial expression is "normal+blink"
     And Nelim's Pickle Tools: I let 5 frames pass
@@ -162,8 +162,8 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (196, 186)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (204, 186) fully grown
     And Nelim's Pickle Tools: I place the decor "Stool" at (204, 185)
-    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants" dyed rgb (96, 110, 70)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_CollarShirt" dyed rgb (176, 84, 52)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Cape" dyed rgb (20, 70, 80)
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: the animals except "Shogun" are kept out of the area from (170, 157) to (230, 217)
