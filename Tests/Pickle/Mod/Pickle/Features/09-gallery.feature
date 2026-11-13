@@ -98,6 +98,7 @@ Feature: gallery: the evening a marble lamp is filled
     And Nelim's Pickle Tools: "Nelim" face state is logged
     And Nelim's Pickle Tools: the thermal state and thoughts of "Nelim" are logged
     And Nelim's Pickle Tools: the pawns within 30 cells of (200, 187) are listed
+    And Nelim's Pickle Tools: the render nodes and layers of "Nelim" are logged
     Then I take a screenshot "gallery 1 - the lamp at noon, dark, the hay on its way (calm zone)"
     And Nelim's Pickle Tools: the decor is removed
 
