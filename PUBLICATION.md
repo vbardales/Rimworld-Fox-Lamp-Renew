@@ -1,6 +1,6 @@
 # Publication: Fox Lamp Renew (unofficial)
 
-Started at `shootGallery[1.0.0]` with the gallery section only. The Steam description, the messages to post, the dependencies
+Started at `shootGallery[1.0.0]` with only the gallery section. The Steam description, the messages to post, the dependencies
 and the content answers are written at `writeDocs` (PUBLISHING.md, "PUBLICATION.md").
 
 ## Gallery
@@ -19,4 +19,4 @@ is an interface capture and carries none.
 | 3 | `3-candidate-night.jpg` | The pool of light holds Nelim and Shogun in the dark | One tank burns for thirty days. Tonight its light holds Nelim and Shogun. |
 | 4 | `4-candidate-inspect-pane.jpg` | Inspect pane of the lamp: Fuel 12 / 12 (30 days), Beauty 800, its art title and its switch | none |
 
-The `candidate` marks drop when Virginie accepts an image.
+The `candidate` markers are removed when Virginie accepts an image.
