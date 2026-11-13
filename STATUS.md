@@ -121,3 +121,5 @@ Open (older, 2026-10-20): ticket 07f6 was queued, owner local_84c81574 (id chang
 ## Ecosystem (PiI, 2026-11-13, study `docs/inventory/ecosystem-steam/FoxLampRenew.md`, protocols 3975801)
 
 Only the original Fox Lamp 2166575832 (RimWorld 1.2, dead) and Fox Lamp Forked 3248294052 (1.5, dead for 1.6, one shared defName `Fox_Lamp`) hold `Fox_Lamp`. No 1.6 competitor. Dependency SydailyFox (Continued) 3540588386 is alive on 1.6 (its original 2134320184 is dead, 1.2). PiI subscribed to nothing.
+
+Comparison (PiI, 2026-11-13): the 1.2 original 2166575832 holds nothing more than the 1.5 fork: every Defs file, `Patches/Flickable.xml` and all textures are byte-identical to the fork (`1.5/Defs`); only `About/Preview.png` differs. Nothing exclusive to the original. Not carried by this mod, on purpose (see ATTRIBUTION.md): the other four lamps, `AF_CITE`, `AF_SpecialBuildingBase`, `Flickable.xml`, the 26 Languages folders. Original unsubscribed by PiI.
