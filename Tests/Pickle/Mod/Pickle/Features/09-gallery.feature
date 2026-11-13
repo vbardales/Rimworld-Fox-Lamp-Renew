@@ -26,7 +26,7 @@
 #      More decor 2026-11-07 (bare floor): second hay (198, 183), stool (204, 185), rose (201, 190).
 #      Says: the lamp stands dark; the hay that will light it is on its way.
 #      Risk: forced haul / forced walk fail if the cell is reserved: replay the scene alone.
-#   2. 22:00 Clear, amber (2026-11-10 REDO after ticket 4bec: lamp read unlit at hour 20 and ceiling 0.45; now hour 22, ceiling 0.3, zoom 3, one hay stack, Shogun faces South; earlier 2026-11-09: was 19:00, zoom 3.5; NPT step 2026-11-08 `the light of the map is dimmed to at most 0.45`, compiled not played, needs Harmony: if refused, drop the line). Zoom 3, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
+#   2. 22:00 Clear, amber (2026-11-13 REDO after ticket 5ee2: NO dimming step any more. Scene 3 at hour 23 without it shows a clear amber pool on the cream square (Art/Gallery/3-candidate-night.jpg), while 4bec (ceiling 0.45) and 5ee2 (ceiling 0.3) both read unlit: the ceiling most likely caps the lamp glow too. Hour 22, zoom 3, one hay stack, Shogun faces South kept). Zoom 3, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
 #      Living: Nelim at (199, 187) facing South (2026-11-08: smile readable), hat off, small smile (MouthSmile, BrowNormal, LidCheerful), hands empty; Shogun
 #      standing at (202, 187) (2026-11-08: no sit step) facing South (front). Decor: stool (204, 185), a hay stack (198, 186), daylily (195, 189), rose (205, 189), a third rose (201, 190).
 #      More decor 2026-11-07: a third rose (201, 190).
@@ -110,7 +110,6 @@ Feature: gallery: the evening a marble lamp is filled
     And I set the hour to 22
     And I set the weather to "Clear"
     And Nelim's Pickle Tools: the temperature of the map is 20 degrees
-    And Nelim's Pickle Tools: the light of the map is dimmed to at most 0.3
     And a "Fox_Lamp" is built at (200, 187)
     And Fox Lamp: the lamp at x=200 z=187 is emptied of its fuel
     And Nelim's Pickle Tools: I place the decor "Plant_Rose" at (198, 189) fully grown
