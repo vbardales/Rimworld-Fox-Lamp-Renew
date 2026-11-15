@@ -14,9 +14,9 @@ is an interface capture and carries none.
 | Index | File | What it shows | Subtitle |
 |---|---|---|---|
 | 0 | `0-preview.png` | Copy of `Mod/About/Preview.png` | none |
-| 1 | `1-candidate-noon.jpg` | Noon, the lamp dark; Nelim carries hay toward it, Shogun faces the camera | The lamp waits, dark, for the hay. |
-| 2 | `2-candidate-dusk.jpg` | Dusk, the tank is filled and the lantern lights: amber halo, hay beside it | The tank is filled and the lantern lights: the hay was the cause. |
-| 3 | `3-candidate-night.jpg` | Night, the lamp burns on its own; Nelim with a bottle, Shogun lying | The lamp burns on its own now, and she can rest. |
-| 4 | `4-candidate-inspect-pane.jpg` | Inspect pane of the lamp: Fuel 12 / 12 (30 days), Beauty 800, its art title and its switch | none |
+| 1 | `1-noon.jpg` | Noon, the lamp dark; Nelim carries hay toward it, Shogun faces the camera | The lamp waits, dark, for the hay. |
+| 2 | `2-dusk.jpg` | Dusk, the tank is filled and the lantern lights: amber halo, hay beside it | The tank is filled and the lantern lights: the hay was the cause. |
+| 3 | `3-night.jpg` | Night, the lamp burns on its own; Nelim with a bottle, Shogun lying | The lamp burns on its own now, and she can rest. |
+| 4 | `4-inspect-pane.jpg` | Inspect pane of the lamp: Fuel 12 / 12 (30 days), Beauty 800, its art title and its switch | none |
 
-The `candidate` markers are removed when Virginie accepts an image.
+All four images accepted by Virginie on 2026-11-16; the `candidate` marker is gone from the names.

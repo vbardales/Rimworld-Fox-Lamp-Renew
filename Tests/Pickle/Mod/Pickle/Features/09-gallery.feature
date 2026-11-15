@@ -26,7 +26,7 @@
 #      More decor 2026-11-07 (bare floor): second hay (198, 183), stool (204, 185), rose (201, 190).
 #      Says: the lamp stands dark; the hay that will light it is on its way.
 #      Risk: forced haul / forced walk fail if the cell is reserved: replay the scene alone.
-#   2. 22:00 Clear, amber (2026-11-13 REDO after ticket 5ee2: NO dimming step any more. Scene 3 at hour 23 without it shows a clear amber pool on the cream square (Art/Gallery/3-candidate-night.jpg), while 4bec (ceiling 0.45) and 5ee2 (ceiling 0.3) both read unlit: the ceiling most likely caps the lamp glow too. Hour 22, zoom 3, one hay stack, Shogun faces South kept). Zoom 3, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
+#   2. 22:00 Clear, amber (2026-11-13 REDO after ticket 5ee2: NO dimming step any more. Scene 3 at hour 23 without it shows a clear amber pool on the cream square (Art/Gallery/3-night.jpg), while 4bec (ceiling 0.45) and 5ee2 (ceiling 0.3) both read unlit: the ceiling most likely caps the lamp glow too. Hour 22, zoom 3, one hay stack, Shogun faces South kept). Zoom 3, tight on the lamp, her hands and the flame. Subject: the tank is filled, the lantern lights.
 #      Living: Nelim at (199, 187) facing South (2026-11-08: smile readable), hat off, small smile (MouthLipsSmallSmile, BrowNormal, LidCheerful; 2026-11-13 Virginie refused the lips of MouthSmile), hands empty; trousers dressed BEFORE the shirt (2026-11-13: scenes 1 to 3 refused, no trousers visible); Shogun
 #      standing at (202, 187) (2026-11-08: no sit step) facing South (front). Decor: stool (204, 185), a hay stack (198, 186), daylily (195, 189), rose (205, 189), a third rose (201, 190).
 #      More decor 2026-11-07: a third rose (201, 190).
