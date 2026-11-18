@@ -16,6 +16,7 @@ tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 a
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: mountPreview[1.0.0]
 remaining:
+  - unverified: echo (AUDIT 10.a, Check-Status ERROR echo_review_sha): `Art/echo-preview.png` is invalidated (gallery has captures); remake from the gallery (Art/echo-source.png) and validate with Virginie. Preview rendered 2026-11-19 from her new Preview-source.png (key art, key-art file untracked: `Art/fox-lamp-renew-key-art.png` not in the closed Art set, to ask), old echo still shown.
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the build-menu icon at scale 1 stays inside its square (Mod/Defs/Fox_Lamp.xml, 2026-10-15, Virginie): read on the gallery 4 capture (Build copy gizmo). Diff reviewed: one field, `uiIconScale` 1.8 to 1, no code, no patch; `code_review_sha` advanced.
@@ -27,7 +28,7 @@ settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: 845707521bca5800b561eee72efdac7ced615ba1
-protocols_read_sha: 7a433725924e8c14a0d0c4553f0efb705e10fedc
+protocols_read_sha: 38dcbfb5f7fcd0381875239f632e05c3664293b8
 ---
 # Workflow audit: 2026-10-11
 
