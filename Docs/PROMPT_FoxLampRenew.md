@@ -1,6 +1,6 @@
 ```
 Use the attached RimWorld in-game screenshots as the only visual reference for this image. Create the
-wide key art of the mod "Fox Lamp Renew (unofficial)": At dusk in a quiet garden a bamboo shoot carved from marble, set in an open lantern frame, glows warm amber, a little hay beside it.
+wide key art of the mod "Fox Lamp Renew (unofficial)": At night in a quiet garden a bamboo shoot carved from marble, set in an open lantern frame, glows warm amber and throws a wide pool of amber light on the ground, a little hay beside it.
 
 Image format: wide landscape, exactly 16:9 (1792 x 1008 pixels). Never square, never portrait.
 
