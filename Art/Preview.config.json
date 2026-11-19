@@ -1,5 +1,6 @@
 {
   "panel": {
+    "panelBare": true,
     "title": "Fox Lamp Renew (unofficial)",
     "titleParts": [
       { "text": "Fox Lamp" },
@@ -9,12 +10,12 @@
   },
   "background": { "file": "Preview-source.png" },
   "echo": { "file": "echo-source.png" },
-  "icon": { "file": "ModIcon-source.png", "corner": "bottom-left" },
+  "icon": { "file": "ModIcon-source.png" },
   "palette": {
-    "veil": "#503C09",
-    "inkPrimary": "#F2ECE1",
-    "inkSecondary": "#F7C585",
-    "accent": "#FC6B33",
-    "badgeInk": "#17120E"
+    "veil": "#857C68",
+    "inkPrimary": "#000000",
+    "inkSecondary": "#0B0703",
+    "accent": "#8A1C00",
+    "badgeInk": "#F2ECE1"
   }
 }
