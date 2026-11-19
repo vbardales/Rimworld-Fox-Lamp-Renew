@@ -18,7 +18,7 @@ tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 a
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: declareDependencies[1.0.0]
 remaining:
-  - 4.g fixed 2026-11-19 (dated dependency record at f7641ee, `workshop_required_items: n/a, not released yet`). Next: replay forward from 4.h to mountPreview (gallery accepted 2026-11-16, Preview rendered 2026-11-19, echo still to redo: 10.a). Session decides images alone since 2026-11-19 (GALLERY.md): gallery acceptance stands.
+  - replay 4..10 (2026-11-19): 4 to 9 done; fixed in place: 4.g dependency record, 5.g Settings audit and 6.h Translation audit sections restored (were only in Docs/runs/status-history.md), code_review_sha advanced (text-only diff). Open: 10.a echo, 10.e (key art off Art set, Docs migration of AGENTS.md: delete PROTOCOLS-READ.md and Docs/runs files other than pickle.md), 10.f social_preview_sha256, 10.d after echo. Stage not set by a range: a whole-chain replay moves it to mountPreview.
   - unverified: echo (AUDIT 10.a, Check-Status ERROR echo_review_sha): `Art/echo-preview.png` is invalidated (gallery has captures); remake from the gallery (Art/echo-source.png) and validate with Virginie. Preview rendered 2026-11-19 from her new Preview-source.png (key art, key-art file untracked: `Art/fox-lamp-renew-key-art.png` not in the closed Art set, to ask), old echo still shown.
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
@@ -30,7 +30,7 @@ updated:      2026-11-19 replay-audit of the whole chain: sections 1 to 3 done, 
 settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
-code_review_sha: 845707521bca5800b561eee72efdac7ced615ba1
+code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
 protocols_read_sha: 4778b712108a584d43f2593c33f20830fb1dd2d2
 ---
 # Workflow audit: 2026-10-11
@@ -129,3 +129,11 @@ Only the original Fox Lamp 2166575832 (RimWorld 1.2, dead) and Fox Lamp Forked 3
 Comparison (PiI, 2026-11-13): the 1.2 original 2166575832 holds nothing more than the 1.5 fork: every Defs file, `Patches/Flickable.xml` and all textures are byte-identical to the fork (`1.5/Defs`); only `About/Preview.png` differs. Nothing exclusive to the original. Not carried by this mod, on purpose (see ATTRIBUTION.md): the other four lamps, `AF_CITE`, `AF_SpecialBuildingBase`, `Flickable.xml`, the 26 Languages folders. Original unsubscribed by PiI.
 
 Links block (PiI, 2026-11-19, protocols 0ef2ef1): parents 2166575832 (1.2), 3248294052 (1.5), 3540588386 (1.6, our dependency); linked 2134320184 (SydailyFox 1.2), 2817403346 (Legacy SydailyFox Continued), 2816826107 (Miho, the celestial fox, 1.6). No patch, retexture or translation found. Full block in `docs/inventory/ecosystem-steam/FoxLampRenew.md`.
+
+## Settings audit (5.g, redone 2026-11-19 at df6086c)
+
+Result: `settings_audit: not_applicable`. Inventory read now: one ThingDef (`Mod/Defs/Fox_Lamp.xml`), two textures, a French DefInjected file, no `Source/`, no assembly, no `MainButtonDef`, no ModSettings class, no patch, no `LoadFolders.xml` (grep `MainButtonDef|ModSettings` in the Def: 0). Fuel, refuelling and the on/off switch belong to the game's per-building comps (`CompRefuelable`, `CompFlickable`, `CompGlower`). Beauty, work cost, fuel capacity and light radius are authored constants with no player need to expose them. So no useful settings page is missing, and no empty page or MainButtons shortcut ships. Persistence, input, RIMMSQOL tests: not applicable. In-game behaviour is covered by `TESTING.md` and the Pickle suite, not by this audit.
+
+## Translation audit (6.h, redone 2026-11-19 at df6086c)
+
+Inventory: two texts, `Fox_Lamp.label` and `Fox_Lamp.description`. English lives in the ThingDef; French in `Mod/Languages/French/DefInjected/ThingDef/Fox_Lamp.xml` (both entries non-empty). French label is "Lampe Fox" since 2026-11-13 (Virginie; "Fox" stays, "Lamp" becomes "Lampe"; `Docs/review-names.md`). `Check-Translations.ps1` PASS 2026-11-19 (2 source texts, French injections, formatting tokens). French review by Virginie: 2026-10-11 (see Workflow audit above), the label change is hers. `TRANSLATION_REVIEW.md` generated. In game, French label shown: `unverified` until scenario 06 replays (see remaining).
