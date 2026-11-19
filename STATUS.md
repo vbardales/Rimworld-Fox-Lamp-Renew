@@ -16,9 +16,10 @@ workshop_required_items: n/a, not released yet
 showcase:     complete
 tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 and 2026-10-02, incompatibility pass 2026-09-29)
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
-workflow_stage: mountPreview[1.0.0]
+workflow_stage: writeReleaseDocs[1.0.0]
 remaining:
-  - Preview redone (Virginie, 2026-11-19, AUDIT 10.a bis): her new night illustration is in Art/Preview-source.png, palette redone from it on Virginie's request (veil #503C09 from the floor, ink #F2ECE1, secondary #F7C585 from the lamp glow, accent #FC6B33 red-orange from the flowers, badge ink #17120E), ModIcon moved to bottom-left (icon.corner), rendered; Preview.png 896x504, 610 KB, contrast on panel: ink 7.0, secondary 5.2, badge digits 6.5; rule line 2.9 (decorative); legible at 268 px. Echo kept (lamp line-art, `echo_review_sha` re-set to the render commit). Open: 10.f social_preview_sha256 (upload Mod/About/Preview.png as the GitHub social preview, then record its sha256), then 10.g (a whole-chain replay decides the stage). Ledger ../.replays/FoxLampRenew-20261119.tsv.
+  - writeReleaseDocs (replay 2026-11-19, ledger ../.replays/FoxLampRenew-20261119c.tsv): open 11.a to 11.c (Steam description block, structure, About.xml generated from it), 11.e PUBLICATION.md (messages, dependencies, content answers), 11.f CHANGELOG heading to ## [Unreleased], 11.h thanks drafts and thanks_drafted_line, 11.i Steam note with [list]; owner: 11.g adult content boxes, 11.j review. Then 12 (freeze) and publish.
+  - Preview done (Virginie, 2026-11-19, AUDIT 10.a to 10.f): her night illustration in Art/Preview-source.png, plain panel (panelBare true, black ink, veil #857C68 = the zone, secondary #0B0703, accent #8A1C00, badge ink #F2ECE1), ModIcon bottom-left by default; contrast measured on the source under each block: title 4.58, suffix 4.68, summary 5.11, badge digits 7.95; legible at 268 px. Echo kept. GitHub social preview uploaded with Chrome and checked after reload, sha256 recorded.
   - echo kept (Virginie, 2026-11-19, AUDIT 10.a): `Art/echo-source.png` (bamboo-shoot lamp line-art) still shows what the gallery shows; on the new Preview it sits right of the title, about 90 px wide of 520, no clipping, no overlap.
   - plain panel (AUDIT 10.b, Virginie 2026-11-19: plain panel from 4.5:1, threshold 5 dropped): panelBare true, palette redone for dark ink on the mid-tone zone (veil #857C68 = the zone, ink #000000, secondary #0B0703, accent #8A1C00, badge ink #F2ECE1), ModIcon bottom-left by default (no icon.corner). Measured on the source under each block: title 4.58, suffix 4.68, summary 5.11, badge digits 7.95 (rule and echo 2.3, decorative). Legible at 268 px.
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
@@ -27,13 +28,14 @@ remaining:
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_4d5ec83f-1052-4291-bf9a-7d4baa33373e
-updated:      2026-11-19 second whole-chain replay: stage unchanged mountPreview[1.0.0], 1 to 9 and 10.a to 10.e done, first open 10.f social_preview_sha256 (Virginie uploads Preview.png, sha256 e27fc559). Pending her choice: plain panel (zone measures 4.58 on the title with pure black ink, gate 4.5, choose 5) or veil kept. Earlier states: git log of STATUS.md.
+updated:      2026-11-19 whole-chain replay: 1 to 10 done, stage writeReleaseDocs[1.0.0], first open 11.a (Steam description block in PUBLICATION.md). Preview finished (plain panel), GitHub social preview uploaded with Chrome, sha256 recorded. Earlier states: git log of STATUS.md.
 settings_audit: not_applicable
 ecosystem_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
 echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
+social_preview_sha256: e27fc5598cf67460a1f869a5a896525b69ccbf12148e3f1027a73434d99f115d
 preview_source_decision: redo, 2026-11-19
 protocols_read_sha: a0a66f5711b98dad173a64b7edd36d24c2924464
 ---
