@@ -28,10 +28,11 @@ remaining:
 session:      local_4d5ec83f-1052-4291-bf9a-7d4baa33373e
 updated:      2026-11-19 replay-audit of the whole chain: stage mountPreview[1.0.0] (4.g fixed earlier today), first open 10.a echo. Protocols read 76c4b480. History of earlier states: git log of STATUS.md.
 settings_audit: not_applicable
+ecosystem_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
-protocols_read_sha: 76c4b480788e0583cac3f19acc2174d65f16edcb
+protocols_read_sha: b254b9ac7efc779e739a23972678637c63ae91f7
 ---
 # Workflow audit: 2026-10-11
 
