@@ -40,7 +40,7 @@ publication_changelog_review_sha: 63dea6efaa32b7ca131f8c1ec12644c24c9c0063
 echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
 social_preview_sha256: e27fc5598cf67460a1f869a5a896525b69ccbf12148e3f1027a73434d99f115d
 preview_source_decision: redo, 2026-11-19
-protocols_read_sha: 5476b52815eb8a5435db3382c318104971360a30
+protocols_read_sha: af55f692b8f73526caa4bc924a9e56d6a13bc10a
 ---
 # Workflow audit: 2026-10-11
 
