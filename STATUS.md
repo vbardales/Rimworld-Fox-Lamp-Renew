@@ -29,12 +29,13 @@ remaining:
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_4d5ec83f-1052-4291-bf9a-7d4baa33373e
-updated:      2026-11-19 whole-chain replay: 1 to 10 done, stage writeReleaseDocs[1.0.0], first open 11.a (Steam description block in PUBLICATION.md). Preview finished (plain panel), GitHub social preview uploaded with Chrome, sha256 recorded. Earlier states: git log of STATUS.md.
+updated:      2026-11-19 whole-chain replay: stage unchanged writeReleaseDocs[1.0.0], 1 to 11.i done, first open 11.j (owner review of PUBLICATION.md and CHANGELOG.md). Fixed in place: thanks_drafted_line 1.0 was missing from the front matter, code_review_sha advanced to bd352eb (text and image diff only). Earlier states: git log of STATUS.md.
 settings_audit: not_applicable
 ecosystem_line: 1.0
+thanks_drafted_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
-code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
+code_review_sha: bd352eb2e0d4b3c10b9e76c63fdc366ca008e2d6
 echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
 social_preview_sha256: e27fc5598cf67460a1f869a5a896525b69ccbf12148e3f1027a73434d99f115d
 preview_source_decision: redo, 2026-11-19
