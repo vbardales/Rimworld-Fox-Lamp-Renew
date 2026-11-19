@@ -20,20 +20,20 @@ workflow_stage: mountPreview[1.0.0]
 remaining:
   - Preview redone (Virginie, 2026-11-19, AUDIT 10.a bis): her new night illustration is in Art/Preview-source.png, palette redone from it on Virginie's request (veil #503C09 from the floor, ink #F2ECE1, secondary #F7C585 from the lamp glow, accent #FC6B33 red-orange from the flowers, badge ink #17120E), ModIcon moved to bottom-left (icon.corner), rendered; Preview.png 896x504, 610 KB, contrast on panel: ink 7.0, secondary 5.2, badge digits 6.5; rule line 2.9 (decorative); legible at 268 px. Echo kept (lamp line-art, `echo_review_sha` re-set to the render commit). Open: 10.f social_preview_sha256 (upload Mod/About/Preview.png as the GitHub social preview, then record its sha256), then 10.g (a whole-chain replay decides the stage). Ledger ../.replays/FoxLampRenew-20261119.tsv.
   - echo kept (Virginie, 2026-11-19, AUDIT 10.a): `Art/echo-source.png` (bamboo-shoot lamp line-art) still shows what the gallery shows; on the new Preview it sits right of the title, about 90 px wide of 520, no clipping, no overlap.
-  - panel without veil (AUDIT 10.b, Virginie 2026-11-19: plain panel by default, veil only under 5:1): measured on the source zone #857C68 (text area), light ink 3.5:1, dark ink 4.5:1 (title 4.06, suffix 3.85, summary 4.52 under each block): under 5:1, so the veil stays. To get a plain panel the illustration needs a darker, even text zone (new prompt, her decision). Attempt kept out of git.
+  - plain panel (AUDIT 10.b, Virginie 2026-11-19: plain panel from 4.5:1, threshold 5 dropped): panelBare true, palette redone for dark ink on the mid-tone zone (veil #857C68 = the zone, ink #000000, secondary #0B0703, accent #8A1C00, badge ink #F2ECE1), ModIcon bottom-left by default (no icon.corner). Measured on the source under each block: title 4.58, suffix 4.68, summary 5.11, badge digits 7.95 (rule and echo 2.3, decorative). Legible at 268 px.
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the build-menu icon at scale 1 stays inside its square (Mod/Defs/Fox_Lamp.xml, 2026-10-15, Virginie): read on the gallery 4 capture (Build copy gizmo). Diff reviewed: one field, `uiIconScale` 1.8 to 1, no code, no patch; `code_review_sha` advanced.
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_4d5ec83f-1052-4291-bf9a-7d4baa33373e
-updated:      2026-11-19 second whole-chain replay: stage unchanged mountPreview[1.0.0], 1 to 9 and 10.a to 10.e done, first open 10.f social_preview_sha256 (Virginie uploads Preview.png, sha256 97f12b36). Pending her choice: plain panel (zone measures 4.58 on the title with pure black ink, gate 4.5, choose 5) or veil kept. Earlier states: git log of STATUS.md.
+updated:      2026-11-19 second whole-chain replay: stage unchanged mountPreview[1.0.0], 1 to 9 and 10.a to 10.e done, first open 10.f social_preview_sha256 (Virginie uploads Preview.png, sha256 e27fc559). Pending her choice: plain panel (zone measures 4.58 on the title with pure black ink, gate 4.5, choose 5) or veil kept. Earlier states: git log of STATUS.md.
 settings_audit: not_applicable
 ecosystem_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
-echo_review_sha: 9e356cb0bff4158bd3f6df1b72f4c78f138290f0
+echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
 preview_source_decision: redo, 2026-11-19
 protocols_read_sha: 57b9b5ee5cd8c5d0b0ef01e5583cd49ff57b0cba
 ---
