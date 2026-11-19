@@ -11,13 +11,14 @@ detached:     yes
 licence:      silent
 licence_at:   neither the 1.5 mod folder nor its Workshop page says anything
 upstream_mod_remotes: N/A
-dependencies: verified
+dependencies: verified 2026-11-19 at f7641ee (About.xml: modDependencies Mlie.AFSydailyFox, Workshop 3540588386, loadAfter same, incompatibleWith mg.ferianstory.foxlamp; no OptionalCompat.xml, no patch file, no DLC)
+workshop_required_items: n/a, not released yet
 showcase:     complete
 tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 and 2026-10-02, incompatibility pass 2026-09-29)
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: declareDependencies[1.0.0]
 remaining:
-  - defect (replay 2026-11-19, AUDIT 4.g): no dated dependency record with revision in this file (only `dependencies: verified`; the 2026-09-13 text sits in Docs/runs/status-history.md) and no `workshop_required_items` field (`n/a, not released yet` for a never-published mod). Redo 4.g here, then replay forward to mountPreview (gallery accepted 2026-11-16, Preview rendered 2026-11-19, echo still to redo: 10.a).
+  - 4.g fixed 2026-11-19 (dated dependency record at f7641ee, `workshop_required_items: n/a, not released yet`). Next: replay forward from 4.h to mountPreview (gallery accepted 2026-11-16, Preview rendered 2026-11-19, echo still to redo: 10.a). Session decides images alone since 2026-11-19 (GALLERY.md): gallery acceptance stands.
   - unverified: echo (AUDIT 10.a, Check-Status ERROR echo_review_sha): `Art/echo-preview.png` is invalidated (gallery has captures); remake from the gallery (Art/echo-source.png) and validate with Virginie. Preview rendered 2026-11-19 from her new Preview-source.png (key art, key-art file untracked: `Art/fox-lamp-renew-key-art.png` not in the closed Art set, to ask), old echo still shown.
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
@@ -30,7 +31,7 @@ settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: 845707521bca5800b561eee72efdac7ced615ba1
-protocols_read_sha: ab67692d788c09569645b6188e71d04659890995
+protocols_read_sha: 4778b712108a584d43f2593c33f20830fb1dd2d2
 ---
 # Workflow audit: 2026-10-11
 
