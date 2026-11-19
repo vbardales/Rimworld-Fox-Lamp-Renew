@@ -1,0 +1,20 @@
+{
+  "templateStamp": "0997467ed212",
+  "workshopId": "3806767650",
+  "packageId": "nelim.foxlamprenew",
+  "releaseTitle": "Fox Lamp Renew (unofficial) {version}",
+  "requirePaths": [
+    "Defs"
+  ],
+  "forbidPaths": [
+    "Assemblies"
+  ],
+  "previewFile": "About/Preview.png",
+  "galleryDir": "Art/Gallery",
+  "aboutFromDescription": true,
+  "description": {
+    "file": "PUBLICATION.md",
+    "format": "markdown",
+    "heading": "^## Steam description$"
+  }
+}
