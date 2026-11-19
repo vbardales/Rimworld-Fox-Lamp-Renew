@@ -18,7 +18,7 @@ tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 a
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: mountPreview[1.0.0]
 remaining:
-  - Preview redone (Virginie, 2026-11-19, AUDIT 10.a bis): her new night illustration is in Art/Preview-source.png, veil #503C09 and secondary ink #E3C79A redone from it (suffix contrast 5.0 after 4.4), rendered; Preview.png 896x504, 603 KB, ink F2ECE1 on panel 7.0, badge ink 8.5, legible at 268 px. Echo kept (lamp line-art, `echo_review_sha` re-set to the render commit). Open: 10.f social_preview_sha256 (upload Mod/About/Preview.png as the GitHub social preview, then record its sha256), then 10.g (a whole-chain replay decides the stage). Ledger ../.replays/FoxLampRenew-20261119.tsv.
+  - Preview redone (Virginie, 2026-11-19, AUDIT 10.a bis): her new night illustration is in Art/Preview-source.png, palette redone from it on Virginie's request (veil #503C09 from the floor, ink #F2ECE1, secondary #F7C585 from the lamp glow, accent #FC6B33 red-orange from the flowers, badge ink #17120E), ModIcon moved to bottom-left (icon.corner), rendered; Preview.png 896x504, 610 KB, contrast on panel: ink 7.0, secondary 5.2, badge digits 6.5; rule line 2.9 (decorative); legible at 268 px. Echo kept (lamp line-art, `echo_review_sha` re-set to the render commit). Open: 10.f social_preview_sha256 (upload Mod/About/Preview.png as the GitHub social preview, then record its sha256), then 10.g (a whole-chain replay decides the stage). Ledger ../.replays/FoxLampRenew-20261119.tsv.
   - echo kept (Virginie, 2026-11-19, AUDIT 10.a): `Art/echo-source.png` (bamboo-shoot lamp line-art) still shows what the gallery shows; on the new Preview it sits right of the title, about 90 px wide of 520, no clipping, no overlap.
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
@@ -32,7 +32,7 @@ ecosystem_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
-echo_review_sha: e81039190890d7131dbe433810725c1f9d203d3e
+echo_review_sha: 9e356cb0bff4158bd3f6df1b72f4c78f138290f0
 preview_source_decision: redo, 2026-11-19
 protocols_read_sha: 9341172cc59e21a3271b32e9a434888782693a97
 ---
