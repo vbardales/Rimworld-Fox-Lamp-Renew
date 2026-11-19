@@ -18,8 +18,8 @@ tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 a
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: mountPreview[1.0.0]
 remaining:
-  - Preview to redo (Virginie, 2026-11-19, AUDIT 10.a bis): she wants a new Preview. New prompt (night scene, wide amber pool) in Docs/PROMPT_FoxLampRenew.md, given to her with images Art/Gallery-clean/3-night.jpg and 1-noon.jpg; Art/Preview-source.png NOT replaced before her image. Then: palette redone (10.b), render (10.c), contrast and echo check (10.d, echo 10.a only if it no longer fits), 10.f social_preview_sha256 after the final render (upload not due before). Replay whole chain (2026-11-19): 1 to 9 done. Ledger ../.replays/FoxLampRenew-20261119.tsv.
-  - echo kept (Virginie, 2026-11-19, AUDIT 10.a): `Art/echo-preview.png` (lamp line-art, bamboo shoot in its frame) still shows what the gallery shows (the lamp, gallery 1 to 3). Preview opened 2026-11-19: echo right of the title, about 90 px wide of 520 (under 50 %), no clipping, no overlap, panel contrast fine. `echo_review_sha` set to 80cf332 (echo file renamed echo-preview.png to echo-source.png, Preview.png byte-identical).
+  - Preview redone (Virginie, 2026-11-19, AUDIT 10.a bis): her new night illustration is in Art/Preview-source.png, veil #503C09 and secondary ink #E3C79A redone from it (suffix contrast 5.0 after 4.4), rendered; Preview.png 896x504, 603 KB, ink F2ECE1 on panel 7.0, badge ink 8.5, legible at 268 px. Echo kept (lamp line-art, `echo_review_sha` re-set to the render commit). Open: 10.f social_preview_sha256 (upload Mod/About/Preview.png as the GitHub social preview, then record its sha256), then 10.g (a whole-chain replay decides the stage). Ledger ../.replays/FoxLampRenew-20261119.tsv.
+  - echo kept (Virginie, 2026-11-19, AUDIT 10.a): `Art/echo-source.png` (bamboo-shoot lamp line-art) still shows what the gallery shows; on the new Preview it sits right of the title, about 90 px wide of 520, no clipping, no overlap.
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the build-menu icon at scale 1 stays inside its square (Mod/Defs/Fox_Lamp.xml, 2026-10-15, Virginie): read on the gallery 4 capture (Build copy gizmo). Diff reviewed: one field, `uiIconScale` 1.8 to 1, no code, no patch; `code_review_sha` advanced.
@@ -32,8 +32,9 @@ ecosystem_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
-echo_review_sha: 80cf33276cc95aff6a27df300ac386889274794c
-protocols_read_sha: 71a58c94f32f6f37133e437e3693fd025c29b48c
+echo_review_sha: e81039190890d7131dbe433810725c1f9d203d3e
+preview_source_decision: redo, 2026-11-19
+protocols_read_sha: 9341172cc59e21a3271b32e9a434888782693a97
 ---
 # Workflow audit: 2026-10-11
 
