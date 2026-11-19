@@ -31,7 +31,7 @@ settings_audit: not_applicable
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
-protocols_read_sha: b6dffae1771d4293af91253cfa700331460b42af
+protocols_read_sha: 76c4b480788e0583cac3f19acc2174d65f16edcb
 ---
 # Workflow audit: 2026-10-11
 
