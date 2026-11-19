@@ -18,8 +18,8 @@ tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 a
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
 workflow_stage: mountPreview[1.0.0]
 remaining:
-  - replay whole chain (2026-11-19): 1 to 9 done (12 n/a), first open 10.a echo (remake from gallery, validate with Virginie, set echo_review_sha); 10.d after echo; 10.f social_preview_sha256 missing; 10.g waits on them. 10.e closed (key art file deleted by owner order, Docs migration done). Ledger ../.replays/FoxLampRenew-20261119.tsv.
-  - unverified: echo (AUDIT 10.a, Check-Status ERROR echo_review_sha): `Art/echo-preview.png` is invalidated (gallery has captures); remake from the gallery (Art/echo-source.png) and validate with Virginie. Preview rendered 2026-11-19 from her new Preview-source.png (key art, key-art file deleted by owner order), old echo still shown.
+  - replay whole chain (2026-11-19): 1 to 9 done (12 n/a). 10.a and 10.d done (echo kept, see below); open: 10.f social_preview_sha256 (upload Mod/About/Preview.png as the GitHub social preview, then record its sha256), then 10.g transition. Ledger ../.replays/FoxLampRenew-20261119.tsv.
+  - echo kept (Virginie, 2026-11-19, AUDIT 10.a): `Art/echo-preview.png` (lamp line-art, bamboo shoot in its frame) still shows what the gallery shows (the lamp, gallery 1 to 3). Preview opened 2026-11-19: echo right of the title, about 90 px wide of 520 (under 50 %), no clipping, no overlap, panel contrast fine. `echo_review_sha` set to 80cf332 (echo file renamed echo-preview.png to echo-source.png, Preview.png byte-identical).
   - unverified: French label changed to "Lampe Fox" (Virginie, 2026-11-13): replay scenario 06 in French alone as a small ticket (the step may assert the label); the Languages text changed, so the final non-regression above covers it.
   - unverified: final non-regression on the final revision, English and French, deposited together after the commit and the deployment (AUDIT.md 8.c, 14.a).
   - unverified: the build-menu icon at scale 1 stays inside its square (Mod/Defs/Fox_Lamp.xml, 2026-10-15, Virginie): read on the gallery 4 capture (Build copy gizmo). Diff reviewed: one field, `uiIconScale` 1.8 to 1, no code, no patch; `code_review_sha` advanced.
@@ -32,7 +32,8 @@ ecosystem_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
-protocols_read_sha: b254b9ac7efc779e739a23972678637c63ae91f7
+echo_review_sha: 80cf33276cc95aff6a27df300ac386889274794c
+protocols_read_sha: 71a58c94f32f6f37133e437e3693fd025c29b48c
 ---
 # Workflow audit: 2026-10-11
 
