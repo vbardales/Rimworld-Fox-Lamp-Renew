@@ -27,7 +27,7 @@ remaining:
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_4d5ec83f-1052-4291-bf9a-7d4baa33373e
-updated:      2026-11-19 replay-audit of the whole chain: stage mountPreview[1.0.0] (4.g fixed earlier today), first open 10.a echo. Protocols read 76c4b480. History of earlier states: git log of STATUS.md.
+updated:      2026-11-19 second whole-chain replay: stage unchanged mountPreview[1.0.0], 1 to 9 and 10.a to 10.e done, first open 10.f social_preview_sha256 (Virginie uploads Preview.png, sha256 97f12b36). Pending her choice: plain panel (zone measures 4.58 on the title with pure black ink, gate 4.5, choose 5) or veil kept. Earlier states: git log of STATUS.md.
 settings_audit: not_applicable
 ecosystem_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
