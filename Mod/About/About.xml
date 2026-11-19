@@ -22,24 +22,24 @@
   </incompatibleWith>
   <description>UNOFFICIAL. This mod is published without the original author's explicit consent. If the original author contacts me to request its removal, I undertake to take it down promptly.
 
-The Fox Lamp, brought to the latest RimWorld version - a bamboo shoot carved from marble, set in an open lantern frame.
+The Fox Lamp, brought to the latest RimWorld version: a bamboo shoot carved from marble, set in an open lantern frame.
 
 I am not the author of this mod. The piece is AmliFurx's, made in July 2020 as a thank-you to a player. Megapa3yM kept it running through 1.5. Credit goes to them; mistakes here are mine. If either of them comes back to it, or asks me to take this down, it comes down.
 
 Most of what I did was the work needed to make it run on the latest RimWorld version. One thing is not that, and it is the first thing you will notice: the lantern lights now. AmliFurx never gave the piece a light and the 1.5 fork never added one, so that is a change to his work rather than a repair of it. It is described below, and it is why this mod is a Renew rather than a straight port.
 
-Original: https://steamcommunity.com/sharedfiles/filedetails/?id=2166575832 (AmliFurx)
-1.5 fork: https://steamcommunity.com/sharedfiles/filedetails/?id=3248294052 (Megapa3yM, stopped at 1.5)
+Original: Fox Lamp (https://steamcommunity.com/sharedfiles/filedetails/?id=2166575832) (AmliFurx)
+1.5 fork: 【1.5】Fox Lamp Forked (https://steamcommunity.com/sharedfiles/filedetails/?id=3248294052) (Megapa3yM, stopped at 1.5)
 
-WHAT THIS MOD IS - AND WHAT IT IS NOT
+WHAT THIS MOD IS, AND WHAT IT IS NOT
 
-This is one building: a sculpture that is also, now, a small lamp. It is built from 80 marble blocks, it carries a beauty of 800 - twice that of the grandest sculpture in the base game - and a pawn can meditate in front of it. Fill the lantern frame with hay, wood or chemfuel and switch it on, and it lights the few cells around it. It pushes no heat: it is marble, and it does not warm a room.
+This is one building: a sculpture that is also, now, a small lamp. It is built from 80 marble blocks, it carries a beauty of 800 (twice that of the grandest sculpture in the base game) and a pawn can meditate in front of it. Fill the lantern frame with hay, wood or chemfuel and switch it on, and it lights the few cells around it. It pushes no heat: it is marble, and it does not warm a room.
 
 It appears in the "AmliFurx" architect tab, alongside the other thank-you pieces.
 
 READ THIS BEFORE SUBSCRIBING
 
-If you are here for the fox lamps - the fur lights, the tiny one, the bamboo shoot lamp - you do not want this mod. You want 【AF】SydailyFox (Continued), which is required below and which already ships every one of them, for the latest RimWorld version, unchanged.
+If you are here for the fox lamps (the fur lights, the tiny one, the bamboo shoot lamp) you do not want this mod. You want 【AF】SydailyFox (Continued) (https://steamcommunity.com/sharedfiles/filedetails/?id=3540588386), which is required below and which already ships every one of them, for the latest RimWorld version, unchanged.
 
 The 1.5 mod this one comes from was a fork of that mod's lamps. All of them have since been carried forward by Mlie in the parent mod itself, so republishing them here would only put duplicate defNames against a mod you are required to have. Exactly one def in the fork was never in the parent: this one. That is all this mod adds.
 
@@ -47,13 +47,11 @@ If you are still subscribed to that 1.5 fork, unsubscribe or disable it. This mo
 
 REQUIRES 【AF】SydailyFox (Continued)
 
-Not a courtesy listing - a hard requirement. The piece inherits its base def, its architect tab and both of its item categories from that mod. Without it, this mod does nothing but log errors.
-
-https://steamcommunity.com/sharedfiles/filedetails/?id=3540588386
+Not a courtesy listing, a hard requirement. The piece inherits its base def, its architect tab and both of its item categories from that mod (https://steamcommunity.com/sharedfiles/filedetails/?id=3540588386). Without it, this mod does nothing but log errors.
 
 THE ONE THING THAT IS NOT A REPAIR: IT LIGHTS
 
-The piece has a switch, a fuel frame and a glow of radius 10 - the reach of a vanilla torch or brazier, the fuel-burning lights it stands beside. The colour and the fuel are AmliFurx's own bamboo shoot lamp's, the closest thing he drew to this and the same subject. A full frame holds twelve units and burns for thirty days, so it is a monument you top up now and then, not a hauling chore.
+The piece has a switch, a fuel frame and a glow of radius 10, the reach of a vanilla torch or brazier, the fuel-burning lights it stands beside. The colour and the fuel are AmliFurx's own bamboo shoot lamp's, the closest thing he drew to this and the same subject. A full frame holds twelve units and burns for thirty days, so it is a monument you top up now and then, not a hauling chore.
 
 His bamboo lamp lights 4.2, and that number was not carried over. It is the smallest of his five lamps, it is below everything the base game calls a lamp, and a pool that size would not cover this sculpture, which is drawn five cells wide. What keeps this from being anyone's cheap light is that it costs 80 marble blocks and 24 000 work, not that the glow is dim.
 
@@ -65,17 +63,17 @@ No heat pusher, and no flame drawn on the sprite. The first would have a marble 
 
 WHAT CHANGED IN THIS UPDATE
 
-Every field was checked against the game files. Nothing in the def was broken by the new version itself - it loads as written. Three things were wrong before it, and are now fixed:
+Every field was checked against the game files. Nothing in the def was broken by the new version itself: it loads as written. Three things were wrong before it, and are now fixed:
 
-- The colour mask never loaded, in any version, since 2020. It shipped as Fox_Lampm.png, but the game looks for the texture path plus "_m" - Fox_Lamp_m.png - and gives up silently when it is missing. It is not shipped rather than renamed: renaming it would change how the piece is drawn, and it should look like the mod people knew. For the curious, the mask covers the marble shoot and nothing else - the lantern frame is not in it. It was a colour mask, never a glow map.
+- The colour mask never loaded, in any version, since 2020. It shipped as Fox_Lampm.png, but the game looks for the texture path plus "_m" (Fox_Lamp_m.png) and gives up silently when it is missing. It is not shipped rather than renamed: renaming it would change how the piece is drawn, and it should look like the mod people knew. For the curious, the mask covers the marble shoot and nothing else; the lantern frame is not in it. It was a colour mask, never a glow map.
 - Beauty was never shown. The piece is built around a Beauty of 800, but it used the plain Building class instead of vanilla's Building_Art, which is what puts the Beauty line in the inspect pane.
-- The description said nothing about the object. AmliFurx's line - the joke and the signature - is kept word for word; a sentence saying what the thing actually is now comes before it, so the build menu has something to show.
+- The description said nothing about the object. AmliFurx's line (the joke and the signature) is kept word for word; a sentence saying what the thing actually is now comes before it, so the build menu has something to show.
 
 The English text also read "No! Shoot! Eat! Bamboo! Shoot! ! !", a garbled machine translation of the Chinese. It now says what the original says.
 
 The defName Fox_Lamp is unchanged on purpose. Renaming it would drop the piece out of any save that already has one standing.
 
-Twenty-six language folders shipped with the 1.5 mod. All twenty-six were byte-identical English stubs - none was ever translated - so they are not carried over. English is in the def, and there is a real French translation.
+Twenty-six language folders shipped with the 1.5 mod. All twenty-six were byte-identical English stubs, none was ever translated, so they are not carried over. English is in the def, and there is a real French translation.
 
 No code, no Harmony, no patches. Safe to add to an ongoing save. To remove it mid-save, deconstruct any you have built first.
 
@@ -85,16 +83,16 @@ If I do not answer within a reasonable time after being contacted, anyone may fr
 
 AI-GENERATED
 
-The port and this description were written with Claude Code (Anthropic), under human direction, review and testing. Stated openly: the def, the translation and the writing above are the work this note is about.
+The port and this description were written with Claude Code (Anthropic), under human direction, review and testing. ChatGPT (OpenAI) reviewed the French text. The key art of the preview image was generated with DALL-E (OpenAI) from my own in-game screenshots. Stated openly: the def, the translation and the writing above are the work this note is about.
 
 THANKS
 
-Claude Code (Anthropic).
-AmliFurx for the piece, made in July 2020.
-Megapa3yM for keeping it running through 1.5.
-Mlie for 【AF】SydailyFox (Continued), the parent mod this one stands on.
+AmliFurx, for the piece, made in July 2020.
+Megapa3yM, for keeping it running through 1.5.
+Mlie, for 【AF】SydailyFox (Continued) (https://steamcommunity.com/sharedfiles/filedetails/?id=3540588386), the parent mod this one stands on.
+Pickle (https://steamcommunity.com/sharedfiles/filedetails/?id=3791648678) and PickleTools, the test tools that played every scenario (development only, never a dependency of this mod).
 
-See ATTRIBUTION.md. No licence is claimed over AmliFurx's or Megapa3yM's work; this is an unofficial continuation, taken down on request.
+The gallery was played in my own test colony with a set of body, face and hair mods, listed in ATTRIBUTION.md on GitHub. See ATTRIBUTION.md for all of it. No licence is claimed over AmliFurx's or Megapa3yM's work; this is an unofficial continuation, taken down on request.
 
-[url=https://github.com/vbardales/Rimworld-Fox-Lamp-Renew]Source code on GitHub[/url]</description>
+Source code on GitHub (https://github.com/vbardales/Rimworld-Fox-Lamp-Renew)</description>
 </ModMetaData>

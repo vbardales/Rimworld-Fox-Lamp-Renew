@@ -263,6 +263,31 @@ broken in 1.5.
   `ITab_Art` and the `CutoutComplex` shader are each still read from XML by vanilla 1.6
   defs.
 
+## Gallery set
+
+The gallery images were played in the Sanctuary of Nelim (Sanctuary Backlot, development only) with the mods below. None of them ships with this mod and none is required; they are credited because the pictures show their work. Nothing here is a dependency.
+
+| Mod | Author | Workshop id | What the gallery uses it for |
+|---|---|---|---|
+| Roo's HD Hairstyles (continued) | Qux | [3559870636](https://steamcommunity.com/sharedfiles/filedetails/?id=3559870636) | Nelim's high ponytail and long loose hair |
+| WDI's Realistic Bodies | Windonsi, Starkz | [3527486510](https://steamcommunity.com/sharedfiles/filedetails/?id=3527486510) | the colonist's body |
+| Female Body Variants Continued | DanZinagri and tiagocc0 | [3798082132](https://steamcommunity.com/sharedfiles/filedetails/?id=3798082132) | Nelim's body |
+| Female Apparel Variants Continued | DanZinagri and tiagocc0 | [3799726535](https://steamcommunity.com/sharedfiles/filedetails/?id=3799726535) | how the clothes sit on the body |
+| AB's Visible Pants | aedbia | [2986402536](https://steamcommunity.com/sharedfiles/filedetails/?id=2986402536) | the trousers drawn on the legs |
+| Hat Hair Control | lordfelix | [3760821540](https://steamcommunity.com/sharedfiles/filedetails/?id=3760821540) | the hair visible under the hat |
+| [NL] Facial Animation - WIP | Nals | [1635901197](https://steamcommunity.com/sharedfiles/filedetails/?id=1635901197) | the faces and smiles |
+| [NL] Facial Animation - Experimentals | Nals | [2581693737](https://steamcommunity.com/sharedfiles/filedetails/?id=2581693737) | the faces |
+| Vanilla Textures Expanded - [NL] Facial Animation | Oracle of Thessia | [2816938779](https://steamcommunity.com/sharedfiles/filedetails/?id=2816938779) | the faces |
+| Akeron Extras - Facial Animations | Newton Zephyr | [2889716301](https://steamcommunity.com/sharedfiles/filedetails/?id=2889716301) | the faces |
+| EyeGenes3 | Lucius | [3745223213](https://steamcommunity.com/sharedfiles/filedetails/?id=3745223213) | the eyes |
+| Facial Animation Performance Patch | astryl | [3790129900](https://steamcommunity.com/sharedfiles/filedetails/?id=3790129900) | the faces, load patch |
+| Vanilla Experimentals for Facial Animation | SunshineyDays | [3753978140](https://steamcommunity.com/sharedfiles/filedetails/?id=3753978140) | the eyes |
+| Visual beauty for Facial Animation | SleepyFrieren | [3685072616](https://steamcommunity.com/sharedfiles/filedetails/?id=3685072616) | the faces |
+| NL Facial Animation - Init Fix | Moshii | [3609895011](https://steamcommunity.com/sharedfiles/filedetails/?id=3609895011) | the faces, load fix |
+| NL Facial Animation - Load Fix | CCJ | [3721489042](https://steamcommunity.com/sharedfiles/filedetails/?id=3721489042) | the faces, load fix |
+
+The test tools (Pickle, PickleTools) are development only. The map of the gallery pass holds other mods (further bodies and hair, Cuter Kids, beauty genes): no scene of this gallery shows their work, so they are not credited.
+
 ## Adoption
 
 If I do not answer within a reasonable time after being contacted, anyone may freely update
