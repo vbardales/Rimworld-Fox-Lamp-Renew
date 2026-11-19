@@ -35,7 +35,7 @@ audit_result: passed_through_writeTests
 code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
 echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
 preview_source_decision: redo, 2026-11-19
-protocols_read_sha: 57b9b5ee5cd8c5d0b0ef01e5583cd49ff57b0cba
+protocols_read_sha: a0a66f5711b98dad173a64b7edd36d24c2924464
 ---
 # Workflow audit: 2026-10-11
 
