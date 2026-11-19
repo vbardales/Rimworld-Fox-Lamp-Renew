@@ -1,6 +1,6 @@
 # Publication: Fox Lamp Renew (unofficial)
 
-What the Workshop page asks for and the repository holds nowhere else. Written at `writeReleaseDocs[1.0.0]` (2026-11-19). Item `3806767650` exists, private, from the `0.1.0` prepublication; the real release is `1.0.0`, published by the CI (`Rimworld-Release-Admin/docs/OPERATIONS.md`). Steam creates every item private; the owner switches it public herself.
+What the Workshop page asks for and the repository holds nowhere else. Written at `writeReleaseDocs[1.0.0]` (2026-11-19). Item `3806767650` exists, private, from the `0.1.0` prepublication; the real release will be `1.0.0`, published by the CI (`Rimworld-Release-Admin/docs/OPERATIONS.md`). Steam creates every item private; the owner switches it public herself.
 
 ## Steam description
 
