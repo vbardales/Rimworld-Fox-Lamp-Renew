@@ -136,6 +136,7 @@ The final block, sent with the update (CI refuses a block whose first line does 
 
 ### 1.0.0
 
+```
 [b]1.0.0[/b]
 [list]
 [*]The lantern lights: switch, fuel (hay, wood or chemfuel, 12 units, 30 days) and a glow of radius 10. It pushes no heat.
@@ -145,6 +146,7 @@ The final block, sent with the update (CI refuses a block whose first line does 
 [*]Build-menu icon scale fixed so the icon stays inside its square.
 [/list]
 [url=https://github.com/vbardales/Rimworld-Fox-Lamp-Renew/blob/main/CHANGELOG.md]Full changelog on GitHub[/url]
+```
 
 ## After the send
 
