@@ -2,37 +2,29 @@
 
 ## Current rendering — 2026-09-13
 
-This section supersedes the historical overlay dimensions and rendering command below.
-Run `node Art/render-preview.cjs` from the repository with Playwright installed (or set
-PLAYWRIGHT_MODULE to its module path). Chrome is required. The renderer serves the local
-composition, loads preview-palette.json as the sole overlay palette, waits for fonts and images,
-and writes the shipped Preview.png, the clean Art/Preview.png and preview-background.png.
-The 268-pixel QA thumbnail is retained separately as preview-thumbnail.png.
+This section supersedes historical overlay dimensions and rendering command below.
+Run `node Art/render-preview.cjs` from repository with Playwright installed (or set
+PLAYWRIGHT_MODULE to its module path). Chrome required. Renderer serves local
+composition, loads preview-palette.json as sole overlay palette, waits for fonts and images,
+writes shipped Preview.png, clean Art/Preview.png and preview-background.png.
+268-pixel QA thumbnail kept separately as preview-thumbnail.png.
 
-The title uses Segoe UI 46 px/600; Renew is 65 percent in sand-colored secondary ink.
-The unofficial tag uses 24 px, and the orange triangle displays the declared version 1.6.
-The origin of this artwork remains the authored sprite and HTML ground, not a generated scene.
+Title uses Segoe UI 46 px/600; Renew is 65 percent in sand-colored secondary ink.
+Unofficial tag uses 24 px, orange triangle displays declared version 1.6.
+Origin of artwork remains authored sprite and HTML ground, not generated scene.
 
 
-RimWorld never reads this folder, and neither does Steam: only `Mod/` is published. What lives
-here is the material needed to rebuild the shipped showcase, and nothing else.
+RimWorld never reads this folder, neither does Steam: only `Mod/` published. Here lives only material needed to rebuild shipped showcase.
 
-It was composed from **the mod's own sprite** rather than generated. For a mod that is one
-object, the object is the honest showcase — and AmliFurx's texture already is the thing being
-sold. `STYLE_RIMWORLD.md` describes a painted RimWorld *scene*, which is the repository's
-default; this is a deliberate departure, noted here so a later pass can regenerate rather than
-guess why.
+Composed from **mod's own sprite**, not generated. For a mod that is one object, object is honest showcase — AmliFurx's texture already is thing being sold. `STYLE_RIMWORLD.md` describes painted RimWorld *scene*, repository default; this is deliberate departure, noted here so later pass can regenerate rather than guess why.
 
-**The mod ships a `ModIcon.png` since 2026-09-12.** See the last section but one for what it is.
+**Mod ships `ModIcon.png` since 2026-09-12.** See last section but one for what it is.
 
-**The banner's light rule was reversed on 2026-09-12**, the day the piece was given a glower. Both
-images now show it giving off light, which it does. The old rule and the reason it fell are kept in
-the `Preview.png` section below rather than deleted.
+**Banner's light rule reversed 2026-09-12**, day piece got a glower. Both images now show it giving off light, which it does. Old rule and reason it fell kept in `Preview.png` section below, not deleted.
 
 ## `sprite-trimmed.png` — 166 x 321, 44 KB
 
-`Mod/Textures/Thankyou/Fox_Lamp.png` is 812 x 812 with the piece occupying a small part of a
-mostly transparent canvas. The alpha bounding box was measured, not eyeballed:
+`Mod/Textures/Thankyou/Fox_Lamp.png` is 812 x 812, piece occupying small part of mostly transparent canvas. Alpha bounding box measured, not eyeballed:
 
 ```
 ffmpeg -i Mod/Textures/Thankyou/Fox_Lamp.png -vf "alphaextract,bbox=min_val=16" -f null -
@@ -40,13 +32,11 @@ ffmpeg -i Mod/Textures/Thankyou/Fox_Lamp.png -vf "alphaextract,bbox=min_val=16" 
 ffmpeg -y -i Mod/Textures/Thankyou/Fox_Lamp.png -vf "crop=166:321:323:168" Art/sprite-trimmed.png
 ```
 
-Kept because both images below are built from it, and because re-deriving it means re-measuring.
+Kept because both images below built from it, and re-deriving means re-measuring.
 
 ## `Mod/About/Preview.png` — 896 x 504, 345 KB
 
-Built by `preview.html` in this folder, rasterised by Chrome headless. The page references
-`sprite-trimmed.png` by relative path, so the command below reproduces the shipped file
-**byte for byte** — verified by `md5sum`.
+Built by `preview.html` in this folder, rasterised by Chrome headless. Page references `sprite-trimmed.png` by relative path, so command below reproduces shipped file **byte for byte** — verified by `md5sum`.
 
 ```
 "/c/Program Files/Google/Chrome/Application/chrome.exe" --headless --disable-gpu \
@@ -55,14 +45,10 @@ Built by `preview.html` in this folder, rasterised by Chrome headless. The page 
   "file:///C:/Users/nelim/Documents/rimworld/FoxLampRenew/Art/preview.html"
 ```
 
-**`--screenshot` needs an absolute Windows path.** Given a path relative to the shell, Chrome
-resolves it against its own working directory and fails with `Le chemin d'accès spécifié est
-introuvable`, leaving the previous file untouched — so the render looks like it silently did
-nothing rather than like an error. `--force-device-scale-factor=1` pins the rasterisation to
-1:1 whatever the display is set to.
+**`--screenshot` needs absolute Windows path.** Given path relative to shell, Chrome resolves it against own working directory and fails with `Le chemin d'accès spécifié est
+introuvable`, leaving previous file untouched — render looks like silently did nothing, not like error. `--force-device-scale-factor=1` pins rasterisation to 1:1 whatever display set to.
 
-Text is composed **at final size**, so the glyphs are never resampled. The repository engraving
-standard is followed exactly:
+Text composed **at final size**, glyphs never resampled. Repository engraving standard followed exactly:
 
 | | Value |
 |---|---|
@@ -71,69 +57,38 @@ standard is followed exactly:
 | Summary | 21 px over 430 px |
 | Darkening | radial from the top-left corner, `rgba(6,5,4,.86)` at the centre, nil at **74 %** |
 
-The summary is lifted word for word from the `About.xml` description, as the standard requires.
-No count is engraved: the rule allows one for a frozen source, but "one sculpture" would read as
-an apology for the mod rather than a description of it.
+Summary lifted word for word from `About.xml` description, as standard requires. No count engraved: rule allows one for frozen source, but "one sculpture" would read as apology for mod, not description.
 
-**The light is emitted, and the pool is anchored on the lantern.** The gradient sits at 76 % width
-and 71 % height, which is the frame's opening in the sprite rather than the piece's centre of mass.
+**Light is emitted, pool anchored on lantern.** Gradient sits at 76 % width and 71 % height: frame's opening in sprite, not piece's centre of mass.
 
-**This rule was the opposite until 2026-09-12, and the reversal is the point.** It used to read:
-the light comes from off-frame right, and the piece never emits any — because it had no
-`CompProperties_Glower`, no fuel and no heat, and a banner showing it aglow would have advertised
-something the mod did not ship. The pool sat at 50 % height and stood for a source outside the
-frame. The Renew release gives the piece a glower, a fuel frame and a switch, so the banner now
-shows what the mod actually does. Anyone who finds the old wording quoted elsewhere is reading a
-document that predates the light.
+**This rule was opposite until 2026-09-12, and reversal is the point.** Used to read: light comes from off-frame right, piece never emits any — no `CompProperties_Glower`, no fuel, no heat, and banner showing it aglow would advertise something mod did not ship. Pool sat at 50 % height, stood for source outside frame. Renew release gives piece glower, fuel frame and switch, so banner now shows what mod actually does. Anyone finding old wording quoted elsewhere reads document predating the light.
 
-The summary engraved under the rule is **unchanged**, and deliberately so. It is the first sentence
-of the `About.xml` description, word for word, as the standard requires, and that sentence did not
-change when the light was added. The picture carries the new fact; the words did not have to.
+Summary engraved under rule **unchanged**, deliberately. It is first sentence of `About.xml` description, word for word, as standard requires, and that sentence did not change when light added. Picture carries new fact; words did not need to.
 
-Checked at 268 px, the real Workshop thumbnail width: the name reads, the silhouette reads. The
-summary falls to about 6 px and is not meant to be read there — it is written for whoever opens
-the mod page.
+Checked at 268 px, real Workshop thumbnail width: name reads, silhouette reads. Summary falls to about 6 px, not meant to be read there — written for whoever opens mod page.
 
 ## `Art/ModIcon-source.png` — 1254 x 1254, 1.2 MB
 
-The mascot at full resolution, kept so the icon can be rebuilt without redrawing it. Never
-published: it sits here, outside `Mod/`.
+Mascot at full resolution, kept so icon can be rebuilt without redrawing. Never published: sits here, outside `Mod/`.
 
 ## `Mod/About/ModIcon.png` — 128 x 128, 24 KB
 
-Downscaled from the source above, and from nothing else:
+Downscaled from source above, nothing else:
 
 ```
 ffmpeg -y -i Art/ModIcon-source.png -vf "scale=128:128:flags=lanczos" Mod/About/ModIcon.png
 ```
 
-It is the repository mascot, and it follows the family: a round head seen three-quarter, winking
-one eye, a thick near-black outline, flat cel shading, and the mod's own subject fused into it.
-The ponytail the other icons wear is replaced here by fox ears, which is the fusion doing its job
-rather than a departure — Mintchoco's head *is* a scoop of ice cream, and this one *is* a fox.
+Repository mascot, follows the family: round head seen three-quarter, winking one eye, thick near-black outline, flat cel shading, mod's own subject fused into it. Ponytail other icons wear replaced here by fox ears, fusion doing its job, not departure — Mintchoco's head *is* scoop of ice cream, this one *is* a fox.
 
-**The lantern it holds is lit**, and it agrees with the banner, which now shows the piece emitting
-light as well.
+**Lantern it holds is lit**, agrees with banner, which now shows piece emitting light too.
 
-It did not always agree. For one day, 2026-09-12, this icon shipped against a banner rule that
-forbade showing the piece aglow, and the paragraph here argued the difference: the icon is a
-character holding an ordinary lantern, not a picture of the sculpture, so it promised nothing the
-mod lacked. That argument is now moot, because the mod does not lack it. Kept in a sentence rather
-than deleted, so that the icon is not mistaken for a leftover of the unlit era and darkened to
-match something.
+It did not always agree. For one day, 2026-09-12, icon shipped against banner rule forbidding showing piece aglow, and paragraph here argued difference: icon is character holding ordinary lantern, not picture of sculpture, so promised nothing mod lacked. Argument now moot, since mod does not lack it. Kept in one sentence rather than deleted, so icon not mistaken for leftover of unlit era and darkened to match something.
 
-The second reason it was drawn lit still stands on its own, and it is the one to keep in mind if
-the icon is ever redrawn. It is read at **32 px** in a mod list. An unlit lantern at that size is a
-brown smudge with no silhouette; the glow is the only thing that makes the object legible as a
-lantern, which is the one word the icon has to say. Checked at 32 px: the ears, the wink and the
-lit lantern all survive.
+Second reason drawn lit still stands on own, and is the one to remember if icon ever redrawn. Read at **32 px** in mod list. Unlit lantern at that size is brown smudge with no silhouette; glow only thing making object legible as lantern, the one word icon must say. Checked at 32 px: ears, wink and lit lantern all survive.
 
-**Whatever is drawn, it must not be built from `UI_Fox_Lamp.png`.** That file is the *build-menu*
-icon and it is a **book** — the author's deliberate style, shipped untouched, and explained in
-`ATTRIBUTION.md`. It names nothing at 32 px in a list of mod icons.
+**Whatever is drawn, must not be built from `UI_Fox_Lamp.png`.** That file is *build-menu* icon and it is a **book** — author's deliberate style, shipped untouched, explained in `ATTRIBUTION.md`. Names nothing at 32 px in list of mod icons.
 
 ## Tooling on this machine, as of 2026-09-05
 
-`ffmpeg` and Chrome are present. **ImageMagick is not** — the `convert` on `PATH` is Windows'
-own filesystem tool, which will fail with `Paramètre non valide` on an image path. Everything
-above is therefore ffmpeg and Chrome only.
+`ffmpeg` and Chrome present. **ImageMagick is not** — `convert` on `PATH` is Windows' own filesystem tool, fails with `Paramètre non valide` on image path. Everything above therefore ffmpeg and Chrome only.
