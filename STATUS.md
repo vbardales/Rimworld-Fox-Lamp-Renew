@@ -16,8 +16,9 @@ workshop_required_items: done, 2026-11-20 (Virginie: Mlie.AFSydailyFox 354058838
 showcase:     complete
 tested_on:    2026-10-02 (English 2026-09-28 and 2026-09-29, French 2026-09-28 and 2026-10-02, incompatibility pass 2026-09-29)
 workshop:     3806767650 (0.1.0 prepublication, private item, not tested or reviewed)
-workflow_stage: startWatch[1.0.0]
+workflow_stage: runNoRegression[1.0.0]
 remaining:
+  - runNoRegression (2026-11-20): 14.a rerun the whole Pickle suite on the published build 1.0.0 (tickets to file, verdict in STATUS and docs/runs), then 14.j cleanUp, 14.c to 14.e dormant. Thank-yous (14.b), watch (14.f) and gallery (14.h) done.
   - startWatch (2026-11-20): 14.f done, Virginie watches the GitHub repository and the Workshop item (2026-11-20, "j'ai watch le mod et github"); next 14.g postOnSteam (stage move needs her yes), then: the three thank-yous posted 2026-11-20 by Virginie (Mlie 3540588386 on the 1.6 page, Megapa3yM 3248294052, AmliFurx 2166575832; 14.b done), then runNoRegression (14.a), cleanUp, dormant. 1.7 pass: change the dependency id (3841646678) and the Required item.
   - publish (2026-11-20 sent): run 44636421682 green (upload OK, tags Mod 1.6, tag v1.0.0 and release created, PublishedFileId.txt 3806767650 already committed). 13.c done by Virginie 2026-11-20 ("Fait" in chat): 5 gallery images uploaded, item public, added to the collection "RimWorld through Nelim's eyes" (3815982565). 13.b done 2026-11-20: PiI SUBSCRIBE-TEST OK on item 3806767650 (Steam had not pulled the new build, PiI resubscribed; 9 files on disk identical to Mod of tag v1.0.0 at 59d9412 up to CRLF; packageId nelim.foxlamprenew, dependency Mlie.AFSydailyFox, supportedVersions 1.6; About.xml carries no modVersion tag, so the version is proven by content match). Gallery-mod thanks: Virginie chose (2026-11-20) not to name the 16 gallery mods in the Steam description (7906 of 8000 characters used); credit stays in ATTRIBUTION.md "Gallery set" and the Covers column of WORKSHOP_COMMENTS.md. Open: 13.f startWatch (stage move needs her yes, after a replay); the three thank-yous are for postOnSteam (14.b).
   - publish (2026-11-20): stage move accepted by Virginie in chat. Required item done 2026-11-20. Final dry-run on the sha of the commit that holds this line, then dispatch-publish.sh (Virginie approves steam-production in GitHub), then About/PublishedFileId.txt check, read the public page, post the three thank-yous, Virginie switches the item public. Details of the earlier work stay in the writeReleaseDocs line below.
@@ -32,7 +33,7 @@ remaining:
   - unverified: the upgrade case (TESTING.md 13.4, a save made before the light existed): no step can make that save. Not
     applicable to the gate, residual risk.
 session:      local_4d5ec83f-1052-4291-bf9a-7d4baa33373e
-updated:      2026-11-20 13.a to 13.f done (range replay 13.a..13.f, ledger FoxLampRenew-20261120-13.a-13.f.tsv), stage startWatch[1.0.0] on Virginie yes in chat. 1.0.0 sent, item public, subscribe test OK. Earlier states: git log of STATUS.md.
+updated:      2026-11-20 replay startWatch.. typed by Virginie (ledger FoxLampRenew-20261120-startWatch-end.tsv): 14.b, 14.d, 14.f to 14.i done, stage runNoRegression[1.0.0], first open 14.a (rerun of the suite on the published build). Earlier states: git log of STATUS.md.
 settings_audit: not_applicable
 ecosystem_line: 1.0
 thanks_drafted_line: 1.0
@@ -43,7 +44,7 @@ publication_changelog_review_sha: 63dea6efaa32b7ca131f8c1ec12644c24c9c0063
 echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
 social_preview_sha256: e27fc5598cf67460a1f869a5a896525b69ccbf12148e3f1027a73434d99f115d
 preview_source_decision: redo, 2026-11-19
-protocols_read_sha: 289e6195f5767e020e0cee6f9a420c6ebce98823
+protocols_read_sha: 8a60551712c9d44b652338dded37e310f4fbd9a7
 ---
 # Workflow audit: 2026-10-11
 
