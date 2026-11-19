@@ -8,7 +8,7 @@ In-game scenarios below written as Pickle suite in [Tests/Pickle/](Tests/Pickle/
 
 Offline validation and reproducible commands in [Tests/RESULTS.md](Tests/RESULTS.md).
 Offline checks not gameplay results. Where scenario below played in game, run in
-[docs/runs/history.md](docs/runs/history.md), verdict in `STATUS.md`.
+[Docs/runs/pickle.md](Docs/runs/pickle.md), verdict in `STATUS.md`.
 
 ## What `done -> tested` needs (AUDIT.md, 2026-10-02)
 
@@ -60,7 +60,7 @@ Per pass and scenario, latest report for revision now in repository, minified: `
 `junit.xml`, `Player.log`, `evidence-complete.txt` (and `dropped-mods.txt` when present), plus `@review` captures a
 person opened: two night stills of `03` once, inspect pane of `07` each language. Delete `report.html`,
 `messages.ndjson` and every other capture once newer report replaces it. One text line per run in
-`docs/runs/history.md`. Details and folder-by-folder state: `Tests/Pickle/README.md`, "Evidence".
+`Docs/runs/pickle.md`. Details and folder-by-folder state: `Tests/Pickle/README.md`, "Evidence".
 
 ## Before starting
 
