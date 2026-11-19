@@ -11,9 +11,9 @@
   "echo": { "file": "echo-source.png" },
   "icon": { "file": "ModIcon-source.png" },
   "palette": {
-    "veil": "#211C16",
+    "veil": "#503C09",
     "inkPrimary": "#F2ECE1",
-    "inkSecondary": "#D7B98C",
+    "inkSecondary": "#E3C79A",
     "accent": "#FF9600",
     "badgeInk": "#17120E"
   }
