@@ -122,7 +122,7 @@ Posted after the item is public (a link to a private item opens for nobody; `WOR
 
    > You kept AmliFurx's marble bamboo lantern alive through 1.5, with a clear promise to remove it if he asked, and that promise is what I passed on. It lights now, and runs on 1.6: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806767650]Fox Lamp Renew[/url]. Thank you Megapa3yM for the fork it grew from.
 
-3. **AmliFurx, on Fox Lamp** (`2166575832`). State: `open question for Virginie`: the original page is dead (1.2); a message there is her call (it is the author of the piece, not a second message on a Continued page, because Fox Lamp is not the original of SydailyFox). Draft if she wants it:
+3. **AmliFurx, on Fox Lamp** (`2166575832`). State: `drafted`, to post after the publication (Virginie, 2026-11-19: the Workshop link is private until then): the original page is dead (1.2); a message there goes to the author of the piece, not a second message on a Continued page, because Fox Lamp is not the original of SydailyFox. Draft:
 
    > The marble bamboo lantern, the joke and the signature are yours and I kept them word for word. It lights now and runs on 1.6: [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3806767650]Fox Lamp Renew[/url]. Thank you AmliFurx for the piece. If you ever want it gone, say so.
 
