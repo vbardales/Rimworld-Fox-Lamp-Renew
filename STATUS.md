@@ -35,7 +35,7 @@ ecosystem_line: 1.0
 thanks_drafted_line: 1.0
 audit_revision: 05bddb172279da82563ed9e3116b42d8512f0ea8
 audit_result: passed_through_writeTests
-code_review_sha: ada50fc228ab50d4ef6d86c518417e94deaf0cc9
+code_review_sha: 773fa2f3fa5d31dabf31925208177a2d5f48862a
 echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
 social_preview_sha256: e27fc5598cf67460a1f869a5a896525b69ccbf12148e3f1027a73434d99f115d
 preview_source_decision: redo, 2026-11-19
