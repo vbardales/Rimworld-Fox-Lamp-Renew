@@ -37,7 +37,7 @@ code_review_sha: df6086c94bb10c776a8777accd6d1d95947e1f92
 echo_review_sha: 16f5f503d48a5e07dec6a57f0c773325808e6c6f
 social_preview_sha256: e27fc5598cf67460a1f869a5a896525b69ccbf12148e3f1027a73434d99f115d
 preview_source_decision: redo, 2026-11-19
-protocols_read_sha: a0a66f5711b98dad173a64b7edd36d24c2924464
+protocols_read_sha: 5476b52815eb8a5435db3382c318104971360a30
 ---
 # Workflow audit: 2026-10-11
 
