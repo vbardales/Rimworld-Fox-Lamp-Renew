@@ -151,3 +151,16 @@ The final block, sent with the update (CI refuses a block whose first line does 
 ## After the send
 
 Commit nothing by hand for the tag or release: the CI creates them after a successful upload. `Mod/About/PublishedFileId.txt` is already committed.
+
+## Collection "RimWorld through Nelim's eyes" (13.c, 1.0.0)
+
+Collection: https://steamcommunity.com/sharedfiles/filedetails/?id=3815982565. Virginie alone adds to it.
+
+- The item: [Fox Lamp Renew (unofficial)](https://steamcommunity.com/sharedfiles/filedetails/?id=3806767650) (`3806767650`).
+- Dependencies that are also mods of Nelim: none. The only dependency, SydailyFox (Continued) `3540588386`, is Mlie's, so it stays out of the collection.
+- DLC required: none.
+- Workshop tags of the item: Mod, 1.6.
+
+## Sent 1.0.0
+
+CI run 44636421682 on sha `59d9412b443f00501e5325a3d01cf14fb626556a`: upload OK (manifest 3605560635312012938), preview and description sent, tags read back from Steam (Mod, 1.6), tag `v1.0.0` and its GitHub release created. By hand, still to do: upload the five gallery images in order (`Art/Gallery`, image 0 first), switch the item public, then post the three thank-you messages.
